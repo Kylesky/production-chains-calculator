@@ -95,7 +95,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
         recipes = recipes.filter(checkSearchMatch);
 
         setFilteredRecipesList(recipes);
-    }, [searchState]);
+    }, [searchState, checkSearchMatch, data.recipes, recipesList, selectedRecipesList]);
 
     useEffect(() => {
         applyFilters();
@@ -131,7 +131,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
             {selectedRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={true} onClick={() => toggleSelectedRecipe(true, recipe)} /> })}
             {filteredRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={false} onClick={() => toggleSelectedRecipe(false, recipe)} /> })}
         </div>
-    }, [selectedRecipesList, filteredRecipesList, data])
+    }, [selectedRecipesList, filteredRecipesList, data, checkSearchMatch])
 
     const handleEnter = (event) => {
         if (event.key === "Enter") applyFilters();
