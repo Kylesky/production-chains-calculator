@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import './SidePanel.css';
 import { getGamesList, useGetData, useImportData } from "./DataContext";
 import { FaYoutube, FaGithub } from 'react-icons/fa';
@@ -44,7 +44,7 @@ function LinkIcons() {
 
 function KoFiButton() {
     return <div className="kofi-container">
-        <a href='https://ko-fi.com/J3J31IBV7N' target='_blank'>
+        <a href='https://ko-fi.com/J3J31IBV7N' target='_blank' rel='noreferrer' >
         <img height='36' style={{border:'0px',height:"36px"}} src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' />
     </a>
         </div>

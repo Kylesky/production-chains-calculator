@@ -49,6 +49,8 @@ function compute(data, recipesList, outputsList, inputsList, intermediatesList, 
             feasible = result.feasible;
             result = result.recipeCounts;
             break;
+        default:
+            break;
     }
     const computeTime = Date.now()-startTime;
 

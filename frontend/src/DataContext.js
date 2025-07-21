@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, useEffect, useRef } from "react";
+import { createContext, useState, useContext, useRef } from "react";
 import gamesList from "./data/gamesList.json";
 // import { useSearchParams } from 'react-router-dom';
 

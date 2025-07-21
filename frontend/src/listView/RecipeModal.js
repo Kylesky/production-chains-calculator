@@ -99,7 +99,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
 
     useEffect(() => {
         applyFilters();
-    }, [show]);
+    }, [show, applyFilters]);
 
     const toggleSelectedRecipe = (selected, toggledRecipe) => {
         if (selected) {
@@ -131,13 +131,13 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
             {selectedRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={true} onClick={() => toggleSelectedRecipe(true, recipe)} /> })}
             {filteredRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={false} onClick={() => toggleSelectedRecipe(false, recipe)} /> })}
         </div>
-    }, [selectedRecipesList, filteredRecipesList])
+    }, [selectedRecipesList, filteredRecipesList, data, toggleSelectedRecipe])
 
     const handleEnter = (event) => {
         if (event.key === "Enter") applyFilters();
     }
 
-    const additionalSearchComponents = getGameSpecificRecipeSearchFilters(data).map(({ id: id, label: label, type: type }) => {
+    const additionalSearchComponents = getGameSpecificRecipeSearchFilters(data).map(({ id, label, type }) => {
         switch (type) {
             case "bool":
                 const handleChange = (event) => {

@@ -81,7 +81,6 @@ function ProcessContent({ recipe, updateRecipe }) {
 }
 
 function RecipeLine({ computeType, recipe, recipesListState, forceWholeBuildings }) {
-    const data = useGetData();
     const { updateRecipe, removeRecipe } = recipesListState;
 
     return <tr>

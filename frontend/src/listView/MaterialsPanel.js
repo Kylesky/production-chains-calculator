@@ -4,8 +4,6 @@ import { compileProcessCosts, getProcessCostComponents } from '../gameSpecific/m
 import './MaterialsPanel.css'
 
 function ItemEntry({ item, negate, handleButtonPress, itemGoalNumbers, setItemGoalNumbers, itemComputedNumbers }) {
-    const data = useGetData();
-
     const sign = negate ? -1 : 1;
 
     const handleNumberInput = (event) => {
@@ -125,7 +123,6 @@ function CostsList({ recipesList }) {
 }
 
 function MaterialsPanel({ itemListsState, recipesListState, setIsRecipeModalOpen, updateSearchState, forceWholeBuildingsState }) {
-    const data = useGetData();
     const { recipesList } = recipesListState;
     const {
         goals: { numbers: itemGoalNumbers, set: setItemGoalNumbers },

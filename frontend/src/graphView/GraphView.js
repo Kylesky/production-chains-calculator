@@ -65,7 +65,7 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
             return {...node, data: {...node.data, forceWholeBuildings: forceWholeBuildingsState.value}}
         })
         setNodes(newNodes);
-    }, [forceWholeBuildingsState.value]);
+    }, [forceWholeBuildingsState.value, nodes, setNodes]);
 
     const nodesInitialized = useNodesInitialized();
 
@@ -81,7 +81,7 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
             handleResetLayout();
             fitView();
         }
-    }, [nodesInitialized]);
+    }, [nodesInitialized, fitView, handleResetLayout]);
 
     const LegendLine = ({ color, label }) => (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

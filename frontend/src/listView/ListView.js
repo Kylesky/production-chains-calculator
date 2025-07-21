@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { Panel, PanelGroup, PanelResizeHandle } from 'react-resizable-panels';
 import "./ListView.css";
 
@@ -22,8 +22,8 @@ function ListView({ recipesListState, itemListsState, computeVarsState, forceWho
     }
 
     useEffect(() => {
-        setSearchState(getRecipeSearchFilters(data).reduce((acc, { id: id, default: def }) => { acc[id] = def; return acc }, { ...searchState }));
-    }, []);
+        setSearchState(getRecipeSearchFilters(data).reduce((acc, { id, default: def }) => { acc[id] = def; return acc }, { ...searchState }));
+    });
 
     return <div className="list-view">
         <ControlPanel computeVarsState={computeVarsState} recipesListState={recipesListState} handleRecipeModalOpen={handleRecipeModalOpen} forceWholeBuildingsState={forceWholeBuildingsState} />

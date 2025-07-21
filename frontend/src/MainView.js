@@ -37,7 +37,7 @@ function MainView() {
             setComputeTime(time);
             setRunCompute(false);
         }
-    }, [recipesList, itemGoalNumbers, computeType, computeMethod, runCompute])
+    }, [recipesList, data, inputsList, outputsList, intermediatesList, itemGoalNumbers, computeType, computeMethod, runCompute])
 
     useEffect(() => {
         if (runUpdateMaterialsLists) {
@@ -78,7 +78,7 @@ function MainView() {
             setItemGoalNumbers(numbers);
             setRunUpdateMaterialsLists(false);
         }
-    }, [recipesList, runUpdateMaterialsLists]);
+    }, [recipesList, itemGoalNumbers, runUpdateMaterialsLists]);
 
     const handleCompute = () => {
         setRunCompute(true);

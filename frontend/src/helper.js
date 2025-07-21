@@ -14,6 +14,7 @@ function getComputeTypeSuffix(computeType) {
         case 'per-sec': return "/s";
         case 'per-hr': return "/hr";
         case 'count': return "";
+        default: return "";
     }
 }
 
@@ -27,8 +28,9 @@ function computePerBuildingMultiplier(computeType, recipeDuration, processSpeed)
             return 3600 * (processSpeed ?? 1) / recipeDuration;
         case "count":
             return 1;
+        default:
+            return 1;
     }
-    return 1;
 }
 
 export { getIconSource, getRecipeProcess, getComputeTypeSuffix, computePerBuildingMultiplier };
