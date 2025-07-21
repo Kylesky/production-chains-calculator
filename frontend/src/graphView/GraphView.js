@@ -26,7 +26,8 @@ const edgeTypes = {
     "custom": CustomEdge
 }
 
-function applyDagreLayout(nodes, edges) {
+const resetLayout = (nodes, edges, setNodes, setEdges) => {
+    // Apply layout from Dagre
     const g = new Dagre.graphlib.Graph().setDefaultEdgeLabel(() => ({}));
     g.setGraph({ rankdir: "LR", ranksep: 100, nodesep: 5 });
 
@@ -51,7 +52,8 @@ function applyDagreLayout(nodes, edges) {
         return { ...node, position: { x, y } };
     });
 
-    return {nodes: layoutedNodes, edges: edges}
+    setNodes([...layoutedNodes]);
+    setEdges([...edges]);
 }
 
 function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
@@ -62,26 +64,22 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
     // Need to call this for updates while the chart is open
     useEffect(() => {
         const newNodes = nodes.map((node) => {
-            return {...node, data: {...node.data, forceWholeBuildings: forceWholeBuildingsState.value}}
+            return { ...node, data: { ...node.data, forceWholeBuildings: forceWholeBuildingsState.value } }
         })
         setNodes(newNodes);
-    }, [forceWholeBuildingsState.value, nodes, setNodes]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [forceWholeBuildingsState.value]);
 
     const nodesInitialized = useNodesInitialized();
-
-    const handleResetLayout = useCallback(() => {
-        const {nodes: layoutedNodes, edges: layoutedEdges} = applyDagreLayout(nodes, edges);
-        setNodes([...layoutedNodes]);
-        setEdges([...layoutedEdges]);
-    }, [nodes, edges, setNodes, setEdges]);
 
     // Handle dagre layouting
     useEffect(() => {
         if (nodesInitialized) {
-            handleResetLayout();
+            resetLayout(nodes, edges, setNodes, setEdges);
             fitView();
         }
-    }, [nodesInitialized, fitView, handleResetLayout]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [nodesInitialized]);
 
     const LegendLine = ({ color, label }) => (
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -116,7 +114,7 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
                         <input type="checkbox" onChange={handleChangeForceWholeBuildings} />}
                     {"Force whole buildings?"}
                 </label>
-                <span><button onClick={handleResetLayout}>Reset Layout</button></span>
+                <span><button onClick={() => resetLayout(nodes, edges, setNodes, setEdges)}>Reset Layout</button></span>
             </div>
         </Panel>
         <Panel position="bottom-left" style={{ background: "rgba(0, 0, 0, 0.5)", padding: "5px" }}>
@@ -188,10 +186,6 @@ function GraphView({ recipesListState, itemListsState, computeVarsState, forceWh
             })
         }
     });
-
-    // itemListsState.outputs.list.forEach(item => { addMaterialNode(item) });
-    // itemListsState.inputs.list.forEach(item => { addMaterialNode(item) });
-    // itemListsState.intermediates.list.forEach(item => { addMaterialNode(item) });
 
     return <ReactFlowProvider>
         <FlowChart nodeList={nodes} edgeList={edges} forceWholeBuildingsState={forceWholeBuildingsState} />
