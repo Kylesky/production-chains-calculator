@@ -95,30 +95,11 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
         recipes = recipes.filter(checkSearchMatch);
 
         setFilteredRecipesList(recipes);
-    });
+    }, [searchState]);
 
     useEffect(() => {
         applyFilters();
     }, [show, applyFilters]);
-
-    const toggleSelectedRecipe = useCallback((selected, toggledRecipe) => {
-        if (selected) {
-            setSelectedRecipesList(selectedRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
-            if (checkSearchMatch(toggledRecipe)) {
-                const index = filteredRecipesList.findIndex(item => item.id >= toggledRecipe.id);
-                const newlist = [...filteredRecipesList];
-                if (index === -1) {
-                    newlist.push(toggledRecipe);
-                } else {
-                    newlist.splice(index, 0, toggledRecipe);
-                }
-                setFilteredRecipesList(newlist);
-            }
-        } else {
-            setSelectedRecipesList([...selectedRecipesList, toggledRecipe]);
-            setFilteredRecipesList(filteredRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
-        }
-    });
 
     const addSelectedRecipes = () => {
         addRecipes(selectedRecipesList);
@@ -127,11 +108,30 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
     };
 
     const recipeCardsContainer = useMemo(() => {
+        const toggleSelectedRecipe = (selected, toggledRecipe) => {
+            if (selected) {
+                setSelectedRecipesList(selectedRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
+                if (checkSearchMatch(toggledRecipe)) {
+                    const index = filteredRecipesList.findIndex(item => item.id >= toggledRecipe.id);
+                    const newlist = [...filteredRecipesList];
+                    if (index === -1) {
+                        newlist.push(toggledRecipe);
+                    } else {
+                        newlist.splice(index, 0, toggledRecipe);
+                    }
+                    setFilteredRecipesList(newlist);
+                }
+            } else {
+                setSelectedRecipesList([...selectedRecipesList, toggledRecipe]);
+                setFilteredRecipesList(filteredRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
+            }
+        };
+
         return <div className="recipe-cards-container">
             {selectedRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={true} onClick={() => toggleSelectedRecipe(true, recipe)} /> })}
             {filteredRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={false} onClick={() => toggleSelectedRecipe(false, recipe)} /> })}
         </div>
-    }, [selectedRecipesList, filteredRecipesList, data, toggleSelectedRecipe])
+    }, [selectedRecipesList, filteredRecipesList, data])
 
     const handleEnter = (event) => {
         if (event.key === "Enter") applyFilters();

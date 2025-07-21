@@ -73,7 +73,7 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
         const {nodes: layoutedNodes, edges: layoutedEdges} = applyDagreLayout(nodes, edges);
         setNodes([...layoutedNodes]);
         setEdges([...layoutedEdges]);
-    });
+    }, [nodes, edges]);
 
     // Handle dagre layouting
     useEffect(() => {
