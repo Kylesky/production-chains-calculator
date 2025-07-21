@@ -23,7 +23,8 @@ function ListView({ recipesListState, itemListsState, computeVarsState, forceWho
 
     useEffect(() => {
         setSearchState(getRecipeSearchFilters(data).reduce((acc, { id, default: def }) => { acc[id] = def; return acc }, { ...searchState }));
-    }, [data, searchState]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [data]);
 
     return <div className="list-view">
         <ControlPanel computeVarsState={computeVarsState} recipesListState={recipesListState} handleRecipeModalOpen={handleRecipeModalOpen} forceWholeBuildingsState={forceWholeBuildingsState} />

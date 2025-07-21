@@ -26,26 +26,62 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
+const includesIgnoreCase = (s1, s2) => { return s1.toLowerCase().includes(s2.toLowerCase()); }
+
+const matchesGeneralSearch = (data, searchState, recipe) => {
+    let result = false;
+    result |= includesIgnoreCase(recipe.name, searchState.general);
+    if (result) return true;
+    result |= recipe.input ? recipe.input.some(input => { return includesIgnoreCase(data.items[input.id].name, searchState.general) }) : false;
+    if (result) return true;
+    result |= data.recipe_types[recipe.type].processes.some(process => { return includesIgnoreCase(data.processes[process].name, searchState.general) });
+    if (result) return true;
+    result |= recipe.output ? recipe.output.some(output => { return includesIgnoreCase(data.items[output.id].name, searchState.general) }) : false;
+    if (result) return true;
+    return result;
+}
+
+const matchesInputSearch = (data, searchState, recipe) => {
+    return recipe.input ? recipe.input.some(input => { return includesIgnoreCase(data.items[input.id].name, searchState.input) }) : false;
+}
+
+const matchesProcessSearch = (data, searchState, recipe) => {
+    return data.recipe_types[recipe.type].processes.some(process => { return includesIgnoreCase(data.processes[process].name, searchState.process) });
+}
+
+const matchesOutputSearch = (data, searchState, recipe) => {
+    return recipe.output ? recipe.output.some(output => { return includesIgnoreCase(data.items[output.id].name, searchState.output) }) : false;
+}
+
+const checkSearchMatch = (data, searchState, recipe) => {
+    if (searchState.general !== '' && !matchesGeneralSearch(data, searchState, recipe)) return false;
+    if (!checkGameSpecificRecipeSearchMatch(data, recipe, searchState)) return false;
+    if (searchState.advanced) {
+        if (searchState.input !== '' && !matchesInputSearch(data, searchState, recipe)) return false;
+        if (searchState.process !== '' && !matchesProcessSearch(data, searchState, recipe)) return false;
+        if (searchState.output !== '' && !matchesOutputSearch(data, searchState, recipe)) return false;
+    }
+    return true;
+}
+
+const applyFilters = (data, recipesList, selectedRecipesList, setFilteredRecipesList, searchState) => {
+    let recipes = Object.values(data.recipes);
+    recipes = recipes.filter(recipe => {
+        return selectedRecipesList.every(selected => { return selected.id !== recipe.id }) && recipesList.every(added => { return added.id !== recipe.id })
+    })
+    recipes = recipes.filter((recipe) => checkSearchMatch(data, searchState, recipe));
+
+    setFilteredRecipesList(recipes);
+}
+
 const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchState }) => {
     const data = useGetData();
     const { recipesList, addRecipes } = recipesListState;
-    const includesIgnoreCase = (s1, s2) => { return s1.toLowerCase().includes(s2.toLowerCase()); }
+    const [ toApplyFilters, setToApplyFilters ] = useState(true);
 
     const handleGeneralSearchChange = (event) => {
         setSearchState({ ...searchState, general: event.target.value })
     }
-    const matchesGeneralSearch = useCallback((recipe) => {
-        let result = false;
-        result |= includesIgnoreCase(recipe.name, searchState.general);
-        if (result) return true;
-        result |= recipe.input ? recipe.input.some(input => { return includesIgnoreCase(data.items[input.id].name, searchState.general) }) : false;
-        if (result) return true;
-        result |= data.recipe_types[recipe.type].processes.some(process => { return includesIgnoreCase(data.processes[process].name, searchState.general) });
-        if (result) return true;
-        result |= recipe.output ? recipe.output.some(output => { return includesIgnoreCase(data.items[output.id].name, searchState.general) }) : false;
-        if (result) return true;
-        return result;
-    }, [searchState.general, data.items, data.processes, data.recipe_types]);
 
     const toggleAdvancedSearch = () => {
         setSearchState({ ...searchState, advanced: !searchState.advanced })
@@ -54,51 +90,28 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
     const handleInputSearchChange = (event) => {
         setSearchState({ ...searchState, input: event.target.value })
     };
-    const matchesInputSearch = useCallback((recipe) => {
-        return recipe.input ? recipe.input.some(input => { return includesIgnoreCase(data.items[input.id].name, searchState.input) }) : false;
-    }, [searchState.input, data.items]);
 
     const handleProcessSearchChange = (event) => {
         setSearchState({ ...searchState, process: event.target.value })
     };
-    const matchesProcessSearch = useCallback((recipe) => {
-        return data.recipe_types[recipe.type].processes.some(process => { return includesIgnoreCase(data.processes[process].name, searchState.process) });
-    }, [searchState.process, data.processes, data.recipe_types]);
 
     const handleOutputSearchChange = (event) => {
         setSearchState({ ...searchState, output: event.target.value })
     };
-    const matchesOutputSearch = useCallback((recipe) => {
-        return recipe.output ? recipe.output.some(output => { return includesIgnoreCase(data.items[output.id].name, searchState.output) }) : false;
-    }, [searchState.output, data.items]);
-
-    const checkSearchMatch = useCallback((recipe) => {
-        if (searchState.general !== '' && !matchesGeneralSearch(recipe)) return false;
-        if (!checkGameSpecificRecipeSearchMatch(data, recipe, searchState)) return false;
-        if (searchState.advanced) {
-            if (searchState.input !== '' && !matchesInputSearch(recipe)) return false;
-            if (searchState.process !== '' && !matchesProcessSearch(recipe)) return false;
-            if (searchState.output !== '' && !matchesOutputSearch(recipe)) return false;
-        }
-        return true;
-    }, [searchState, data, matchesGeneralSearch, matchesInputSearch, matchesOutputSearch, matchesProcessSearch]);
+    
+    const handleApplyFilters = () => {
+        setToApplyFilters(true);
+    }
 
     const [selectedRecipesList, setSelectedRecipesList] = useState([]);
     const [filteredRecipesList, setFilteredRecipesList] = useState([]);
 
-    const applyFilters = useCallback(() => {
-        let recipes = Object.values(data.recipes);
-        recipes = recipes.filter(recipe => {
-            return selectedRecipesList.every(selected => { return selected.id !== recipe.id }) && recipesList.every(added => { return added.id !== recipe.id })
-        })
-        recipes = recipes.filter(checkSearchMatch);
-
-        setFilteredRecipesList(recipes);
-    }, [checkSearchMatch, data.recipes, recipesList, selectedRecipesList]);
-
     useEffect(() => {
-        applyFilters();
-    }, [show, applyFilters]);
+        if(show || toApplyFilters) {
+            applyFilters(data, recipesList, selectedRecipesList, setFilteredRecipesList, searchState);
+            setToApplyFilters(false);
+        }
+    }, [show, toApplyFilters]);
 
     const addSelectedRecipes = () => {
         addRecipes(selectedRecipesList);
@@ -110,7 +123,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
         const toggleSelectedRecipe = (selected, toggledRecipe) => {
             if (selected) {
                 setSelectedRecipesList(selectedRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
-                if (checkSearchMatch(toggledRecipe)) {
+                if (checkSearchMatch(data, searchState, toggledRecipe)) {
                     const index = filteredRecipesList.findIndex(item => item.id >= toggledRecipe.id);
                     const newlist = [...filteredRecipesList];
                     if (index === -1) {
@@ -130,10 +143,10 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
             {selectedRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={true} onClick={() => toggleSelectedRecipe(true, recipe)} /> })}
             {filteredRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={false} onClick={() => toggleSelectedRecipe(false, recipe)} /> })}
         </div>
-    }, [selectedRecipesList, filteredRecipesList, data, checkSearchMatch])
+    }, [selectedRecipesList, filteredRecipesList, data])
 
     const handleEnter = (event) => {
-        if (event.key === "Enter") applyFilters();
+        if (event.key === "Enter") handleApplyFilters();
     }
 
     const additionalSearchComponents = getGameSpecificRecipeSearchFilters(data).map(({ id, label, type }) => {
@@ -161,7 +174,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
                 <div className="search">
                     <div className="main-search">
                         <input className="general-search" value={searchState.general} onChange={handleGeneralSearchChange} onKeyDown={handleEnter} />
-                        <button className="search-button" onClick={applyFilters}>Search</button>
+                        <button className="search-button" onClick={handleApplyFilters}>Search</button>
                     </div>
                 </div>
                 {searchState.advanced ?
