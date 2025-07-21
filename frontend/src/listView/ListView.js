@@ -23,7 +23,7 @@ function ListView({ recipesListState, itemListsState, computeVarsState, forceWho
 
     useEffect(() => {
         setSearchState(getRecipeSearchFilters(data).reduce((acc, { id, default: def }) => { acc[id] = def; return acc }, { ...searchState }));
-    });
+    }, [data, searchState]);
 
     return <div className="list-view">
         <ControlPanel computeVarsState={computeVarsState} recipesListState={recipesListState} handleRecipeModalOpen={handleRecipeModalOpen} forceWholeBuildingsState={forceWholeBuildingsState} />

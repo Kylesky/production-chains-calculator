@@ -1,5 +1,5 @@
 import Dagre from '@dagrejs/dagre';
-import { useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import {
     ReactFlow,
     ReactFlowProvider,
@@ -69,11 +69,11 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
 
     const nodesInitialized = useNodesInitialized();
 
-    const handleResetLayout = () => {
+    const handleResetLayout = useCallback(() => {
         const {nodes: layoutedNodes, edges: layoutedEdges} = applyDagreLayout(nodes, edges);
         setNodes([...layoutedNodes]);
         setEdges([...layoutedEdges]);
-    }
+    });
 
     // Handle dagre layouting
     useEffect(() => {

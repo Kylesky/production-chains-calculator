@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import Modal from 'react-modal';
 import './RecipeModal.css';
 import RecipeCard from './RecipeCard';
@@ -87,7 +87,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
     const [selectedRecipesList, setSelectedRecipesList] = useState([]);
     const [filteredRecipesList, setFilteredRecipesList] = useState([]);
 
-    const applyFilters = () => {
+    const applyFilters = useCallback(() => {
         let recipes = Object.values(data.recipes);
         recipes = recipes.filter(recipe => {
             return selectedRecipesList.every(selected => { return selected.id !== recipe.id }) && recipesList.every(added => { return added.id !== recipe.id })
@@ -95,13 +95,13 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
         recipes = recipes.filter(checkSearchMatch);
 
         setFilteredRecipesList(recipes);
-    };
+    });
 
     useEffect(() => {
         applyFilters();
     }, [show, applyFilters]);
 
-    const toggleSelectedRecipe = (selected, toggledRecipe) => {
+    const toggleSelectedRecipe = useCallback((selected, toggledRecipe) => {
         if (selected) {
             setSelectedRecipesList(selectedRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
             if (checkSearchMatch(toggledRecipe)) {
@@ -118,13 +118,13 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
             setSelectedRecipesList([...selectedRecipesList, toggledRecipe]);
             setFilteredRecipesList(filteredRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
         }
-    }
+    });
 
     const addSelectedRecipes = () => {
         addRecipes(selectedRecipesList);
         setSelectedRecipesList([]);
         onClose();
-    }
+    };
 
     const recipeCardsContainer = useMemo(() => {
         return <div className="recipe-cards-container">
