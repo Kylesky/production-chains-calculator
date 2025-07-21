@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Modal from 'react-modal';
 import './RecipeModal.css';
 import RecipeCard from './RecipeCard';
@@ -74,10 +74,29 @@ const applyFilters = (data, recipesList, selectedRecipesList, setFilteredRecipes
     setFilteredRecipesList(recipes);
 }
 
+const toggleSelectedRecipe = (selected, toggledRecipe, data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList) => {
+    if (selected) {
+        setSelectedRecipesList(selectedRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
+        if (checkSearchMatch(data, searchState, toggledRecipe)) {
+            const index = filteredRecipesList.findIndex(item => item.id >= toggledRecipe.id);
+            const newlist = [...filteredRecipesList];
+            if (index === -1) {
+                newlist.push(toggledRecipe);
+            } else {
+                newlist.splice(index, 0, toggledRecipe);
+            }
+            setFilteredRecipesList(newlist);
+        }
+    } else {
+        setSelectedRecipesList([...selectedRecipesList, toggledRecipe]);
+        setFilteredRecipesList(filteredRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
+    }
+};
+
 const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchState }) => {
     const data = useGetData();
     const { recipesList, addRecipes } = recipesListState;
-    const [ toApplyFilters, setToApplyFilters ] = useState(true);
+    const [toApplyFilters, setToApplyFilters] = useState(true);
 
     const handleGeneralSearchChange = (event) => {
         setSearchState({ ...searchState, general: event.target.value })
@@ -98,7 +117,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
     const handleOutputSearchChange = (event) => {
         setSearchState({ ...searchState, output: event.target.value })
     };
-    
+
     const handleApplyFilters = () => {
         setToApplyFilters(true);
     }
@@ -107,10 +126,9 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
     const [filteredRecipesList, setFilteredRecipesList] = useState([]);
 
     useEffect(() => {
-        if(show || toApplyFilters) {
-            applyFilters(data, recipesList, selectedRecipesList, setFilteredRecipesList, searchState);
-            setToApplyFilters(false);
-        }
+        applyFilters(data, recipesList, selectedRecipesList, setFilteredRecipesList, searchState);
+        setToApplyFilters(false);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [show, toApplyFilters]);
 
     const addSelectedRecipes = () => {
@@ -120,30 +138,12 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
     };
 
     const recipeCardsContainer = useMemo(() => {
-        const toggleSelectedRecipe = (selected, toggledRecipe) => {
-            if (selected) {
-                setSelectedRecipesList(selectedRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
-                if (checkSearchMatch(data, searchState, toggledRecipe)) {
-                    const index = filteredRecipesList.findIndex(item => item.id >= toggledRecipe.id);
-                    const newlist = [...filteredRecipesList];
-                    if (index === -1) {
-                        newlist.push(toggledRecipe);
-                    } else {
-                        newlist.splice(index, 0, toggledRecipe);
-                    }
-                    setFilteredRecipesList(newlist);
-                }
-            } else {
-                setSelectedRecipesList([...selectedRecipesList, toggledRecipe]);
-                setFilteredRecipesList(filteredRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
-            }
-        };
-
         return <div className="recipe-cards-container">
-            {selectedRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={true} onClick={() => toggleSelectedRecipe(true, recipe)} /> })}
-            {filteredRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={false} onClick={() => toggleSelectedRecipe(false, recipe)} /> })}
+            {selectedRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={true} onClick={() => toggleSelectedRecipe(true, recipe, data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)} /> })}
+            {filteredRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={false} onClick={() => toggleSelectedRecipe(false, recipe, data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)} /> })}
         </div>
-    }, [selectedRecipesList, filteredRecipesList, data])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [selectedRecipesList, filteredRecipesList]);
 
     const handleEnter = (event) => {
         if (event.key === "Enter") handleApplyFilters();
