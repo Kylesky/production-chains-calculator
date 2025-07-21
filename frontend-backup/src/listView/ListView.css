@@ -1,0 +1,25 @@
+.list-view {
+    height: 100%;
+    width: 100%;
+}
+
+.panel-container {
+    height: 95%;
+}
+
+.panel-group {
+    height: 100%;
+}
+
+.panel {
+    height: 100%;
+}
+
+.panel-resize-handle {
+    background: grey;
+    /* border: 1px grey dashed; */
+    width: 2px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

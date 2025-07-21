@@ -1,0 +1,131 @@
+.materials-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.input-output-container {
+    height: 35%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.outputs-panel {
+    height: 100%;
+    width: 50%;
+}
+
+.inputs-panel {
+    height: 100%;
+    width: 50%;
+    border-right: 1px grey dashed;
+}
+
+.item-list {
+    height: 95%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.intermediates-panel {
+    height: 35%;
+    width: 100%;
+}
+
+.intermediates-list-container {
+    height: 95%;
+    width: 100%;
+}
+
+.intermediates-item-list {
+    max-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow-y: auto;
+    align-items: start;
+}
+
+.item-entry {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    gap: 3px;
+}
+
+.item-entry-input {
+    width: 3em;
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.item-entry-input::-webkit-outer-spin-button,
+.item-entry-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.item-entry-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.buildings-panel {
+    height: 15%;
+    width: 100%;
+}
+
+.buildings-container {
+    width: 100%;
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+}
+
+.costs-panel {
+    height: 15%;
+    width: 100%;
+}
+
+.costs-container {
+    width: 100%;
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px;
+}
+
+.card-container {
+    border: 2px grey solid;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px grey dashed;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 5px;
+}
+
+.item-entry {
+    text-align: start;
+}

@@ -1,0 +1,72 @@
+.recipe-node-contents {
+    background: '#0f0f0f';
+    border: 5px blue solid;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.recipe-node-name {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+}
+
+.recipe-node-process {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px grey dashed;
+    padding: 2px;
+    gap: 5px;
+}
+
+.recipe-node-process-costs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px grey dashed;
+    padding: 2px;
+    gap: 2px;
+}
+
+.recipe-node-inout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-node-inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-node-arrow {
+    padding: 5px;
+}
+
+.recipe-node-outputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-node-material-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    white-space: nowrap;
+}

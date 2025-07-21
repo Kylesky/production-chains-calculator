@@ -1,0 +1,13 @@
+.control-panel {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.compute-option {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}

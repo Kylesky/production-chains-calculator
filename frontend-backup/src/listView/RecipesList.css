@@ -1,0 +1,84 @@
+.recipes-list-container{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.recipes-table {
+    width: 100%;
+}
+
+.column-header {
+    width: 32%;
+}
+
+.num-column-header {
+    width: 2%;
+}
+
+.x-column-header {
+    width: 2%;
+}
+
+.recipes-list-table-cell {
+    border-top: 1px grey dashed;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 32%;
+}
+
+.recipes-list-table-num-cell {
+    border-top: 1px grey dashed;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 2%;
+}
+
+.recipes-list-table-x-cell {
+    border-top: 1px grey dashed;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 2%;
+}
+
+.recipes-list-table-x-cell:hover {
+    cursor: pointer;
+}
+
+.recipes-list-material-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.process-selection-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.process-costs-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.recipes-list-process-icon {
+    padding: 2px;
+}
+
+.recipes-list-process-icon:hover {
+    cursor: pointer;
+}
+
+.recipes-list-process-icon-selected {
+    padding: 2px;
+    border: 2px white solid;
+}
+
+.recipes-list-process-icon-selected:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,79 @@
+.recipe-card {
+    background: '#0f0f0f';
+    border: 1px white solid;
+    border-radius: 5px;
+    height: fit-content;
+    width: 100%;
+}
+
+.recipe-card:hover {
+    cursor: pointer;
+}
+
+.recipe-card-selected {
+    background: darkgreen;
+    border: 1px green solid;
+    border-radius: 5px;
+    height: fit-content;
+    width: 100%;
+}
+
+.recipe-card-selected:hover {
+    cursor: pointer;
+}
+
+.recipe-card-contents {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.recipe-card-name {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+}
+
+.recipe-card-process {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px grey dashed;
+    padding: 2px;
+}
+
+.recipe-card-inout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-card-inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-card-arrow {
+    padding: 5px;
+}
+
+.recipe-card-outputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recipe-card-material-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
