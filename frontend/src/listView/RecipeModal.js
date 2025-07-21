@@ -34,7 +34,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
     const handleGeneralSearchChange = (event) => {
         setSearchState({ ...searchState, general: event.target.value })
     }
-    const matchesGeneralSearch = (recipe) => {
+    const matchesGeneralSearch = useCallback((recipe) => {
         let result = false;
         result |= includesIgnoreCase(recipe.name, searchState.general);
         if (result) return true;
@@ -45,33 +45,32 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
         result |= recipe.output ? recipe.output.some(output => { return includesIgnoreCase(data.items[output.id].name, searchState.general) }) : false;
         if (result) return true;
         return result;
-    };
+    }, [searchState.general]);
 
     const toggleAdvancedSearch = () => {
         setSearchState({ ...searchState, advanced: !searchState.advanced })
-    }
+    };
 
     const handleInputSearchChange = (event) => {
         setSearchState({ ...searchState, input: event.target.value })
-    }
-    const matchesInputSearch = (recipe) => {
-        return recipe.input ? recipe.input.some(input => { return includesIgnoreCase(data.items[input.id].name, searchState.input) }) : false;
     };
+    const matchesInputSearch = useCallback((recipe) => {
+        return recipe.input ? recipe.input.some(input => { return includesIgnoreCase(data.items[input.id].name, searchState.input) }) : false;
+    }, [searchState.input]);
 
     const handleProcessSearchChange = (event) => {
         setSearchState({ ...searchState, process: event.target.value })
-    }
-    const matchesProcessSearch = (recipe) => {
-        return data.recipe_types[recipe.type].processes.some(process => { return includesIgnoreCase(data.processes[process].name, searchState.process) });
-        // return includesIgnoreCase(data.processes[recipe.process.id].name, processSearch)
     };
+    const matchesProcessSearch = useCallback((recipe) => {
+        return data.recipe_types[recipe.type].processes.some(process => { return includesIgnoreCase(data.processes[process].name, searchState.process) });
+    }, [searchState.process]);
 
     const handleOutputSearchChange = (event) => {
         setSearchState({ ...searchState, output: event.target.value })
-    }
-    const matchesOutputSearch = (recipe) => {
+    };
+    const matchesOutputSearch = useCallback((recipe) => {
         return recipe.output ? recipe.output.some(output => { return includesIgnoreCase(data.items[output.id].name, searchState.output) }) : false;
-    }
+    }, [searchState.output]);
 
     const checkSearchMatch = useCallback((recipe) => {
         if (searchState.general !== '' && !matchesGeneralSearch(recipe)) return false;
