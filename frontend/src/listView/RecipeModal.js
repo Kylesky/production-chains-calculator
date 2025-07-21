@@ -82,7 +82,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
             if (searchState.output !== '' && !matchesOutputSearch(recipe)) return false;
         }
         return true;
-    }, [searchState]);
+    }, [searchState, data, matchesGeneralSearch, matchesInputSearch, matchesOutputSearch, matchesProcessSearch]);
 
     const [selectedRecipesList, setSelectedRecipesList] = useState([]);
     const [filteredRecipesList, setFilteredRecipesList] = useState([]);
