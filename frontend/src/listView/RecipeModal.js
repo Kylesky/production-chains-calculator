@@ -73,7 +73,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
         return recipe.output ? recipe.output.some(output => { return includesIgnoreCase(data.items[output.id].name, searchState.output) }) : false;
     }
 
-    const checkSearchMatch = (recipe) => {
+    const checkSearchMatch = useCallback((recipe) => {
         if (searchState.general !== '' && !matchesGeneralSearch(recipe)) return false;
         if (!checkGameSpecificRecipeSearchMatch(data, recipe, searchState)) return false;
         if (searchState.advanced) {
@@ -82,7 +82,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
             if (searchState.output !== '' && !matchesOutputSearch(recipe)) return false;
         }
         return true;
-    }
+    }, [searchState]);
 
     const [selectedRecipesList, setSelectedRecipesList] = useState([]);
     const [filteredRecipesList, setFilteredRecipesList] = useState([]);
@@ -95,7 +95,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
         recipes = recipes.filter(checkSearchMatch);
 
         setFilteredRecipesList(recipes);
-    }, [searchState, checkSearchMatch, data.recipes, recipesList, selectedRecipesList]);
+    }, [checkSearchMatch, data.recipes, recipesList, selectedRecipesList]);
 
     useEffect(() => {
         applyFilters();
