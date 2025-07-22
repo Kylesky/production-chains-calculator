@@ -5,7 +5,8 @@ import RecipeCard from './RecipeCard';
 import { useGetData } from '../DataContext';
 import {
     getRecipeSearchFilters as getGameSpecificRecipeSearchFilters,
-    checkRecipeSearchMatch as checkGameSpecificRecipeSearchMatch
+    checkRecipeSearchMatch as checkGameSpecificRecipeSearchMatch,
+    getRecipeProcessIds
 } from '../gameSpecific/moduleRouter';
 
 const customStyles = {
@@ -34,7 +35,7 @@ const matchesGeneralSearch = (data, searchState, recipe) => {
     if (result) return true;
     result |= recipe.input ? recipe.input.some(input => { return includesIgnoreCase(data.items[input.id].name, searchState.general) }) : false;
     if (result) return true;
-    result |= data.recipe_types[recipe.type].processes.some(process => { return includesIgnoreCase(data.processes[process].name, searchState.general) });
+    result |= getRecipeProcessIds(data, recipe).some(process => { return includesIgnoreCase(data.processes[process].name, searchState.general) });
     if (result) return true;
     result |= recipe.output ? recipe.output.some(output => { return includesIgnoreCase(data.items[output.id].name, searchState.general) }) : false;
     if (result) return true;
@@ -46,7 +47,7 @@ const matchesInputSearch = (data, searchState, recipe) => {
 }
 
 const matchesProcessSearch = (data, searchState, recipe) => {
-    return data.recipe_types[recipe.type].processes.some(process => { return includesIgnoreCase(data.processes[process].name, searchState.process) });
+    return getRecipeProcessIds(data, recipe).some(process => { return includesIgnoreCase(data.processes[process].name, searchState.process) });
 }
 
 const matchesOutputSearch = (data, searchState, recipe) => {

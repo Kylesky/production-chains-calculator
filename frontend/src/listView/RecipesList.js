@@ -1,23 +1,18 @@
 import { useGetData } from '../DataContext'
 import Icon from '../components/Icon';
-import { getProcessCostComponents, getInputQuantity, getOutputQuantity } from '../gameSpecific/moduleRouter';
-import { getRecipeProcess, getComputeTypeSuffix, computePerBuildingMultiplier } from '../helper';
+import { getRecipeProcess, getProcessCostComponents, getInputQuantity, getOutputQuantity, getRecipeProcessIds, getRecipeTimePerCraft } from '../gameSpecific/moduleRouter';
+import { getComputeTypeSuffix, computePerBuildingMultiplier } from '../helper';
 import './RecipesList.css'
 
-function InputMaterialsList({ computeType, recipe }) {
+function InputMaterialsList({ computeType, recipe, process, itemsMultiplier }) {
     const data = useGetData();
     if (!recipe.input) return <div>None</div>;
-
-    const process = getRecipeProcess(data, recipe);
-
-    const perBuildingMultiplier = computePerBuildingMultiplier(computeType, recipe.duration, process.speed ?? 1);
-    const numBuildings = recipe.multiplier ?? 1;
 
     return <div>
         {recipe.input.map(material => {
             const pieces = [];
             const perCraft = getInputQuantity(data, material, recipe, process);
-            pieces.push(<span>{perCraft}x ({+(perBuildingMultiplier * perCraft * numBuildings).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>);
+            pieces.push(<span>{+(perCraft.toFixed(2))}x ({+(perCraft * itemsMultiplier).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>);
             pieces.push(<Icon id={material.id} name={data.items[material.id].name} />);
             pieces.push(<span> {data.items[material.id].name}</span>);
 
@@ -26,20 +21,15 @@ function InputMaterialsList({ computeType, recipe }) {
     </div>
 }
 
-function OutputMaterialsList({ computeType, recipe }) {
+function OutputMaterialsList({ computeType, recipe, process, itemsMultiplier }) {
     const data = useGetData();
     if (!recipe.output) return <div>None</div>;
-
-    const process = getRecipeProcess(data, recipe);
-
-    const perBuildingMultiplier = computePerBuildingMultiplier(computeType, recipe.duration, process.speed ?? 1);
-    const numBuildings = recipe.multiplier ?? 1;
 
     return <div>
         {recipe.output.map(material => {
             const pieces = [];
             const perCraft = getOutputQuantity(data, material, recipe, process);
-            pieces.push(<span>{perCraft}x ({+(perBuildingMultiplier * perCraft * numBuildings).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>);
+            pieces.push(<span>{+(perCraft.toFixed(2))}x ({+(perCraft * itemsMultiplier).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>);
             pieces.push(<Icon id={material.id} name={data.items[material.id].name} />);
             pieces.push(<span> {data.items[material.id].name}</span>);
 
@@ -48,30 +38,31 @@ function OutputMaterialsList({ computeType, recipe }) {
     </div>
 }
 
-function ProcessContent({ recipe, updateRecipe }) {
+function ProcessContent({ computeType, recipe, updateRecipe, process, timePerCraft }) {
     const data = useGetData();
 
-    const recipe_type = data.recipe_types[recipe.type];
-    const selectedProcess = recipe.selectedProcess ?? recipe_type.processes.length - 1;
-    const process = data.processes[recipe_type.processes[selectedProcess]];
+    const processes = getRecipeProcessIds(data, recipe);
+    const selectedProcess = getRecipeProcess(data, recipe);
 
     const topPiece = <div className="process-selection-container">
-        {recipe_type.processes.map((processId, index) => {
-            if (selectedProcess === index)
-                return <Icon className="recipes-list-process-icon-selected" id={processId} name={data.processes[processId]}
+        {processes.map((process, index) => {
+            if (selectedProcess.id === process)
+                return <Icon className="recipes-list-process-icon-selected" id={process} name={data.processes[process].name}
                     onClick={() => { updateRecipe(recipe.id, { ...recipe, selectedProcess: index }) }} />
-            return <Icon className="recipes-list-process-icon" id={processId} name={data.processes[processId]}
+            return <Icon className="recipes-list-process-icon" id={process} name={data.processes[process].name}
                 onClick={() => { updateRecipe(recipe.id, { ...recipe, selectedProcess: index }) }} />
         })}
         {process.name}
     </div>
 
     let costs = [];
-    costs.push(<span>&#9203;{+(recipe.duration / process.speed).toFixed(4)}s</span>);
-    costs = [...costs, ...getProcessCostComponents(data, process)];
+    if(timePerCraft) costs.push(<span>&#9203;{+(timePerCraft).toFixed(4)}s</span>);
+    costs = [...costs, ...getProcessCostComponents(data, "default", recipe, process)];
+
+    let costsMultiplied = [getProcessCostComponents(data, computeType, recipe, process, (recipe.multiplier ?? 1) * (computeType === "count" ? getRecipeTimePerCraft(data, recipe) : 1))];
 
     const bottomPiece = <div className="process-costs-container">
-        {costs}
+        {costs}&rarr;{costsMultiplied}
     </div>
 
     return <div>
@@ -82,19 +73,27 @@ function ProcessContent({ recipe, updateRecipe }) {
 
 function RecipeLine({ computeType, recipe, recipesListState, forceWholeBuildings }) {
     const { updateRecipe, removeRecipe } = recipesListState;
+    const data = useGetData();
+
+    const process = getRecipeProcess(data, recipe);
+    const timePerCraft = getRecipeTimePerCraft(data, recipe);
+    
+    const perBuildingMultiplier = computePerBuildingMultiplier(computeType, timePerCraft);
+    const numBuildings = recipe.multiplier ?? 1;
+    const itemsMultiplier = perBuildingMultiplier * numBuildings;
 
     return <tr>
         <td className="recipes-list-table-num-cell">
             {forceWholeBuildings ? Math.ceil(recipe.multiplier ?? 1) : +(recipe.multiplier ?? 1).toFixed(4)}x
         </td>
         <td className="recipes-list-table-cell">
-            <InputMaterialsList computeType={computeType} recipe={recipe} />
+            <InputMaterialsList computeType={computeType} recipe={recipe} process={process} itemsMultiplier={itemsMultiplier} />
         </td>
         <td className="recipes-list-table-cell">
-            <ProcessContent recipe={recipe} updateRecipe={updateRecipe} />
+            <ProcessContent computeType={computeType} recipe={recipe} updateRecipe={updateRecipe} process={process} timePerCraft={timePerCraft} />
         </td>
         <td className="recipes-list-table-cell">
-            <OutputMaterialsList computeType={computeType} recipe={recipe} />
+            <OutputMaterialsList computeType={computeType} recipe={recipe} process={process} itemsMultiplier={itemsMultiplier} />
         </td>
         <td className="recipes-list-table-x-cell" onClick={() => removeRecipe(recipe.id)}>&#10060;</td>
     </tr>

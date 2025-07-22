@@ -2,22 +2,23 @@ import { Handle, Position } from '@xyflow/react';
 import "./RecipeNode.css";
 import Icon from "../components/Icon";
 import { useGetData } from '../DataContext';
-import { getProcessCostComponents, getInputQuantity, getOutputQuantity } from '../gameSpecific/moduleRouter';
-import { getRecipeProcess, computePerBuildingMultiplier, getComputeTypeSuffix } from '../helper';
+import { getRecipeProcess, getProcessCostComponents, getInputQuantity, getOutputQuantity, getRecipeTimePerCraft } from '../gameSpecific/moduleRouter';
+import { computePerBuildingMultiplier, getComputeTypeSuffix } from '../helper';
 
 function RecipeNode({ data: nodeData }) {
     const data = useGetData();
     const { recipe, computeType, forceWholeBuildings } = nodeData;
 
     const process = getRecipeProcess(data, recipe);
+    const timePerCraft = getRecipeTimePerCraft(data, recipe);
 
-    const perBuildingMultiplier = computePerBuildingMultiplier(computeType, recipe.duration, process.speed ?? 1);
+    const perBuildingMultiplier = computePerBuildingMultiplier(computeType, timePerCraft);
     const numBuildings = recipe.multiplier ?? 1;
 
-    const costs = [
-        <span>&#9203;{+(recipe.duration / process.speed).toFixed(4)}s</span>,
-        ...getProcessCostComponents(data, process, forceWholeBuildings ? Math.ceil(numBuildings) : numBuildings)
-    ];
+    var costs = [...getProcessCostComponents(data, computeType, recipe, process, forceWholeBuildings ? Math.ceil(numBuildings) : numBuildings)];
+    if(computeType !== "count") {
+        if(timePerCraft) costs = [<span>&#9203;{+(timePerCraft.toFixed(4))}s</span>, ...costs];
+    }
 
     return <div>
         <div className="recipe-node-contents">
@@ -37,7 +38,7 @@ function RecipeNode({ data: nodeData }) {
                         recipe.input.map(input => {
                             const perCraft = getInputQuantity(data, input, recipe, process);
                             return <div className="recipe-node-material-line">
-                                <span>{perCraft}x ({+(perBuildingMultiplier * perCraft * numBuildings).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>
+                                <span>{+(perCraft.toFixed(2))}x ({+(perBuildingMultiplier * perCraft * numBuildings).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>
                                 <Icon id={input.id} name={data.items[input.id].name} />
                             </div>
                         }) :
@@ -49,7 +50,7 @@ function RecipeNode({ data: nodeData }) {
                         recipe.output.map(output => {
                             const perCraft = getOutputQuantity(data, output, recipe, process);
                             return <div className="recipe-node-material-line">
-                                <span>{perCraft}x ({+(perBuildingMultiplier * perCraft * numBuildings).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>
+                                <span>{+(perCraft.toFixed(2))}x ({+(perBuildingMultiplier * perCraft * numBuildings).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>
                                 <Icon id={output.id} name={data.items[output.id].name} />
                             </div>
                         }) :

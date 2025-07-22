@@ -50,7 +50,7 @@ function KoFiButton() {
         </div>
 }
 
-function SidePanel() {
+function SidePanel({clearRecipes}) {
     const data = useGetData();
     const importData = useImportData();
     const [isOpen, setIsOpen] = useState(data.gameId === undefined ? true : false);
@@ -58,6 +58,7 @@ function SidePanel() {
     const [selectedItem, setSelectedItem] = useState("");
 
     const handleLoad = (id) => {
+        clearRecipes();
         importData(id);
         setIsOpen(false);
     }
@@ -109,8 +110,8 @@ function SidePanel() {
                             <ul>
                                 <li>Simple: Fast and works well with straightforward problems. Struggles with multiple options and loops.</li>
                                 <li>Matrix: Resolves multiple options and loops better than Simple, but may struggle to match target numbers exactly. Will sometimes give "close enough" approximations for more complex problems.</li>
-                                <li>LP-Force: Slower but more accurate. Forces inputs and outputs to match the target numbers and tries to minimize byproducts (unused intermediates) if any. May give nonsense answers if it can't find a solution.</li>
-                                <li>LP-Optimize: Slower but more accurate. Minimizes inputs and maximizes outputs (depending on the problem). May give nonsense answers if it can't find a solution.</li>
+                                <li>LP-Force: Slower but more accurate. Forces inputs and outputs to match the target numbers and tries to minimize byproducts (unused intermediates) if any. Requires intermediates to be nonnegative. May give nonsense answers if it can't find a solution.</li>
+                                <li>LP-Optimize: Slower but more accurate. Minimizes inputs and maximizes outputs (depending on the problem). Requires intermediates to be nonnegative. May give nonsense answers if it can't find a solution.</li>
                             </ul>
                             <li>Everything should automatically be computed whenever you change anything, but you can click the compute button in case it gets stuck.</li>
                             <li>Check the Visual tab to see a flow chart of your recipes.</li>

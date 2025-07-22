@@ -1,14 +1,13 @@
 import './App.css';
 import MainView from './MainView';
-import SidePanel from './SidePanel';
 import { DataProvider } from './DataContext';
+import { useState } from 'react';
 
 function App() {
     return (
         <div id="app" className="App">
             <header className="App-header">
                 <DataProvider>
-                    <SidePanel />
                     <MainView />
                 </DataProvider>
             </header>

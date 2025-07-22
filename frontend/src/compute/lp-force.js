@@ -1,6 +1,6 @@
-// Force equality to targets, unspecified intermediate materials forced nonnegative and minimized
+// Force equality to targets, unspecified intermediate materials forced nonnegative and minimized (except for raw materials)
 
-function compute(recipes, outputGoals, inputGoals, intermediateGoals) {
+function compute(data, recipes, outputGoals, inputGoals, intermediateGoals) {
     const variables = {};
     Object.entries(recipes).forEach(([recipeId, recipe]) => {
         const variable = {"intermediates": 0};
@@ -25,8 +25,9 @@ function compute(recipes, outputGoals, inputGoals, intermediateGoals) {
         if(target !== null) constraints[itemId] = {"equal": target};
     })
     Object.entries(intermediateGoals).forEach(([itemId, target]) => {
-        if(target === null) constraints[itemId] = {"min": 0};
-        else constraints[itemId] = {"equal": target};
+        if(target === null) {
+            if(!data.items[itemId].raw) constraints[itemId] = {"min": 0};
+        } else constraints[itemId] = {"equal": target};
     })
 
     var model = {

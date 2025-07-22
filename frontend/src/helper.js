@@ -2,12 +2,6 @@ function getIconSource(data, id) {
     return `${process.env.PUBLIC_URL}/${data.gameId}/icons/${id}.png`;
 }
 
-function getRecipeProcess(data, recipe) {
-    const recipe_type = data.recipe_types[recipe.type];
-    const selectedProcess = recipe.selectedProcess ?? recipe_type.processes.length - 1;
-    return data.processes[recipe_type.processes[selectedProcess]];
-}
-
 function getComputeTypeSuffix(computeType) {
     switch(computeType){
         case 'per-min': return "/m";
@@ -18,14 +12,15 @@ function getComputeTypeSuffix(computeType) {
     }
 }
 
-function computePerBuildingMultiplier(computeType, recipeDuration, processSpeed) {
+function computePerBuildingMultiplier(computeType, timePerCraft) {
+    if(!timePerCraft) return 1;
     switch(computeType) {
         case "per-min":
-            return 60 * (processSpeed ?? 1) / recipeDuration;
+            return 60 / timePerCraft;
         case "per-sec":
-            return (processSpeed ?? 1) / recipeDuration;
+            return 1 / timePerCraft;
         case "per-hr":
-            return 3600 * (processSpeed ?? 1) / recipeDuration;
+            return 3600 / timePerCraft;
         case "count":
             return 1;
         default:
@@ -33,4 +28,4 @@ function computePerBuildingMultiplier(computeType, recipeDuration, processSpeed)
     }
 }
 
-export { getIconSource, getRecipeProcess, getComputeTypeSuffix, computePerBuildingMultiplier };
+export { getIconSource, getComputeTypeSuffix, computePerBuildingMultiplier };
