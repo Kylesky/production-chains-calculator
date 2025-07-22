@@ -1,16 +1,18 @@
 import './RecipeCard.css';
 import Icon from "../components/Icon";
 import { useGetData } from '../DataContext';
+import { getRecipeProcessIds } from '../gameSpecific/moduleRouter';
 
 
 const RecipeCard = ({ recipe, selected, onClick }) => {
     const data = useGetData()
+    const processes = getRecipeProcessIds(data, recipe);
     return <div className={selected ? "recipe-card-selected" : "recipe-card"} onClick={onClick}>
         <div className="recipe-card-contents">
             {recipe.name ? <div className="recipe-card-name">{recipe.name}</div> : null}
             <div className="recipe-card-process">
-                {data.recipe_types[recipe.type].processes.map(processId => {
-                    return <Icon id={processId} name={data.processes[processId].name} />
+                {processes.map(process => {
+                    return <Icon id={process} name={data.processes[process].name} />
                 })}
             </div>
             <div className="recipe-card-inout">

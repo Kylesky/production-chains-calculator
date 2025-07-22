@@ -1,5 +1,5 @@
-import { getRecipeProcess, computePerBuildingMultiplier } from "../helper";
-import { getInputQuantity, getOutputQuantity } from "../gameSpecific/moduleRouter";
+import { computePerBuildingMultiplier } from "../helper";
+import { getRecipeProcess, getInputQuantity, getOutputQuantity, getRecipeTimePerCraft } from "../gameSpecific/moduleRouter";
 import simpleCompute from "./simple";
 import matrixCompute from "./matrix";
 import lpForceCompute from "./lp-force";
@@ -19,7 +19,8 @@ function compute(data, recipesList, outputsList, inputsList, intermediatesList, 
     const intermediateGoals = intermediatesList.reduce(insertGoalNumber, {});
     const recipes = recipesList.reduce((acc, recipe) => {
         const process = getRecipeProcess(data, recipe);
-        const multiplier = computePerBuildingMultiplier(computeType, recipe.duration, process.speed ?? 1);
+        const timePerCraft = getRecipeTimePerCraft(data, recipe);
+        const multiplier = computePerBuildingMultiplier(computeType, timePerCraft);
         acc[recipe.id] = {
             input: "input" in recipe ? recipe.input.reduce((acc2, input) => { acc2[input.id] = multiplier * getInputQuantity(data, input, recipe, process); return acc2 }, {}) : {},
             output: "output" in recipe ? recipe.output.reduce((acc2, output) => { acc2[output.id] = multiplier * getOutputQuantity(data, output, recipe, process); return acc2 }, {}) : {}
@@ -34,18 +35,18 @@ function compute(data, recipesList, outputsList, inputsList, intermediatesList, 
     const startTime = Date.now();
     switch (computeMethod) {
         case "simple":
-            result = simpleCompute(recipes, outputGoals, inputGoals, intermediateGoals);
+            result = simpleCompute(data, recipes, outputGoals, inputGoals, intermediateGoals);
             break;
         case "matrix":
-            result = matrixCompute(recipes, outputGoals, inputGoals, intermediateGoals);
+            result = matrixCompute(data, recipes, outputGoals, inputGoals, intermediateGoals);
             break;
         case "lp-force":
-            result = lpForceCompute(recipes, outputGoals, inputGoals, intermediateGoals);
+            result = lpForceCompute(data, recipes, outputGoals, inputGoals, intermediateGoals);
             feasible = result.feasible;
             result = result.recipeCounts;
             break;
         case "lp-optimize":
-            result = lpOptimizeCompute(recipes, outputGoals, inputGoals, intermediateGoals);
+            result = lpOptimizeCompute(data, recipes, outputGoals, inputGoals, intermediateGoals);
             feasible = result.feasible;
             result = result.recipeCounts;
             break;
@@ -60,6 +61,12 @@ function compute(data, recipesList, outputsList, inputsList, intermediatesList, 
 
     Object.entries(recipes).forEach(([recipeId, {input, output}]) => {
         var count = (recipeId in result ? result[recipeId] : 0);
+
+        // If using the "Items" compute type, partial recipes are not allowed.
+        if(computeType === "count"){
+            count = Math.ceil(count);
+        }
+
         recipeCounts[recipeId] = count;
         Object.entries(input).forEach(([item, num]) => {
             if (item in itemConsumption) itemConsumption[item] = itemConsumption[item] - count * num;

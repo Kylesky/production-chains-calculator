@@ -1,6 +1,6 @@
 import { useGetData } from '../DataContext'
 import Icon from '../components/Icon';
-import { compileProcessCosts, getProcessCostComponents } from '../gameSpecific/moduleRouter';
+import { compileProcessCosts, getProcessCostComponents, getRecipeProcess } from '../gameSpecific/moduleRouter';
 import './MaterialsPanel.css'
 
 function ItemEntry({ item, negate, handleButtonPress, itemGoalNumbers, setItemGoalNumbers, itemComputedNumbers }) {
@@ -91,8 +91,7 @@ function BuildingsList({ recipesList }) {
     const data = useGetData();
     const counts = {};
     recipesList.forEach(recipe => {
-        const recipe_type = data.recipe_types[recipe.type];
-        const processId = recipe_type.processes[recipe.selectedProcess ?? recipe_type.processes.length - 1];
+        const processId = getRecipeProcess(data, recipe)["id"];
 
         if (processId in counts) {
             counts[processId] += Math.ceil(recipe.multiplier ?? 1);
@@ -111,9 +110,9 @@ function BuildingsList({ recipesList }) {
     </div>
 }
 
-function CostsList({ recipesList }) {
+function CostsList({ recipesList, computeType }) {
     const data = useGetData();
-    const components = getProcessCostComponents(data, compileProcessCosts(data, recipesList));
+    const components = getProcessCostComponents(data, computeType, {}, compileProcessCosts(data, computeType, recipesList));
     
     return <div className="costs-container">
         {components.map(component => {
@@ -122,7 +121,7 @@ function CostsList({ recipesList }) {
     </div>
 }
 
-function MaterialsPanel({ itemListsState, recipesListState, setIsRecipeModalOpen, updateSearchState, forceWholeBuildingsState }) {
+function MaterialsPanel({ itemListsState, recipesListState, computeType, setIsRecipeModalOpen, updateSearchState, forceWholeBuildingsState }) {
     const { recipesList } = recipesListState;
     const {
         goals: { numbers: itemGoalNumbers, set: setItemGoalNumbers },
@@ -157,7 +156,7 @@ function MaterialsPanel({ itemListsState, recipesListState, setIsRecipeModalOpen
         </div>
         <div className="costs-panel">
             <div className="header">Other Costs</div>
-            <CostsList recipesList={recipesList} />
+            <CostsList recipesList={recipesList} computeType={computeType} />
         </div>
     </div>
 }

@@ -1,4 +1,4 @@
-function compute(recipes, outputGoals, inputGoals, intermediateGoals) {
+function compute(data, recipes, outputGoals, inputGoals, intermediateGoals) {
     const itemRecipes = {};
     const itemInputCount = {};
     const itemOutputCount = {};

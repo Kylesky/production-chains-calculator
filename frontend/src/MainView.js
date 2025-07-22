@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ListView from './listView/ListView';
 import GraphView from './graphView/GraphView';
+import SidePanel from './SidePanel';
 import './MainView.css';
 import { useGetData } from './DataContext';
 import compute from './compute/compute';
@@ -38,6 +39,10 @@ function MainView() {
             setRunCompute(false);
         }
     }, [recipesList, data, inputsList, outputsList, intermediatesList, itemGoalNumbers, computeType, computeMethod, runCompute])
+
+    const handleCompute = () => {
+        setRunCompute(true);
+    };
 
     useEffect(() => {
         if (runUpdateMaterialsLists) {
@@ -77,12 +82,9 @@ function MainView() {
             intermediates.forEach(item => { if (item in itemGoalNumbers) numbers[item] = itemGoalNumbers[item]; });
             setItemGoalNumbers(numbers);
             setRunUpdateMaterialsLists(false);
+            handleCompute();
         }
     }, [recipesList, itemGoalNumbers, runUpdateMaterialsLists]);
-
-    const handleCompute = () => {
-        setRunCompute(true);
-    };
 
     const updateMaterialsLists = () => {
         setRunUpdateMaterialsLists(true);
@@ -199,20 +201,23 @@ function MainView() {
         set: setForceWholeBuildings
     }
 
-    return <Tabs className="tabs" selectedTabClassName="selected-tab" selectedTabPanelClassName="selected-tab-panel">
-        <TabList className="tab-list">
-            <Tab className="tab">List</Tab>
-            <Tab className="tab">Visual</Tab>
-            Data Set Loaded: {data.name}
-        </TabList>
+    return <>
+        <SidePanel clearRecipes={clearRecipes} />
+        <Tabs className="tabs" selectedTabClassName="selected-tab" selectedTabPanelClassName="selected-tab-panel">
+            <TabList className="tab-list">
+                <Tab className="tab">List</Tab>
+                <Tab className="tab">Visual</Tab>
+                Data Set Loaded: {data.name}
+            </TabList>
 
-        <TabPanel className="tab-panel">
-            <ListView recipesListState={recipesListState} itemListsState={itemListsState} computeVarsState={computeVarsState} forceWholeBuildingsState={forceWholeBuildingsState} />
-        </TabPanel>
-        <TabPanel className="tab-panel">
-            <GraphView recipesListState={recipesListState} itemListsState={itemListsState} computeVarsState={computeVarsState} forceWholeBuildingsState={forceWholeBuildingsState} />
-        </TabPanel>
-    </Tabs>
+            <TabPanel className="tab-panel">
+                <ListView recipesListState={recipesListState} itemListsState={itemListsState} computeVarsState={computeVarsState} forceWholeBuildingsState={forceWholeBuildingsState} />
+            </TabPanel>
+            <TabPanel className="tab-panel">
+                <GraphView recipesListState={recipesListState} itemListsState={itemListsState} computeVarsState={computeVarsState} forceWholeBuildingsState={forceWholeBuildingsState} />
+            </TabPanel>
+        </Tabs>
+    </>
 }
 
 export default MainView;

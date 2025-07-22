@@ -1,20 +1,37 @@
 import Icon from "../components/Icon";
+import { computePerBuildingMultiplier, getComputeTypeSuffix } from "../helper";
 import "./gameSpecific.css";
-import { getRecipeProcess } from "../helper";
 
-const costs=["energy", "burner", "nutrient", "food", "pollution"];
+const costs=["power", "burner", "nutrient", "food", "pollution"];
 
-function compileProcessCosts(data, recipesList){
+function getRecipeProcesses(data, recipe) {
+    return data.recipe_types[recipe.type].processes;
+}
+
+function getRecipeProcess(data, recipe) {
+    const recipeType = data.recipe_types[recipe.type];
+    const selectedProcess = recipe.selectedProcess ?? recipeType.processes.length - 1;
+    return data.processes[recipeType.processes[selectedProcess]];
+}
+
+function getRecipeTimePerCraft(data, recipe) {
+    const process = getRecipeProcess(data, recipe)
+    return recipe.duration / process.speed;
+}
+
+function compileProcessCosts(data, computeType, recipesList){
     const totals={};
 
     recipesList.forEach(recipe => {
         const process = getRecipeProcess(data, recipe);
+        let multiplier = recipe.multiplier ?? 1;
+        if(computeType === "count") multiplier *= getRecipeTimePerCraft(data, recipe);
         costs.forEach(costType => {
             if(costType in process){
                 if(costType in totals)
-                    totals[costType] += process[costType];
+                    totals[costType] += multiplier*process[costType];
                 else
-                    totals[costType] = process[costType];
+                    totals[costType] = multiplier*process[costType];
             }
         });
     });
@@ -22,31 +39,36 @@ function compileProcessCosts(data, recipesList){
     return totals;
 }
 
-function getProcessCostComponents(process, multiplier = 1) {
+function getProcessCostComponents(computeType, _recipe, process, multiplier = 1) {
     let components = [];
-    if(process.energy) {
-        components.push( <span>&#9889;{+(process.energy*multiplier).toFixed(2)}kw</span> );
+
+    const powerUnits = computeType === "count" ? "KJ" : "KW";
+    if(process.power) {
+        components.push( <span>&#9889;{+(process.power*multiplier).toFixed(2)} {powerUnits}</span> );
     }
     if(process.burner) {
         components.push(<div className="cost-item">
             <Icon id="coal" name="Burner" />
-            <span>{+(process.burner*multiplier).toFixed(2)}kw</span>
+            <span>{+(process.burner*multiplier).toFixed(2)} {powerUnits}</span>
         </div>);
     }
     if(process.nutrient) {
         components.push(<div className="cost-item">
             <Icon id="nutrients" name="Nutrient" />
-            <span>{+(process.nutrient*multiplier).toFixed(2)}kw</span>
+            <span>{+(process.nutrient*multiplier).toFixed(2)} {powerUnits}</span>
         </div>);
     }
     if(process.food) {
         components.push(<div className="cost-item">
             <Icon id="bioflux" name="Food" />
-            <span>{+(process.food*multiplier).toFixed(2)}kw</span>
+            <span>{+(process.food*multiplier).toFixed(2)} {powerUnits}</span>
         </div>);
     }
+    const pollutionSuffix = computeType === "default" ? "/m" : getComputeTypeSuffix(computeType);
+    const pollutionMultiplier = computeType === "default" ? 60 : computePerBuildingMultiplier(computeType, 1);
+    console.log(computeType, pollutionMultiplier);
     if(process.pollution) {
-        components.push( <span>&#x1F4A8;{+(process.pollution*multiplier).toFixed(2)}/m</span> );
+        components.push( <span>&#x1F4A8;{+(process.pollution*multiplier*pollutionMultiplier).toFixed(2)}{pollutionSuffix}</span> );
     }
     return components
 }
@@ -65,7 +87,6 @@ function getOutputQuantity(item, recipe, process) {
     if("ignored_by_productivity" in item)
         qty -= item["ignored_by_productivity"] * productivity;
 
-    qty = +(qty.toFixed(2));
     return qty;
 }
 
@@ -90,6 +111,9 @@ function checkRecipeSearchMatch(recipe, searchState) {
 }
 
 export {
+    getRecipeProcesses,
+    getRecipeProcess,
+    getRecipeTimePerCraft,
     compileProcessCosts, 
     getProcessCostComponents, 
     getInputQuantity, 

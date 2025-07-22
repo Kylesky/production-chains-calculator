@@ -1,0 +1,28 @@
+{
+    "Biomass_Burner": {
+        "Leaves": 15,
+        "Wood": 100,
+        "Mycelia": 20,
+        "Hog_Remains": 250,
+        "Spitter_Remains": 250,
+        "Stinger_Remains": 250,
+        "Hatcher_Remains": 250,
+        "Biomass": 180,
+        "Solid_Biofuel": 450,
+        "Packaged_Liquid_Biofuel": 750
+    },
+    "Coal-Powered_Generator": {
+        "Coal": 300,
+        "Compacted_Coal": 630,
+        "Petroleum_Coke": 180
+    },
+    "Fuel-Powered_Generator": {
+        "Fuel": 750,
+        "Turbofuel": 2000,
+        "Rocket_Fuel": 3600,
+        "Ionized_Fuel": 5000
+    },
+    "Nuclear_Power_Plant": {
+        "Ficsonium_Fuel_Rod": 150000
+    }
+}

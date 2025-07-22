@@ -1,0 +1,20 @@
+{
+    "Craft_Bench": {"id": "Craft_Bench", "name": "Crafting Bench", "speed": 1},
+    "Equipment_Workshop": {"id": "Equipment_Workshop", "name": "Equipment Workshop", "speed": 1},
+    "Smelter": {"id": "Smelter", "name": "Smelter", "power": 4, "overclock": true, "max_somersloops": 1},
+    "Foundry": {"id": "Foundry", "name": "Foundry", "power": 16, "overclock": true, "max_somersloops": 2},
+    "Constructor": {"id": "Constructor", "name": "Constructor", "power": 4, "overclock": true, "max_somersloops": 1},
+    "Assembler": {"id": "Assembler", "name": "Assembler", "power": 15, "overclock": true, "max_somersloops": 2},
+    "Manufacturer": {"id": "Manufacturer", "name": "Manufacturer", "power": 55, "overclock": true, "max_somersloops": 4},
+    "Packager": {"id": "Packager", "name": "Packager", "power": 10, "overclock": true},
+    "Refinery": {"id": "Refinery", "name": "Refinery", "power": 30, "overclock": true, "max_somersloops": 2},
+    "Blender": {"id": "Blender", "name": "Blender", "power": 75, "overclock": true, "max_somersloops": 4},
+    "Particle_Accelerator": {"id": "Particle_Accelerator", "name": "Particle Accelerator", "overclock": true, "max_somersloops": 4},
+    "Quantum_Encoder": {"id": "Quantum_Encoder", "name": "Quantum Encoder", "overclock": true, "max_somersloops": 4},
+    "Converter": {"id": "Converter", "name": "Converter", "overclock": true, "max_somersloops": 2},
+    "Biomass_Burner": {"id": "Biomass_Burner", "name": "Biomass Burner", "overclock": true, "generator": 30},
+    "Coal-Powered_Generator": {"id": "Coal-Powered_Generator", "name": "Coal-Powered Generator", "overclock": true, "generator": 75},
+    "Fuel-Powered_Generator": {"id": "Fuel-Powered_Generator", "name": "Fuel-Powered Generator", "overclock": true, "generator": 250},
+    "Nuclear_Power_Plant": {"id": "Nuclear_Power_Plant", "name": "Nuclear Power Plant", "overclock": true, "generator": 2500},
+    "Space_Elevator": {"id": "Space_Elevator", "name": "Space Elevator"}
+}

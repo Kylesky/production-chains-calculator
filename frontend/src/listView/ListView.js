@@ -36,7 +36,7 @@ function ListView({ recipesListState, itemListsState, computeVarsState, forceWho
                 <PanelResizeHandle className="panel-resize-handle"> </PanelResizeHandle>
                 {/* <PanelResizeHandle className="panel-resize-handle">&#8700;</PanelResizeHandle> */}
                 <Panel className="panel" defaultSize={30}>
-                    <MaterialsPanel itemListsState={itemListsState} recipesListState={recipesListState} setIsRecipeModalOpen={setIsRecipeModalOpen} updateSearchState={updateSearchState} forceWholeBuildingsState={forceWholeBuildingsState} />
+                    <MaterialsPanel itemListsState={itemListsState} recipesListState={recipesListState} computeType={computeVarsState.type.value} setIsRecipeModalOpen={setIsRecipeModalOpen} updateSearchState={updateSearchState} forceWholeBuildingsState={forceWholeBuildingsState} />
                 </Panel>
             </PanelGroup>
         </div>

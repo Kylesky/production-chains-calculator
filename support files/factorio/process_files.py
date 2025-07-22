@@ -270,6 +270,10 @@ processes = {}
 with open('processes.json', 'r') as file:
     processes = json.load(file)
 
+for (id, process) in processes.items():
+    if "pollution" in process:
+        process["pollution"] /= 60
+
 item_renames = [
     ['battery-equipment', 'Personal Battery'],
     ['battery-mk2-equipment', 'Personal Battery MK2'],

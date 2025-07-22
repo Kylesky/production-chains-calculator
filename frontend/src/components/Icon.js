@@ -1,5 +1,6 @@
 import { useGetData } from '../DataContext';
 import { getIconSource } from '../helper';
+import "./icon.css";
 
 function Icon({id, name, className="icon", onClick=null}) {
     const data = useGetData();
