@@ -1,7 +1,6 @@
 import './App.css';
 import MainView from './MainView';
 import { DataProvider } from './DataContext';
-import { useState } from 'react';
 
 function App() {
     return (

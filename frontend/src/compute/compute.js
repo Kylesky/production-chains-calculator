@@ -63,7 +63,7 @@ function compute(data, recipesList, outputsList, inputsList, intermediatesList, 
         var count = (recipeId in result ? result[recipeId] : 0);
 
         // If using the "Items" compute type, partial recipes are not allowed.
-        if(computeType == "count"){
+        if(computeType === "count"){
             count = Math.ceil(count);
         }
 
