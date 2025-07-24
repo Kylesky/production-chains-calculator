@@ -112,6 +112,10 @@ function checkRecipeSearchMatch(_recipe, _searchState) {
     return true;
 }
 
+function getItemDefaultValue(_data, item) {
+    return "default_value" in item ? item["default_value"] : 1;
+}
+
 export {
     getRecipeProcesses,
     getRecipeProcess,
@@ -122,5 +126,6 @@ export {
     getOutputQuantity,
     getDefaultRecipeId,
     getRecipeSearchFilters,
-    checkRecipeSearchMatch
+    checkRecipeSearchMatch,
+    getItemDefaultValue
 };

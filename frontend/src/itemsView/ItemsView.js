@@ -4,7 +4,7 @@ import ItemsViewItem from "./ItemsViewItem";
 import { useGetData } from '../DataContext';
 import { useState, useEffect } from "react";
 
-function ItemsView({addRecipes}) {
+function ItemsView({addRecipes, itemValuesState}) {
     const data = useGetData();
     const [searchString, setSearchString] = useState("")
     const [filteredItems, setfilteredItems] = useState([])
@@ -22,7 +22,7 @@ function ItemsView({addRecipes}) {
     return <div className="items-view">
         <div>Search: <input value={searchString} onChange={handleSearchStringUpdate} /></div>
         <div className="items-view-container">
-            {filteredItems.map(item => <ItemsViewItem key={item.id} item={item} addRecipes={addRecipes}/>)}
+            {filteredItems.map(item => <ItemsViewItem key={item.id} item={item} addRecipes={addRecipes} itemValuesState={itemValuesState}/>)}
         </div>
     </div>
 }

@@ -30,6 +30,23 @@
     gap: 5px;
 }
 
+.items-view-item-value-input {
+    width: 5em;
+    text-align: start;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.items-view-item-value-input::-webkit-outer-spin-button,
+.items-view-item-value-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.items-view-item-value-input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .items-view-item-io-container {
     padding: 2px;
     gap: 2px;

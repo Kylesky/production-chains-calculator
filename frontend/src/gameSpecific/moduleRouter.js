@@ -77,6 +77,12 @@ function checkRecipeSearchMatch(data, recipe, searchState) {
     return module.checkRecipeSearchMatch(recipe, searchState);
 }
 
+function getItemDefaultValue(data, item) {
+    const module = loadModule(data);
+    if (!module) return true;
+    return module.getItemDefaultValue(data, item);
+}
+
 export {
     getRecipeProcesses,
     getRecipeProcessIds,
@@ -88,5 +94,6 @@ export {
     getOutputQuantity,
     getDefaultRecipeId,
     getRecipeSearchFilters,
-    checkRecipeSearchMatch
+    checkRecipeSearchMatch,
+    getItemDefaultValue
 }

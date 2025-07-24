@@ -1,18 +1,18 @@
 // Force equality to targets, unspecified intermediate materials forced nonnegative and minimized (except for raw materials)
 
-function compute(data, recipes, outputGoals, inputGoals, intermediateGoals) {
+function compute(data, recipes, outputGoals, inputGoals, intermediateGoals, itemValues) {
     const variables = {};
     Object.entries(recipes).forEach(([recipeId, recipe]) => {
         const variable = {"intermediates": 0};
         Object.entries(recipe.input).forEach(([itemId, qty]) => {
             if(itemId in variable) variable[itemId] -= qty;
             else variable[itemId] = -qty;
-            if(itemId in intermediateGoals) variable["intermediates"] -= qty;
+            if(itemId in intermediateGoals) variable["intermediates"] -= qty * itemValues[itemId];
         })
         Object.entries(recipe.output).forEach(([itemId, qty]) => {
             if(itemId in variable) variable[itemId] += qty;
             else variable[itemId] = qty;
-            if(itemId in intermediateGoals) variable["intermediates"] += qty;
+            if(itemId in intermediateGoals) variable["intermediates"] += qty * itemValues[itemId];
         })
         variables[recipeId] = variable;
     })

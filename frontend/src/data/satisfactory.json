@@ -10,15 +10,18 @@
         },
         "Magnetic_Field_Generator": {
             "id": "Magnetic_Field_Generator",
-            "name": "Magnetic Field Generator"
+            "name": "Magnetic Field Generator",
+            "default_value": 11000
         },
         "Neural-Quantum_Processor": {
             "id": "Neural-Quantum_Processor",
-            "name": "Neural-Quantum Processor"
+            "name": "Neural-Quantum Processor",
+            "default_value": 248034
         },
         "Superposition_Oscillator": {
             "id": "Superposition_Oscillator",
-            "name": "Superposition Oscillator"
+            "name": "Superposition Oscillator",
+            "default_value": 37292
         },
         "Excited_Photonic_Matter": {
             "id": "Excited_Photonic_Matter",
@@ -26,7 +29,8 @@
         },
         "AI_Expansion_Server": {
             "id": "AI_Expansion_Server",
-            "name": "AI Expansion Server"
+            "name": "AI Expansion Server",
+            "default_value": 597652
         },
         "Dark_Matter_Residue": {
             "id": "Dark_Matter_Residue",
@@ -34,51 +38,63 @@
         },
         "Copper_Sheet": {
             "id": "Copper_Sheet",
-            "name": "Copper Sheet"
+            "name": "Copper Sheet",
+            "default_value": 24
         },
         "Quickwire": {
             "id": "Quickwire",
-            "name": "Quickwire"
+            "name": "Quickwire",
+            "default_value": 17
         },
         "AI_Limiter": {
             "id": "AI_Limiter",
-            "name": "AI Limiter"
+            "name": "AI Limiter",
+            "default_value": 920
         },
         "Automated_Wiring": {
             "id": "Automated_Wiring",
-            "name": "Automated Wiring"
+            "name": "Automated Wiring",
+            "default_value": 1440
         },
         "Circuit_Board": {
             "id": "Circuit_Board",
-            "name": "Circuit Board"
+            "name": "Circuit Board",
+            "default_value": 696
         },
         "Heavy_Modular_Frame": {
             "id": "Heavy_Modular_Frame",
-            "name": "Heavy Modular Frame"
+            "name": "Heavy Modular Frame",
+            "default_value": 10800
         },
         "Computer": {
             "id": "Computer",
-            "name": "Computer"
+            "name": "Computer",
+            "default_value": 8352
         },
         "Adaptive_Control_Unit": {
             "id": "Adaptive_Control_Unit",
-            "name": "Adaptive Control Unit"
+            "name": "Adaptive Control Unit",
+            "default_value": 76368
         },
         "Aluminum_Ingot": {
             "id": "Aluminum_Ingot",
-            "name": "Aluminum Ingot"
+            "name": "Aluminum Ingot",
+            "default_value": 131
         },
         "Copper_Ingot": {
             "id": "Copper_Ingot",
-            "name": "Copper Ingot"
+            "name": "Copper Ingot",
+            "default_value": 6
         },
         "Alclad_Aluminum_Sheet": {
             "id": "Alclad_Aluminum_Sheet",
-            "name": "Alclad Aluminum Sheet"
+            "name": "Alclad Aluminum Sheet",
+            "default_value": 266
         },
         "Alien_Protein": {
             "id": "Alien_Protein",
-            "name": "Alien Protein"
+            "name": "Alien Protein",
+            "default_value": 0
         },
         "Alien_DNA_Capsule": {
             "id": "Alien_DNA_Capsule",
@@ -86,20 +102,24 @@
         },
         "SAM_Fluctuator": {
             "id": "SAM_Fluctuator",
-            "name": "SAM Fluctuator"
+            "name": "SAM Fluctuator",
+            "default_value": 1968
         },
         "Power_Shard": {
             "id": "Power_Shard",
-            "name": "Power Shard"
+            "name": "Power Shard",
+            "default_value": 0
         },
         "Alien_Power_Matrix": {
             "id": "Alien_Power_Matrix",
-            "name": "Alien Power Matrix"
+            "name": "Alien Power Matrix",
+            "default_value": 210
         },
         "Bauxite": {
             "id": "Bauxite",
             "name": "Bauxite",
-            "raw": true
+            "raw": true,
+            "default_value": 8
         },
         "Water": {
             "id": "Water",
@@ -112,52 +132,64 @@
         },
         "Silica": {
             "id": "Silica",
-            "name": "Silica"
+            "name": "Silica",
+            "default_value": 20
         },
         "Aluminum_Casing": {
             "id": "Aluminum_Casing",
-            "name": "Aluminum Casing"
+            "name": "Aluminum Casing",
+            "default_value": 393
         },
         "Aluminum_Scrap": {
             "id": "Aluminum_Scrap",
-            "name": "Aluminum Scrap"
+            "name": "Aluminum Scrap",
+            "default_value": 27
         },
         "Coal": {
             "id": "Coal",
             "name": "Coal",
-            "raw": true
+            "raw": true,
+            "default_value": 3
         },
         "Supercomputer": {
             "id": "Supercomputer",
-            "name": "Supercomputer"
+            "name": "Supercomputer",
+            "default_value": 97352
         },
         "Assembly_Director_System": {
             "id": "Assembly_Director_System",
-            "name": "Assembly Director System"
+            "name": "Assembly Director System",
+            "default_value": 500176
         },
         "Stator": {
             "id": "Stator",
-            "name": "Stator"
+            "name": "Stator",
+            "default_value": 240
         },
         "Cable": {
             "id": "Cable",
-            "name": "Cable"
+            "name": "Cable",
+            "default_value": 24
         },
         "Thermal_Propulsion_Rocket": {
             "id": "Thermal_Propulsion_Rocket",
-            "name": "Thermal Propulsion Rocket"
+            "name": "Thermal Propulsion Rocket",
+            "default_value": 728508
         },
         "Singularity_Cell": {
             "id": "Singularity_Cell",
-            "name": "Singularity Cell"
+            "name": "Singularity Cell",
+            "default_value": 114675
         },
         "Dark_Matter_Crystal": {
             "id": "Dark_Matter_Crystal",
-            "name": "Dark Matter Crystal"
+            "name": "Dark Matter Crystal",
+            "default_value": 1780
         },
         "Ballistic_Warp_Drive": {
             "id": "Ballistic_Warp_Drive",
-            "name": "Ballistic Warp Drive"
+            "name": "Ballistic Warp Drive",
+            "default_value": 2895334
         },
         "Sulfuric_Acid": {
             "id": "Sulfuric_Acid",
@@ -165,155 +197,191 @@
         },
         "Battery": {
             "id": "Battery",
-            "name": "Battery"
+            "name": "Battery",
+            "default_value": 465
         },
         "Reanimated_SAM": {
             "id": "Reanimated_SAM",
-            "name": "Reanimated SAM"
+            "name": "Reanimated SAM",
+            "default_value": 160
         },
         "Caterium_Ore": {
             "id": "Caterium_Ore",
             "name": "Caterium Ore",
-            "raw": true
+            "raw": true,
+            "default_value": 7
         },
         "Copper_Ore": {
             "id": "Copper_Ore",
             "name": "Copper Ore",
-            "raw": true
+            "raw": true,
+            "default_value": 3
         },
         "Ficsite_Trigon": {
             "id": "Ficsite_Trigon",
-            "name": "Ficsite Trigon"
+            "name": "Ficsite Trigon",
+            "default_value": 1291
         },
         "Biochemical_Sculptor": {
             "id": "Biochemical_Sculptor",
-            "name": "Biochemical Sculptor"
+            "name": "Biochemical Sculptor",
+            "default_value": 301778
         },
         "Biomass": {
             "id": "Biomass",
-            "name": "Biomass"
+            "name": "Biomass",
+            "default_value": 12
         },
         "Leaves": {
             "id": "Leaves",
-            "name": "Leaves"
+            "name": "Leaves",
+            "default_value": 3
         },
         "Mycelia": {
             "id": "Mycelia",
             "name": "Mycelia",
-            "raw": true
+            "raw": true,
+            "default_value": 10
         },
         "Wood": {
             "id": "Wood",
             "name": "Wood",
-            "raw": true
+            "raw": true,
+            "default_value": 30
         },
         "Sulfur": {
             "id": "Sulfur",
             "name": "Sulfur",
-            "raw": true
+            "raw": true,
+            "default_value": 11
         },
         "Black_Powder": {
             "id": "Black_Powder",
-            "name": "Black Powder"
+            "name": "Black Powder",
+            "default_value": 14
         },
         "Modular_Frame": {
             "id": "Modular_Frame",
-            "name": "Modular Frame"
+            "name": "Modular Frame",
+            "default_value": 408
         },
         "Rotor": {
             "id": "Rotor",
-            "name": "Rotor"
+            "name": "Rotor",
+            "default_value": 140
         },
         "Blade_Runners": {
             "id": "Blade_Runners",
-            "name": "Blade Runners"
+            "name": "Blade Runners",
+            "default_value": 4088
         },
         "FICSMAS_Gift": {
             "id": "FICSMAS_Gift",
-            "name": "FICSMAS Gift"
+            "name": "FICSMAS Gift",
+            "default_value": 1
         },
         "Blue_FICSMAS_Ornament": {
             "id": "Blue_FICSMAS_Ornament",
-            "name": "Blue FICSMAS Ornament"
+            "name": "Blue FICSMAS Ornament",
+            "default_value": 1
         },
         "Wire": {
             "id": "Wire",
-            "name": "Wire"
+            "name": "Wire",
+            "default_value": 6
         },
         "Candy_Cane": {
             "id": "Candy_Cane",
-            "name": "Candy Cane"
+            "name": "Candy Cane",
+            "default_value": 6
         },
         "Xeno-Zapper": {
             "id": "Xeno-Zapper",
-            "name": "Xeno-Zapper"
+            "name": "Xeno-Zapper",
+            "default_value": 1880
         },
         "Candy_Cane_Basher": {
             "id": "Candy_Cane_Basher",
-            "name": "Candy Cane Basher"
+            "name": "Candy Cane Basher",
+            "default_value": 7850
         },
         "Caterium_Ingot": {
             "id": "Caterium_Ingot",
-            "name": "Caterium Ingot"
+            "name": "Caterium Ingot",
+            "default_value": 42
         },
         "Raw_Quartz": {
             "id": "Raw_Quartz",
             "name": "Raw Quartz",
-            "raw": true
+            "raw": true,
+            "default_value": 15
         },
         "Reinforced_Iron_Plate": {
             "id": "Reinforced_Iron_Plate",
-            "name": "Reinforced Iron Plate"
+            "name": "Reinforced Iron Plate",
+            "default_value": 120
         },
         "Iron_Rod": {
             "id": "Iron_Rod",
-            "name": "Iron Rod"
+            "name": "Iron Rod",
+            "default_value": 4
         },
         "Screws": {
             "id": "Screws",
-            "name": "Screws"
+            "name": "Screws",
+            "default_value": 2
         },
         "Chainsaw": {
             "id": "Chainsaw",
-            "name": "Chainsaw"
+            "name": "Chainsaw",
+            "default_value": 2760
         },
         "Plastic": {
             "id": "Plastic",
-            "name": "Plastic"
+            "name": "Plastic",
+            "default_value": 75
         },
         "Nobelisk": {
             "id": "Nobelisk",
-            "name": "Nobelisk"
+            "name": "Nobelisk",
+            "default_value": 152
         },
         "Smokeless_Powder": {
             "id": "Smokeless_Powder",
-            "name": "Smokeless Powder"
+            "name": "Smokeless Powder",
+            "default_value": 58
         },
         "Cluster_Nobelisk": {
             "id": "Cluster_Nobelisk",
-            "name": "Cluster Nobelisk"
+            "name": "Cluster Nobelisk",
+            "default_value": 1376
         },
         "Iron_Ore": {
             "id": "Iron_Ore",
             "name": "Iron Ore",
-            "raw": true
+            "raw": true,
+            "default_value": 1
         },
         "Limestone": {
             "id": "Limestone",
             "name": "Limestone",
-            "raw": true
+            "raw": true,
+            "default_value": 2
         },
         "Concrete": {
             "id": "Concrete",
-            "name": "Concrete"
+            "name": "Concrete",
+            "default_value": 12
         },
         "Heat_Sink": {
             "id": "Heat_Sink",
-            "name": "Heat Sink"
+            "name": "Heat Sink",
+            "default_value": 2804
         },
         "Rubber": {
             "id": "Rubber",
-            "name": "Rubber"
+            "name": "Rubber",
+            "default_value": 60
         },
         "Nitrogen_Gas": {
             "id": "Nitrogen_Gas",
@@ -322,112 +390,139 @@
         },
         "Cooling_System": {
             "id": "Cooling_System",
-            "name": "Cooling System"
+            "name": "Cooling System",
+            "default_value": 12006
         },
         "Red_FICSMAS_Ornament": {
             "id": "Red_FICSMAS_Ornament",
-            "name": "Red FICSMAS Ornament"
+            "name": "Red FICSMAS Ornament",
+            "default_value": 2
         },
         "Copper_FICSMAS_Ornament": {
             "id": "Copper_FICSMAS_Ornament",
-            "name": "Copper FICSMAS Ornament"
+            "name": "Copper FICSMAS Ornament",
+            "default_value": 32
         },
         "Copper_Powder": {
             "id": "Copper_Powder",
-            "name": "Copper Powder"
+            "name": "Copper Powder",
+            "default_value": 72
         },
         "Quartz_Crystal": {
             "id": "Quartz_Crystal",
-            "name": "Quartz Crystal"
+            "name": "Quartz Crystal",
+            "default_value": 50
         },
         "Crystal_Oscillator": {
             "id": "Crystal_Oscillator",
-            "name": "Crystal Oscillator"
+            "name": "Crystal Oscillator",
+            "default_value": 3072
         },
         "Diamonds": {
             "id": "Diamonds",
-            "name": "Diamonds"
+            "name": "Diamonds",
+            "default_value": 240
         },
         "Electromagnetic_Control_Rod": {
             "id": "Electromagnetic_Control_Rod",
-            "name": "Electromagnetic Control Rod"
+            "name": "Electromagnetic Control Rod",
+            "default_value": 2560
         },
         "Empty_Canister": {
             "id": "Empty_Canister",
-            "name": "Empty Canister"
+            "name": "Empty Canister",
+            "default_value": 60
         },
         "Empty_Fluid_Tank": {
             "id": "Empty_Fluid_Tank",
-            "name": "Empty Fluid Tank"
+            "name": "Empty Fluid Tank",
+            "default_value": 170
         },
         "Steel_Beam": {
             "id": "Steel_Beam",
-            "name": "Steel Beam"
+            "name": "Steel Beam",
+            "default_value": 64
         },
         "Encased_Industrial_Beam": {
             "id": "Encased_Industrial_Beam",
-            "name": "Encased Industrial Beam"
+            "name": "Encased Industrial Beam",
+            "default_value": 528
         },
         "Plutonium_Pellet": {
             "id": "Plutonium_Pellet",
-            "name": "Plutonium Pellet"
+            "name": "Plutonium Pellet",
+            "default_value": 0
         },
         "Encased_Plutonium_Cell": {
             "id": "Encased_Plutonium_Cell",
-            "name": "Encased Plutonium Cell"
+            "name": "Encased Plutonium Cell",
+            "default_value": 0
         },
         "Uranium": {
             "id": "Uranium",
             "name": "Uranium",
-            "raw": true
+            "raw": true,
+            "default_value": 35
         },
         "Encased_Uranium_Cell": {
             "id": "Encased_Uranium_Cell",
-            "name": "Encased Uranium Cell"
+            "name": "Encased Uranium Cell",
+            "default_value": 147
         },
         "Iron_Rebar": {
             "id": "Iron_Rebar",
-            "name": "Iron Rebar"
+            "name": "Iron Rebar",
+            "default_value": 8
         },
         "Steel_Pipe": {
             "id": "Steel_Pipe",
-            "name": "Steel Pipe"
+            "name": "Steel Pipe",
+            "default_value": 24
         },
         "Explosive_Rebar": {
             "id": "Explosive_Rebar",
-            "name": "Explosive Rebar"
+            "name": "Explosive Rebar",
+            "default_value": 360
         },
         "FICSMAS_Actual_Snow": {
             "id": "FICSMAS_Actual_Snow",
-            "name": "FICSMAS Actual Snow"
+            "name": "FICSMAS Actual Snow",
+            "default_value": 5
         },
         "FICSMAS_Bow": {
             "id": "FICSMAS_Bow",
-            "name": "FICSMAS Bow"
+            "name": "FICSMAS Bow",
+            "default_value": 4
         },
         "Iron_FICSMAS_Ornament": {
             "id": "Iron_FICSMAS_Ornament",
-            "name": "Iron FICSMAS Ornament"
+            "name": "Iron FICSMAS Ornament",
+            "default_value": 18
         },
         "FICSMAS_Ornament_Bundle": {
             "id": "FICSMAS_Ornament_Bundle",
-            "name": "FICSMAS Ornament Bundle"
+            "name": "FICSMAS Ornament Bundle",
+            "default_value": 100
         },
         "FICSMAS_Tree_Branch": {
             "id": "FICSMAS_Tree_Branch",
-            "name": "FICSMAS Tree Branch"
+            "name": "FICSMAS Tree Branch",
+            "default_value": 2
         },
         "FICSMAS_Wreath": {
             "id": "FICSMAS_Wreath",
-            "name": "FICSMAS Wreath"
+            "name": "FICSMAS Wreath",
+            "default_value": 630
         },
         "FICSMAS_Wonder_Star": {
             "id": "FICSMAS_Wonder_Star",
-            "name": "FICSMAS Wonder Star"
+            "name": "FICSMAS Wonder Star",
+            "default_value": 6540
         },
         "Fabric": {
             "id": "Fabric",
-            "name": "Fabric"
+            "name": "Fabric",
+            "default_value": 140
         },
         "Factory_Cart": {
             "id": "Factory_Cart",
@@ -435,27 +530,33 @@
         },
         "Fancy_Fireworks": {
             "id": "Fancy_Fireworks",
-            "name": "Fancy Fireworks"
+            "name": "Fancy Fireworks",
+            "default_value": 40
         },
         "Ficsite_Ingot": {
             "id": "Ficsite_Ingot",
-            "name": "Ficsite Ingot"
+            "name": "Ficsite Ingot",
+            "default_value": 1936
         },
         "Iron_Ingot": {
             "id": "Iron_Ingot",
-            "name": "Iron Ingot"
+            "name": "Iron Ingot",
+            "default_value": 2
         },
         "Plutonium_Waste": {
             "id": "Plutonium_Waste",
-            "name": "Plutonium Waste"
+            "name": "Plutonium Waste",
+            "default_value": 0
         },
         "Ficsonium": {
             "id": "Ficsonium",
-            "name": "Ficsonium"
+            "name": "Ficsonium",
+            "default_value": 0
         },
         "Ficsonium_Fuel_Rod": {
             "id": "Ficsonium_Fuel_Rod",
-            "name": "Ficsonium Fuel Rod"
+            "name": "Ficsonium Fuel Rod",
+            "default_value": 0
         },
         "Crude_Oil": {
             "id": "Crude_Oil",
@@ -468,27 +569,33 @@
         },
         "Polymer_Resin": {
             "id": "Polymer_Resin",
-            "name": "Polymer Resin"
+            "name": "Polymer Resin",
+            "default_value": 12
         },
         "Fused_Modular_Frame": {
             "id": "Fused_Modular_Frame",
-            "name": "Fused Modular Frame"
+            "name": "Fused Modular Frame",
+            "default_value": 62840
         },
         "Iron_Plate": {
             "id": "Iron_Plate",
-            "name": "Iron Plate"
+            "name": "Iron Plate",
+            "default_value": 6
         },
         "Gas_Filter": {
             "id": "Gas_Filter",
-            "name": "Gas Filter"
+            "name": "Gas Filter",
+            "default_value": 608
         },
         "Gas_Mask": {
             "id": "Gas_Mask",
-            "name": "Gas Mask"
+            "name": "Gas Mask",
+            "default_value": 14960
         },
         "Gas_Nobelisk": {
             "id": "Gas_Nobelisk",
-            "name": "Gas Nobelisk"
+            "name": "Gas Nobelisk",
+            "default_value": 544
         },
         "Golden_Factory_Cart": {
             "id": "Golden_Factory_Cart",
@@ -496,39 +603,48 @@
         },
         "Hatcher_Remains": {
             "id": "Hatcher_Remains",
-            "name": "Hatcher Remains"
+            "name": "Hatcher Remains",
+            "default_value": 0
         },
         "Hazmat_Suit": {
             "id": "Hazmat_Suit",
-            "name": "Hazmat Suit"
+            "name": "Hazmat Suit",
+            "default_value": 54100
         },
         "High-Speed_Connector": {
             "id": "High-Speed_Connector",
-            "name": "High-Speed Connector"
+            "name": "High-Speed Connector",
+            "default_value": 3776
         },
         "Hog_Remains": {
             "id": "Hog_Remains",
-            "name": "Hog Remains"
+            "name": "Hog Remains",
+            "default_value": 0
         },
         "Rifle_Ammo": {
             "id": "Rifle_Ammo",
-            "name": "Rifle Ammo"
+            "name": "Rifle Ammo",
+            "default_value": 25
         },
         "Homing_Rifle_Ammo": {
             "id": "Homing_Rifle_Ammo",
-            "name": "Homing Rifle Ammo"
+            "name": "Homing Rifle Ammo",
+            "default_value": 855
         },
         "Motor": {
             "id": "Motor",
-            "name": "Motor"
+            "name": "Motor",
+            "default_value": 1520
         },
         "Hoverpack": {
             "id": "Hoverpack",
-            "name": "Hoverpack"
+            "name": "Hoverpack",
+            "default_value": 265632
         },
         "Iodine-Infused_Filter": {
             "id": "Iodine-Infused_Filter",
-            "name": "Iodine-Infused Filter"
+            "name": "Iodine-Infused Filter",
+            "default_value": 2274
         },
         "Rocket_Fuel": {
             "id": "Rocket_Fuel",
@@ -540,15 +656,18 @@
         },
         "Compacted_Coal": {
             "id": "Compacted_Coal",
-            "name": "Compacted Coal"
+            "name": "Compacted Coal",
+            "default_value": 28
         },
         "Jetpack": {
             "id": "Jetpack",
-            "name": "Jetpack"
+            "name": "Jetpack",
+            "default_value": 16580
         },
         "Solid_Biofuel": {
             "id": "Solid_Biofuel",
-            "name": "Solid Biofuel"
+            "name": "Solid Biofuel",
+            "default_value": 48
         },
         "Liquid_Biofuel": {
             "id": "Liquid_Biofuel",
@@ -556,19 +675,23 @@
         },
         "Versatile_Framework": {
             "id": "Versatile_Framework",
-            "name": "Versatile Framework"
+            "name": "Versatile Framework",
+            "default_value": 1176
         },
         "Smart_Plating": {
             "id": "Smart_Plating",
-            "name": "Smart Plating"
+            "name": "Smart Plating",
+            "default_value": 520
         },
         "Modular_Engine": {
             "id": "Modular_Engine",
-            "name": "Modular Engine"
+            "name": "Modular Engine",
+            "default_value": 9960
         },
         "Time_Crystal": {
             "id": "Time_Crystal",
-            "name": "Time Crystal"
+            "name": "Time Crystal",
+            "default_value": 960
         },
         "Nitric_Acid": {
             "id": "Nitric_Acid",
@@ -576,55 +699,68 @@
         },
         "Object_Scanner": {
             "id": "Object_Scanner",
-            "name": "Object Scanner"
+            "name": "Object Scanner",
+            "default_value": 1400
         },
         "Nobelisk_Detonator": {
             "id": "Nobelisk_Detonator",
-            "name": "Nobelisk Detonator"
+            "name": "Nobelisk Detonator",
+            "default_value": 6480
         },
         "Uranium_Waste": {
             "id": "Uranium_Waste",
-            "name": "Uranium Waste"
+            "name": "Uranium Waste",
+            "default_value": 0
         },
         "Non-Fissile_Uranium": {
             "id": "Non-Fissile_Uranium",
-            "name": "Non-Fissile Uranium"
+            "name": "Non-Fissile Uranium",
+            "default_value": 0
         },
         "Pressure_Conversion_Cube": {
             "id": "Pressure_Conversion_Cube",
-            "name": "Pressure Conversion Cube"
+            "name": "Pressure Conversion Cube",
+            "default_value": 255088
         },
         "Nuclear_Pasta": {
             "id": "Nuclear_Pasta",
-            "name": "Nuclear Pasta"
+            "name": "Nuclear Pasta",
+            "default_value": 538976
         },
         "Nuke_Nobelisk": {
             "id": "Nuke_Nobelisk",
-            "name": "Nuke Nobelisk"
+            "name": "Nuke Nobelisk",
+            "default_value": 19600
         },
         "Bacon_Agaric": {
             "id": "Bacon_Agaric",
-            "name": "Bacon Agaric"
+            "name": "Bacon Agaric",
+            "default_value": 0
         },
         "Paleberry": {
             "id": "Paleberry",
-            "name": "Paleberry"
+            "name": "Paleberry",
+            "default_value": 0
         },
         "Beryl_Nut": {
             "id": "Beryl_Nut",
-            "name": "Beryl Nut"
+            "name": "Beryl Nut",
+            "default_value": 0
         },
         "Medicinal_Inhaler": {
             "id": "Medicinal_Inhaler",
-            "name": "Medicinal Inhaler"
+            "name": "Medicinal Inhaler",
+            "default_value": 125
         },
         "Packaged_Alumina_Solution": {
             "id": "Packaged_Alumina_Solution",
-            "name": "Packaged Alumina Solution"
+            "name": "Packaged Alumina Solution",
+            "default_value": 160
         },
         "Packaged_Fuel": {
             "id": "Packaged_Fuel",
-            "name": "Packaged Fuel"
+            "name": "Packaged Fuel",
+            "default_value": 270
         },
         "Heavy_Oil_Residue": {
             "id": "Heavy_Oil_Residue",
@@ -632,35 +768,43 @@
         },
         "Packaged_Heavy_Oil_Residue": {
             "id": "Packaged_Heavy_Oil_Residue",
-            "name": "Packaged Heavy Oil Residue"
+            "name": "Packaged Heavy Oil Residue",
+            "default_value": 180
         },
         "Packaged_Ionized_Fuel": {
             "id": "Packaged_Ionized_Fuel",
-            "name": "Packaged Ionized Fuel"
+            "name": "Packaged Ionized Fuel",
+            "default_value": 5246
         },
         "Packaged_Liquid_Biofuel": {
             "id": "Packaged_Liquid_Biofuel",
-            "name": "Packaged Liquid Biofuel"
+            "name": "Packaged Liquid Biofuel",
+            "default_value": 370
         },
         "Packaged_Nitric_Acid": {
             "id": "Packaged_Nitric_Acid",
-            "name": "Packaged Nitric Acid"
+            "name": "Packaged Nitric Acid",
+            "default_value": 412
         },
         "Packaged_Nitrogen_Gas": {
             "id": "Packaged_Nitrogen_Gas",
-            "name": "Packaged Nitrogen Gas"
+            "name": "Packaged Nitrogen Gas",
+            "default_value": 312
         },
         "Packaged_Oil": {
             "id": "Packaged_Oil",
-            "name": "Packaged Oil"
+            "name": "Packaged Oil",
+            "default_value": 180
         },
         "Packaged_Rocket_Fuel": {
             "id": "Packaged_Rocket_Fuel",
-            "name": "Packaged Rocket Fuel"
+            "name": "Packaged Rocket Fuel",
+            "default_value": 1028
         },
         "Packaged_Sulfuric_Acid": {
             "id": "Packaged_Sulfuric_Acid",
-            "name": "Packaged Sulfuric Acid"
+            "name": "Packaged Sulfuric Acid",
+            "default_value": 152
         },
         "Turbofuel": {
             "id": "Turbofuel",
@@ -668,112 +812,139 @@
         },
         "Packaged_Turbofuel": {
             "id": "Packaged_Turbofuel",
-            "name": "Packaged Turbofuel"
+            "name": "Packaged Turbofuel",
+            "default_value": 570
         },
         "Packaged_Water": {
             "id": "Packaged_Water",
-            "name": "Packaged Water"
+            "name": "Packaged Water",
+            "default_value": 130
         },
         "Parachute": {
             "id": "Parachute",
-            "name": "Parachute"
+            "name": "Parachute",
+            "default_value": 6080
         },
         "Petroleum_Coke": {
             "id": "Petroleum_Coke",
-            "name": "Petroleum Coke"
+            "name": "Petroleum Coke",
+            "default_value": 20
         },
         "Plutonium_Fuel_Rod": {
             "id": "Plutonium_Fuel_Rod",
-            "name": "Plutonium Fuel Rod"
+            "name": "Plutonium Fuel Rod",
+            "default_value": 153184
         },
         "Portable_Miner": {
             "id": "Portable_Miner",
-            "name": "Portable Miner"
+            "name": "Portable Miner",
+            "default_value": 56
         },
         "Blue_Power_Slug": {
             "id": "Blue_Power_Slug",
-            "name": "Blue Power Slug"
+            "name": "Blue Power Slug",
+            "default_value": 0
         },
         "Yellow_Power_Slug": {
             "id": "Yellow_Power_Slug",
-            "name": "Yellow Power Slug"
+            "name": "Yellow Power Slug",
+            "default_value": 0
         },
         "Purple_Power_Slug": {
             "id": "Purple_Power_Slug",
-            "name": "Purple Power Slug"
+            "name": "Purple Power Slug",
+            "default_value": 0
         },
         "Radio_Control_Unit": {
             "id": "Radio_Control_Unit",
-            "name": "Radio Control Unit"
+            "name": "Radio Control Unit",
+            "default_value": 32352
         },
         "Pulse_Nobelisk": {
             "id": "Pulse_Nobelisk",
-            "name": "Pulse Nobelisk"
+            "name": "Pulse Nobelisk",
+            "default_value": 1533
         },
         "SAM": {
             "id": "SAM",
             "name": "SAM",
-            "raw": true
+            "raw": true,
+            "default_value": 20
         },
         "Rebar_Gun": {
             "id": "Rebar_Gun",
-            "name": "Rebar Gun"
+            "name": "Rebar Gun",
+            "default_value": 1968
         },
         "Rifle": {
             "id": "Rifle",
-            "name": "Rifle"
+            "name": "Rifle",
+            "default_value": 9480
         },
         "Shatter_Rebar": {
             "id": "Shatter_Rebar",
-            "name": "Shatter Rebar"
+            "name": "Shatter Rebar",
+            "default_value": 332
         },
         "Snowball": {
             "id": "Snowball",
-            "name": "Snowball"
+            "name": "Snowball",
+            "default_value": 30
         },
         "Sparkly_Fireworks": {
             "id": "Sparkly_Fireworks",
-            "name": "Sparkly Fireworks"
+            "name": "Sparkly Fireworks",
+            "default_value": 32
         },
         "Spitter_Remains": {
             "id": "Spitter_Remains",
-            "name": "Spitter Remains"
+            "name": "Spitter Remains",
+            "default_value": 0
         },
         "Steel_Ingot": {
             "id": "Steel_Ingot",
-            "name": "Steel Ingot"
+            "name": "Steel Ingot",
+            "default_value": 8
         },
         "Stinger_Remains": {
             "id": "Stinger_Remains",
-            "name": "Stinger Remains"
+            "name": "Stinger Remains",
+            "default_value": 0
         },
         "Stun_Rebar": {
             "id": "Stun_Rebar",
-            "name": "Stun Rebar"
+            "name": "Stun Rebar",
+            "default_value": 186
         },
         "Sweet_Fireworks": {
             "id": "Sweet_Fireworks",
-            "name": "Sweet Fireworks"
+            "name": "Sweet Fireworks",
+            "default_value": 60
         },
         "Turbo_Motor": {
             "id": "Turbo_Motor",
-            "name": "Turbo Motor"
+            "name": "Turbo Motor",
+            "default_value": 240496
         },
         "Turbo_Rifle_Ammo": {
             "id": "Turbo_Rifle_Ammo",
-            "name": "Turbo Rifle Ammo"
+            "name": "Turbo Rifle Ammo",
+            "default_value": 120
         },
         "Uranium_Fuel_Rod": {
             "id": "Uranium_Fuel_Rod",
-            "name": "Uranium Fuel Rod"
+            "name": "Uranium Fuel Rod",
+            "default_value": 43468
         },
         "Xeno-Basher": {
             "id": "Xeno-Basher",
-            "name": "Xeno-Basher"
+            "name": "Xeno-Basher",
+            "default_value": 17800
         },
         "Zipline": {
             "id": "Zipline",
-            "name": "Zipline"
+            "name": "Zipline",
+            "default_value": 5284
         },
         "Dissolved_Silica": {
             "id": "Dissolved_Silica",

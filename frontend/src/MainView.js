@@ -17,6 +17,7 @@ function MainView() {
     const [itemGoalNumbers, setItemGoalNumbers] = useState({});
     const [itemComputedProduction, setItemComputedProduction] = useState({});
     const [itemComputedConsumption, setItemComputedConsumption] = useState({});
+    const [itemValues, setItemValues] = useState({});
     const [computeType, setComputeType] = useState('per-min');
     const [computeMethod, setComputeMethod] = useState('simple');
     const [computeSuccess, setComputeSuccess] = useState(false);
@@ -27,7 +28,7 @@ function MainView() {
 
     useEffect(() => {
         if (runCompute) {
-            const { recipeCounts, itemProduction, itemConsumption, success, computeTime: time } = compute(data, recipesList, outputsList, inputsList, intermediatesList, itemGoalNumbers, computeType, computeMethod);
+            const { recipeCounts, itemProduction, itemConsumption, success, computeTime: time } = compute(data, recipesList, outputsList, inputsList, intermediatesList, itemGoalNumbers, itemValues, computeType, computeMethod);
             const updatedRecipes = recipesList.map((recipe) => {
                 if (recipe.id in recipeCounts) return { ...recipe, multiplier: recipeCounts[recipe.id] };
                 return recipe;
@@ -39,7 +40,7 @@ function MainView() {
             setComputeTime(time);
             setRunCompute(false);
         }
-    }, [recipesList, data, inputsList, outputsList, intermediatesList, itemGoalNumbers, computeType, computeMethod, runCompute])
+    }, [recipesList, data, inputsList, outputsList, intermediatesList, itemGoalNumbers, itemValues, computeType, computeMethod, runCompute])
 
     const handleCompute = () => {
         setRunCompute(true);
@@ -159,6 +160,21 @@ function MainView() {
         consumption: { numbers: itemComputedConsumption, set: setItemComputedConsumption }
     }
 
+    const setItemValue = (id, value) => {
+        setItemValues({...itemValues, [id]: value})
+    }
+    
+    const resetItemValue = (id) => {
+        const { [id]: _removed, ...remaining } = itemValues
+        setItemValues(remaining)
+    }
+
+    const itemValuesState = {
+        values: itemValues,
+        set: setItemValue,
+        reset: resetItemValue
+    }
+
     const handleComputeTypeChange = (event) => {
         setComputeType(event.target.value);
         handleCompute();
@@ -216,7 +232,7 @@ function MainView() {
             </TabList>
 
             <TabPanel className="tab-panel">
-                <ItemsView addRecipes={addRecipes} />
+                <ItemsView addRecipes={addRecipes} itemValuesState={itemValuesState} />
             </TabPanel>
             <TabPanel className="tab-panel">
                 <ListView recipesListState={recipesListState} itemListsState={itemListsState} computeVarsState={computeVarsState} forceWholeBuildingsState={forceWholeBuildingsState} />

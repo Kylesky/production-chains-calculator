@@ -1,6 +1,6 @@
 // Maximize outputs and minimize inputs, requires intermediates to be non-negative unless they are raw materials
 
-function compute(data, recipes, outputGoals, inputGoals, intermediateGoals) {
+function compute(data, recipes, outputGoals, inputGoals, intermediateGoals, itemValues) {
     const constraintVars = [];
     const variables = {};
     Object.entries(recipes).forEach(([recipeId, recipe]) => {
@@ -8,12 +8,12 @@ function compute(data, recipes, outputGoals, inputGoals, intermediateGoals) {
         Object.entries(recipe.input).forEach(([itemId, qty]) => {
             if(itemId in variable) variable[itemId] -= qty;
             else variable[itemId] = -qty;
-            if(itemId in inputGoals) variable["score"] -= qty;
+            if(itemId in inputGoals) variable["score"] -= qty * itemValues[itemId];  
         })
         Object.entries(recipe.output).forEach(([itemId, qty]) => {
             if(itemId in variable) variable[itemId] += qty;
             else variable[itemId] = qty;
-            if(itemId in outputGoals && outputGoals[itemId] > 0) variable["score"] += qty;
+            if(itemId in outputGoals && outputGoals[itemId] > 0) variable["score"] += qty * itemValues[itemId];
         })
         variable[recipeId+"_constraint"] = 1;
         constraintVars.push(recipeId+"_constraint");
