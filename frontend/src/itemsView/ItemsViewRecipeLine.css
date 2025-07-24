@@ -1,0 +1,28 @@
+.items-view-recipe-line {
+    display: flex;
+    flex-direction: column;
+    border: 1px grey dotted;
+    padding: 3px;
+    gap: 1px;
+}
+
+.items-view-recipe-line-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.items-view-recipe-line-components {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.items-view-recipe-component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}

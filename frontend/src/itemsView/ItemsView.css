@@ -1,0 +1,22 @@
+.items-view {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 99%;
+    height: fit-content;
+    max-height: 100%;
+    gap: 5px;
+}
+
+.items-view-container {
+    width: 100%;
+    height: fit-content;
+    flex: 2;
+    overflow-y: auto; 
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+    gap: 5px;
+    padding: 5px;
+}

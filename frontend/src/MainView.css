@@ -48,7 +48,7 @@
 .selected-tab-panel {
     display: flex;
     height: 90vh;
-    overflow-y: auto;
-    scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+    /* overflow-y: auto;
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent; */
     /* border: 2px solid gray; */
 }

@@ -66,7 +66,6 @@ function getProcessCostComponents(computeType, _recipe, process, multiplier = 1)
     }
     const pollutionSuffix = computeType === "default" ? "/m" : getComputeTypeSuffix(computeType);
     const pollutionMultiplier = computeType === "default" ? 60 : computePerBuildingMultiplier(computeType, 1);
-    console.log(computeType, pollutionMultiplier);
     if(process.pollution) {
         components.push( <span>&#x1F4A8;{+(process.pollution*multiplier*pollutionMultiplier).toFixed(2)}{pollutionSuffix}</span> );
     }

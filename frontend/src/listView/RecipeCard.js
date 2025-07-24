@@ -4,10 +4,10 @@ import { useGetData } from '../DataContext';
 import { getRecipeProcessIds } from '../gameSpecific/moduleRouter';
 
 
-const RecipeCard = ({ recipe, selected, onClick }) => {
+const RecipeCard = ({ recipe, selected = false, onClick = null }) => {
     const data = useGetData()
     const processes = getRecipeProcessIds(data, recipe);
-    return <div className={selected ? "recipe-card-selected" : "recipe-card"} onClick={onClick}>
+    return <div className={selected ? "recipe-card-selected" : "recipe-card"} onClick={onClick} style={onClick !== null ? {'--hover-cursor': 'pointer'} : {}}>
         <div className="recipe-card-contents">
             {recipe.name ? <div className="recipe-card-name">{recipe.name}</div> : null}
             <div className="recipe-card-process">

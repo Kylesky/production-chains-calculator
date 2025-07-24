@@ -13,7 +13,7 @@ function compute(data, recipes, outputGoals, inputGoals, intermediateGoals) {
         Object.entries(recipe.output).forEach(([itemId, qty]) => {
             if(itemId in variable) variable[itemId] += qty;
             else variable[itemId] = qty;
-            if(itemId in outputGoals) variable["score"] += qty;
+            if(itemId in outputGoals && outputGoals[itemId] > 0) variable["score"] += qty;
         })
         variable[recipeId+"_constraint"] = 1;
         constraintVars.push(recipeId+"_constraint");

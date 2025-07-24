@@ -80,19 +80,34 @@ const toggleSelectedRecipe = (selected, toggledRecipe, data, searchState, select
         setSelectedRecipesList(selectedRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
         if (checkSearchMatch(data, searchState, toggledRecipe)) {
             const index = filteredRecipesList.findIndex(item => item.id >= toggledRecipe.id);
-            const newlist = [...filteredRecipesList];
+            const newList = [...filteredRecipesList];
             if (index === -1) {
-                newlist.push(toggledRecipe);
+                newList.push(toggledRecipe);
             } else {
-                newlist.splice(index, 0, toggledRecipe);
+                newList.splice(index, 0, toggledRecipe);
             }
-            setFilteredRecipesList(newlist);
+            setFilteredRecipesList(newList);
         }
     } else {
         setSelectedRecipesList([...selectedRecipesList, toggledRecipe]);
         setFilteredRecipesList(filteredRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
     }
 };
+
+const selectAllRecipes = (selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList) => {
+    var newList = [...selectedRecipesList, ...filteredRecipesList];
+    newList = newList.sort((a, b) => a.id.localeCompare(b.id))
+    setSelectedRecipesList(newList);
+    setFilteredRecipesList([]);
+}
+
+const unselectAllRecipes = (data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList) => {
+    var newList = selectedRecipesList.filter(recipe => checkSearchMatch(data, searchState, recipe));
+    newList = [...newList, ...filteredRecipesList];
+    newList = newList.sort((a, b) => a.id.localeCompare(b.id));
+    setSelectedRecipesList([]);
+    setFilteredRecipesList(newList);
+}
 
 const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchState }) => {
     const data = useGetData();
@@ -202,6 +217,8 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
                 <button onClick={toggleAdvancedSearch}>{searchState.advanced ? "Hide Advanced Search" : "Show Advanced Search"}</button>
                 {recipeCardsContainer}
                 <div className="modal-buttons">
+                    <button onClick={() => selectAllRecipes(selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)}>Select All</button>
+                    <button onClick={() => unselectAllRecipes(data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)}>Unselect All</button>
                     <button onClick={addSelectedRecipes}>Add</button>
                     <button onClick={onClose}>Cancel</button>
                 </div>

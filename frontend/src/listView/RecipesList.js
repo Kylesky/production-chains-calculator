@@ -113,7 +113,7 @@ function RecipesList({ computeVarsState, recipesListState, forceWholeBuildingsSt
             </thead>
             <tbody>
                 {recipesListState.recipesList.map(recipe => {
-                    return <RecipeLine computeType={computeVarsState.type.value} recipe={recipe} recipesListState={recipesListState} forceWholeBuildings={forceWholeBuildingsState.value} />
+                    return <RecipeLine key={recipe.id} computeType={computeVarsState.type.value} recipe={recipe} recipesListState={recipesListState} forceWholeBuildings={forceWholeBuildingsState.value} />
                 })}
             </tbody>
         </table>
