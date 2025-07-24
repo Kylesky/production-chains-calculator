@@ -1,0 +1,42 @@
+.items-view-item {
+    border: 2px grey solid;
+    border-radius: 10px;
+    text-align: start;
+    padding: 5px;
+    padding-left: 10px;
+    height: fit-content;
+}
+
+.items-view-icon {
+    height: auto;
+    width: auto;
+    max-height: 48px;
+    max-width: 48px;
+}
+
+.items-view-item-header {
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.items-view-item-container {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 100%;
+    align-items: left;
+    text-align: left;
+    gap: 5px;
+}
+
+.items-view-item-io-container {
+    padding: 2px;
+    gap: 2px;
+}
+
+.items-view-recipes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}

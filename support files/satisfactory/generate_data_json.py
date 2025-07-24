@@ -46,6 +46,9 @@ def scrape_crafting_recipes(download_icons = False):
         ingredients = []
         for item in cells[1].find_all("div", class_="recipe-item"):
             id = item.find("a").attrs["href"].removeprefix("/wiki/")
+            if "Factory_Cart" in id:
+                parts = id.partition("Factory_Cart")
+                id = parts[0] + parts[1]
             qty = float(item.find("span", class_="item-amount").text.replace('\xa0', ' ').replace(',', '').split(' ')[0])
             name = item.find("span", class_="item-name").text
             img = item.find("img")
@@ -77,6 +80,9 @@ def scrape_crafting_recipes(download_icons = False):
         products = []
         for item in cells[3].find_all("div", class_="recipe-item"):
             id = item.find("a").attrs["href"].removeprefix("/wiki/")
+            if "Factory_Cart" in id:
+                parts = id.partition("Factory_Cart")
+                id = parts[0] + parts[1]
             qty = float(item.find("span", class_="item-amount").text.replace('\xa0', ' ').replace(',', '').split(' ')[0])
             name = item.find("span", class_="item-name").text
             img = item.find("img")

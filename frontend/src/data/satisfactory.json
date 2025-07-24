@@ -429,8 +429,8 @@
             "id": "Fabric",
             "name": "Fabric"
         },
-        "Factory_Cart%E2%84%A2": {
-            "id": "Factory_Cart%E2%84%A2",
+        "Factory_Cart": {
+            "id": "Factory_Cart",
             "name": "Factory Cart\u2122"
         },
         "Fancy_Fireworks": {
@@ -490,8 +490,8 @@
             "id": "Gas_Nobelisk",
             "name": "Gas Nobelisk"
         },
-        "Golden_Factory_Cart%E2%84%A2": {
-            "id": "Golden_Factory_Cart%E2%84%A2",
+        "Golden_Factory_Cart": {
+            "id": "Golden_Factory_Cart",
             "name": "Golden Factory Cart\u2122"
         },
         "Hatcher_Remains": {
@@ -2877,7 +2877,7 @@
             ],
             "output": [
                 {
-                    "id": "Factory_Cart%E2%84%A2",
+                    "id": "Factory_Cart",
                     "qty": 1.0
                 }
             ]
@@ -3279,7 +3279,7 @@
             ],
             "output": [
                 {
-                    "id": "Golden_Factory_Cart%E2%84%A2",
+                    "id": "Golden_Factory_Cart",
                     "qty": 1.0
                 }
             ]

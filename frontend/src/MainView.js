@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import ItemsView from './itemsView/ItemsView';
 import ListView from './listView/ListView';
 import GraphView from './graphView/GraphView';
 import SidePanel from './SidePanel';
@@ -91,7 +92,10 @@ function MainView() {
     };
 
     const addRecipes = (recipes) => {
-        setRecipesList([...recipesList, ...recipes]);
+        const addedRecipes = new Set();
+        recipesList.forEach(recipe => addedRecipes.add(recipe.id));
+        const recipesToAdd = recipes.filter(recipe => !addedRecipes.has(recipe.id));
+        setRecipesList([...recipesList, ...recipesToAdd]);
         updateMaterialsLists();
         handleCompute();
     }
@@ -205,11 +209,15 @@ function MainView() {
         <SidePanel clearRecipes={clearRecipes} />
         <Tabs className="tabs" selectedTabClassName="selected-tab" selectedTabPanelClassName="selected-tab-panel">
             <TabList className="tab-list">
+                <Tab className="tab">Items</Tab>
                 <Tab className="tab">List</Tab>
                 <Tab className="tab">Visual</Tab>
                 Data Set Loaded: {data.name}
             </TabList>
 
+            <TabPanel className="tab-panel">
+                <ItemsView addRecipes={addRecipes} />
+            </TabPanel>
             <TabPanel className="tab-panel">
                 <ListView recipesListState={recipesListState} itemListsState={itemListsState} computeVarsState={computeVarsState} forceWholeBuildingsState={forceWholeBuildingsState} />
             </TabPanel>

@@ -7,7 +7,7 @@
 }
 
 .recipe-card:hover {
-    cursor: pointer;
+    cursor: var(--hover-cursor);
 }
 
 .recipe-card-selected {
@@ -19,7 +19,7 @@
 }
 
 .recipe-card-selected:hover {
-    cursor: pointer;
+    cursor: var(--hover-cursor);
 }
 
 .recipe-card-contents {
