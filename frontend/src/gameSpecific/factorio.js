@@ -94,7 +94,7 @@ function getRecipeTimePerCraft(data, recipe, speedMultiplier = null) {
     var speedModifier = speedMultiplier;
     if (speedModifier === null)
         speedModifier = getModuleModifiers(recipe.modules ?? [], recipe.beacons ?? []).speed;
-    const speed = process.speed * (1 + (0.3 * (recipe.quality ?? 0))) * (1 + speedModifier);
+    const speed = process.speed * Math.max(0.2, (1 + (0.3 * (recipe.quality ?? 0))) * (1 + speedModifier));
     return recipe.duration / speed;
 }
 
