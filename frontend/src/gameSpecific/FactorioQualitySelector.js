@@ -1,6 +1,5 @@
 import * as Select from "@radix-ui/react-select";
 import React, { useState, useRef } from "react";
-import Icon from "../components/Icon";
 import FactorioQualityIcon from "./FactorioQualityIcon";
 
 const options = [0, 1, 2, 3, 5];
