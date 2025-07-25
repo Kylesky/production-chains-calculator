@@ -36,7 +36,7 @@ function compute(data, recipes, outputGoals, inputGoals, intermediateGoals, item
         if(itemId in inputGoals) target = inputGoals[itemId] ?? 0;
         const unsetInputRecipes = [];
         const unsetOutputRecipes = [];
-        Object.entries(itemRecipes[itemId]).forEach(([recipeId, count]) => {
+        Object.entries(itemRecipes[itemId] ?? {}).forEach(([recipeId, count]) => {
             if(recipeId in recipeCounts) {
                 target -= itemRecipes[itemId][recipeId] * recipeCounts[recipeId];
             } else {

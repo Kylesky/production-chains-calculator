@@ -85,7 +85,7 @@ function getItemDefaultValue(data, item) {
 
 function getRecipeAdditionalComponents(data, recipe, process, updateRecipe){
     const module = loadModule(data);
-    if (!module) return true;
+    if (!module) return null;
     return module.getRecipeAdditionalComponents(data, recipe, process, updateRecipe);
 }
 
