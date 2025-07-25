@@ -113,6 +113,12 @@ function getItemDefaultValue(_data, _item) {
     return 1;
 }
 
+function getRecipeAdditionalComponents(data, recipe, process, updateRecipe) {
+
+    return <div>
+    </div>
+}
+
 export {
     getRecipeProcesses,
     getRecipeProcess,
@@ -124,5 +130,6 @@ export {
     getDefaultRecipeId, 
     getRecipeSearchFilters, 
     checkRecipeSearchMatch,
-    getItemDefaultValue
+    getItemDefaultValue,
+    getRecipeAdditionalComponents
 };

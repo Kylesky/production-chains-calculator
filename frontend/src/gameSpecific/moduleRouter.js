@@ -83,6 +83,12 @@ function getItemDefaultValue(data, item) {
     return module.getItemDefaultValue(data, item);
 }
 
+function getRecipeAdditionalComponents(data, recipe, process, updateRecipe){
+    const module = loadModule(data);
+    if (!module) return true;
+    return module.getRecipeAdditionalComponents(data, recipe, process, updateRecipe);
+}
+
 export {
     getRecipeProcesses,
     getRecipeProcessIds,
@@ -95,5 +101,6 @@ export {
     getDefaultRecipeId,
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
-    getItemDefaultValue
+    getItemDefaultValue,
+    getRecipeAdditionalComponents
 }
