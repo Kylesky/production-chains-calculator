@@ -30,6 +30,12 @@ function ControlPanel({ computeVarsState, recipesListState, handleRecipeModalOpe
 
         const recipesToAdd = [];
         for (const itemId of inputs) {
+            if("forced_recipe" in data.items[itemId]) {
+                const recipe = data.recipes[data.items[itemId]["forced_recipe"]];
+                recipesToAdd.push(recipe);
+                if (recipe.input) recipe.input.forEach(input => inputs.add(input.id));
+                if (recipe.output) recipe.output.forEach(output => outputs.add(output.id));
+            }
             if (outputs.has(itemId)) continue;
             const recipeId = getDefaultRecipeId(data, itemId);
             if (recipeId in data.recipes) {
