@@ -77,6 +77,18 @@ function checkRecipeSearchMatch(data, recipe, searchState) {
     return module.checkRecipeSearchMatch(recipe, searchState);
 }
 
+function getItemDefaultValue(data, item) {
+    const module = loadModule(data);
+    if (!module) return true;
+    return module.getItemDefaultValue(data, item);
+}
+
+function getRecipeAdditionalComponents(data, recipe, process, updateRecipe){
+    const module = loadModule(data);
+    if (!module) return null;
+    return module.getRecipeAdditionalComponents(data, recipe, process, updateRecipe);
+}
+
 export {
     getRecipeProcesses,
     getRecipeProcessIds,
@@ -88,5 +100,7 @@ export {
     getOutputQuantity,
     getDefaultRecipeId,
     getRecipeSearchFilters,
-    checkRecipeSearchMatch
+    checkRecipeSearchMatch,
+    getItemDefaultValue,
+    getRecipeAdditionalComponents
 }

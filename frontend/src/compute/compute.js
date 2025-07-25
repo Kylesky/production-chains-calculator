@@ -1,11 +1,11 @@
 import { computePerBuildingMultiplier } from "../helper";
-import { getRecipeProcess, getInputQuantity, getOutputQuantity, getRecipeTimePerCraft } from "../gameSpecific/moduleRouter";
+import { getRecipeProcess, getInputQuantity, getOutputQuantity, getRecipeTimePerCraft, getItemDefaultValue } from "../gameSpecific/moduleRouter";
 import simpleCompute from "./simple";
 import matrixCompute from "./matrix";
 import lpForceCompute from "./lp-force";
 import lpOptimizeCompute from "./lp-optimize";
 
-function compute(data, recipesList, outputsList, inputsList, intermediatesList, itemGoalNumbers, computeType, computeMethod) {
+function compute(data, recipesList, outputsList, inputsList, intermediatesList, itemGoalNumbers, itemValues, computeType, computeMethod) {
     let skip = true;
     const insertGoalNumber = (acc, id) => {
         skip = false;
@@ -32,21 +32,27 @@ function compute(data, recipesList, outputsList, inputsList, intermediatesList, 
     let result = {};
     let feasible = true;
 
+    const computedItemValues = Object.values(data.items).reduce((acc, item) => {
+        if(item.id in itemValues) acc[item.id] = itemValues[item.id];
+        else acc[item.id] = getItemDefaultValue(data, item);
+        return acc;
+    }, {})
+
     const startTime = Date.now();
     switch (computeMethod) {
         case "simple":
-            result = simpleCompute(data, recipes, outputGoals, inputGoals, intermediateGoals);
+            result = simpleCompute(data, recipes, outputGoals, inputGoals, intermediateGoals, computedItemValues);
             break;
         case "matrix":
-            result = matrixCompute(data, recipes, outputGoals, inputGoals, intermediateGoals);
+            result = matrixCompute(data, recipes, outputGoals, inputGoals, intermediateGoals, computedItemValues);
             break;
         case "lp-force":
-            result = lpForceCompute(data, recipes, outputGoals, inputGoals, intermediateGoals);
+            result = lpForceCompute(data, recipes, outputGoals, inputGoals, intermediateGoals, computedItemValues);
             feasible = result.feasible;
             result = result.recipeCounts;
             break;
         case "lp-optimize":
-            result = lpOptimizeCompute(data, recipes, outputGoals, inputGoals, intermediateGoals);
+            result = lpOptimizeCompute(data, recipes, outputGoals, inputGoals, intermediateGoals, computedItemValues);
             feasible = result.feasible;
             result = result.recipeCounts;
             break;

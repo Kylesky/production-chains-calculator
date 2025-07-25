@@ -1,6 +1,6 @@
 import { useGetData } from '../DataContext'
 import Icon from '../components/Icon';
-import { getRecipeProcess, getProcessCostComponents, getInputQuantity, getOutputQuantity, getRecipeProcessIds, getRecipeTimePerCraft } from '../gameSpecific/moduleRouter';
+import { getRecipeProcess, getProcessCostComponents, getInputQuantity, getOutputQuantity, getRecipeProcessIds, getRecipeTimePerCraft, getRecipeAdditionalComponents } from '../gameSpecific/moduleRouter';
 import { getComputeTypeSuffix, computePerBuildingMultiplier } from '../helper';
 import './RecipesList.css'
 
@@ -44,7 +44,7 @@ function ProcessContent({ computeType, recipe, updateRecipe, process, timePerCra
     const processes = getRecipeProcessIds(data, recipe);
     const selectedProcess = getRecipeProcess(data, recipe);
 
-    const topPiece = <div className="process-selection-container">
+    const processPiece = <div className="process-selection-container">
         {processes.map((process, index) => {
             if (selectedProcess.id === process)
                 return <Icon className="recipes-list-process-icon-selected" id={process} name={data.processes[process].name}
@@ -61,13 +61,16 @@ function ProcessContent({ computeType, recipe, updateRecipe, process, timePerCra
 
     let costsMultiplied = [getProcessCostComponents(data, computeType, recipe, process, (recipe.multiplier ?? 1) * (computeType === "count" ? getRecipeTimePerCraft(data, recipe) : 1))];
 
-    const bottomPiece = <div className="process-costs-container">
+    const costsPiece = <div className="process-costs-container">
         {costs}&rarr;{costsMultiplied}
     </div>
 
+    const gameSpecificPiece = getRecipeAdditionalComponents(data, recipe, process, updateRecipe);
+
     return <div>
-        {topPiece}
-        {bottomPiece}
+        {processPiece}
+        {costsPiece}
+        {gameSpecificPiece}
     </div>;
 }
 

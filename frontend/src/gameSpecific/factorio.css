@@ -1,0 +1,119 @@
+.select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #1f1f1f;
+  cursor: pointer;
+}
+
+.select-value {
+  display: flex;
+  align-items: center;
+}
+
+.select-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.select-content {
+  background: #1f1f1f;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  width: 240px;
+  z-index: 100;
+}
+
+.select-viewport {
+  padding: 8px;
+}
+
+.select-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.select-item {
+  position: relative;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.select-item:focus,
+.select-item:hover {
+  background: #eee;
+}
+
+.item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.factorio-quality-icon-container {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.factorio-quality-icon-base {
+  width: 100%;
+  height: 100%;
+}
+
+.factorio-quality-icon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.factorio-modules-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.factorio-additional-components {
+    display: flex;
+    flex-direction: column;
+}
+
+.factorio-building-options {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.factorio-beacon-options {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center
+}
+
+.factorio-beacon-components {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.factorio-beacon-component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.factorio-beacon-number-input {
+    width: 2em;
+    text-align: center;
+}

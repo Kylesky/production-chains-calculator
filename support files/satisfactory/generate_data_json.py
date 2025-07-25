@@ -154,6 +154,37 @@ def add_elevator_recipes():
             "output": [{"id": "Elevator_Progress", "qty": 1}]
         }
 
+def scrape_item_values():
+    url = "https://satisfactory.wiki.gg/wiki/AWESOME_Sink"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    for table in soup.find_all("table"):
+        headers = [header.text.strip() for header in table.find_all("th")]
+        if headers != ["Points", "Items"]:
+            continue
+
+        for row in table.find_all("tr"):
+            cells = row.find_all("td")
+            if len(cells) < 2:
+                continue
+
+            points = cells[0].text.replace(',', '')
+            default_value = None
+            if points == "Points":
+                continue
+
+            if points == "Cannot be sunk":
+                default_value = 0
+            else:
+                default_value = int(points)
+
+            for item_a in cells[1].find_all("a"):
+                id = item_a.attrs["href"].removeprefix("/wiki/")
+                if id in items:
+                    items[id]["default_value"] = default_value
+
+
 if __name__ == "__main__":
     add_elevator_recipes()
     
@@ -165,6 +196,7 @@ if __name__ == "__main__":
 
     add_generator_recipes()
     set_raw_ingredient_flags()
+    scrape_item_values()
 
     data = {
         "items": items,

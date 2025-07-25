@@ -1,0 +1,41 @@
+.satisfactory-overclock-input {
+    width: 2em;
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.satisfactory-overclock-input::-webkit-outer-spin-button,
+.satisfactory-overclock-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.satisfactory-overclock-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.satisfactory-additonal-components {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.satisfactory-overclock {
+    display: flex;
+    flex-direction: column;
+}
+
+.satisfactory-overclock-lower {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.satisfactory-somersloop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
