@@ -75,12 +75,10 @@ function computeModuleModifiers(modules, beacons) {
             if (module) addModuleValues(module, 1);
         });
     }
-    console.log(modules, beacons);
     return { productivity: productivity, speed: speed, energy: energy, pollution: pollution }
 }
 
 function getModuleModifiers(recipe) {
-    console.log(recipe.id);
     if("modifiers" in recipe) return recipe.modifiers;
     else return {productivity: 0, speed: 0, energy: 0, pollution: 0};
 }
@@ -216,7 +214,7 @@ function RecipeAdditionalComponents(data, recipe, process, updateRecipe) {
             }
         }
 
-        const modules = recipe.modules > 0 ?
+        const modules = "modules" in recipe ?
             (recipe.modules.length > process.modules ? recipe.modules.slice(0, process.modules) : recipe.modules) :
             (process.modules ? Array.from({ length: process.modules }, () => null) : null)
 
