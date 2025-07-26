@@ -19,6 +19,10 @@ default_recipe_overrides = {
     "jelly": "jellynut-processing"
 }
 
+forced_recipe_override = {
+    "fluoroketone-hot": "fluoroketone"
+}
+
 def parse_items(filename):
     with open(filename, 'r') as file:
         item = None
@@ -46,6 +50,8 @@ def parse_items(filename):
                         item["name"] = kebab_to_human(item["name"])
                         if item["id"] in default_recipe_overrides:
                             item["default_recipe"] = default_recipe_overrides[item["id"]]
+                        if item["id"] in forced_recipe_override:
+                            item["forced_recipe"] = forced_recipe_override[item["id"]]
                         items[item["id"]] = item
                     item = None
                     

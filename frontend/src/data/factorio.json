@@ -844,7 +844,8 @@
         "fluoroketone-hot": {
             "id": "fluoroketone-hot",
             "name": "Fluoroketone Hot",
-            "default_recipe": "fluoroketone"
+            "default_recipe": "fluoroketone",
+            "forced_recipe": "fluoroketone"
         },
         "fusion-plasma": {
             "id": "fusion-plasma",

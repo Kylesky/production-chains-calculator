@@ -1,8 +1,9 @@
 import { useGetData } from '../DataContext'
 import Icon from '../components/Icon';
-import { getRecipeProcess, getProcessCostComponents, getInputQuantity, getOutputQuantity, getRecipeProcessIds, getRecipeTimePerCraft, getRecipeAdditionalComponents } from '../gameSpecific/moduleRouter';
+import { getRecipeProcess, getProcessCostComponents, getInputQuantity, getOutputQuantity, getRecipeProcessIds, getRecipeTimePerCraft, RecipeAdditionalComponents } from '../gameSpecific/moduleRouter';
 import { getComputeTypeSuffix, computePerBuildingMultiplier } from '../helper';
 import './RecipesList.css'
+import { useMemo } from 'react';
 
 function InputMaterialsList({ computeType, recipe, process, itemsMultiplier }) {
     const data = useGetData();
@@ -55,9 +56,11 @@ function ProcessContent({ computeType, recipe, updateRecipe, process, timePerCra
         {process.name}
     </div>
 
-    let costs = [];
-    if(timePerCraft) costs.push(<span>&#9203;{+(timePerCraft).toFixed(4)}s</span>);
-    costs = [...costs, ...getProcessCostComponents(data, "default", recipe, process)];
+    let costs = useMemo(() => {
+        let costs = [];
+        if(timePerCraft) costs.push(<span>&#9203;{+(timePerCraft).toFixed(4)}s</span>);
+        return [...costs, ...getProcessCostComponents(data, "default", recipe, process)];
+    }, [data, timePerCraft, recipe, process]);
 
     let costsMultiplied = [getProcessCostComponents(data, computeType, recipe, process, (recipe.multiplier ?? 1) * (computeType === "count" ? getRecipeTimePerCraft(data, recipe) : 1))];
 
@@ -65,7 +68,7 @@ function ProcessContent({ computeType, recipe, updateRecipe, process, timePerCra
         {costs}&rarr;{costsMultiplied}
     </div>
 
-    const gameSpecificPiece = getRecipeAdditionalComponents(data, recipe, process, updateRecipe);
+    const gameSpecificPiece = RecipeAdditionalComponents(data, recipe, process, updateRecipe);
 
     return <div>
         {processPiece}
@@ -79,7 +82,7 @@ function RecipeLine({ computeType, recipe, recipesListState, forceWholeBuildings
     const data = useGetData();
 
     const process = getRecipeProcess(data, recipe);
-    const timePerCraft = getRecipeTimePerCraft(data, recipe);
+    const timePerCraft = useMemo(() => getRecipeTimePerCraft(data, recipe), [data, recipe]);
     
     const perBuildingMultiplier = computePerBuildingMultiplier(computeType, timePerCraft);
     const numBuildings = recipe.multiplier ?? 1;

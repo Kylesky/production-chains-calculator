@@ -83,10 +83,10 @@ function getItemDefaultValue(data, item) {
     return module.getItemDefaultValue(data, item);
 }
 
-function getRecipeAdditionalComponents(data, recipe, process, updateRecipe){
+function RecipeAdditionalComponents(data, recipe, process, updateRecipe){
     const module = loadModule(data);
     if (!module) return null;
-    return module.getRecipeAdditionalComponents(data, recipe, process, updateRecipe);
+    return module.RecipeAdditionalComponents(data, recipe, process, updateRecipe);
 }
 
 export {
@@ -102,5 +102,5 @@ export {
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
     getItemDefaultValue,
-    getRecipeAdditionalComponents
+    RecipeAdditionalComponents
 }

@@ -1,5 +1,5 @@
 import Dagre from '@dagrejs/dagre';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {
     ReactFlow,
     ReactFlowProvider,
@@ -25,6 +25,11 @@ const nodeTypes = {
 const edgeTypes = {
     "custom": CustomEdge
 }
+
+const includesIgnoreCaseSpecialAndSuffix = (s1, s2) => { 
+    const str1 = s1.split('|')[0].replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    const str2 = s2.split('|')[0].replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    return str1.includes(str2); }
 
 const resetLayout = (nodes, edges, setNodes, setEdges) => {
     // Apply layout from Dagre
@@ -96,6 +101,44 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
         forceWholeBuildingsState.set(!forceWholeBuildingsState.value);
     }
 
+    const [searchInput, setSearchInput] = useState('');
+    const [searchChanged, setSearchChanged] = useState(false);
+    const [searchResults, setSearchResults] = useState([]);
+    const [searchIndex, setSearchIndex] = useState(0);
+
+    const handleSearchChange = (event) => {
+        setSearchInput(event.target.value);
+        setSearchChanged(true);
+        setSearchIndex(0);
+    }
+
+    const searchItem = () => {
+        if (searchInput === "") return;
+        var results = searchResults;
+        if (searchChanged) {
+            results = nodes.filter(node => {
+                return includesIgnoreCaseSpecialAndSuffix(node.id, searchInput);
+            });
+            setSearchChanged(false);
+            setSearchResults(results);
+        }
+
+        var index = searchIndex;
+        if (index === results.length) {
+            setSearchIndex(1);
+            index = 0;
+        } else {
+            setSearchIndex(index + 1);
+        }
+
+        if(results.length > 0)
+            fitView({ nodes: [{ id: results[index].id }], duration: 500 });
+    }
+
+    const handleEnter = (event) => {
+        if (event.key === "Enter") searchItem();
+    }
+
     return <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -108,6 +151,8 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
         <Background color="#ccc" variant={BackgroundVariant.Dots} />
         <Panel position="top-left" style={{ background: "rgba(0, 0, 0, 0.5)", padding: "5px" }}>
             <div className="flowchart-actions">
+                <input value={searchInput} onChange={handleSearchChange} onKeyDown={handleEnter} placeholder='item or recipe name' />
+                <button onClick={searchItem}>Search</button>
                 <label>
                     {forceWholeBuildingsState.value ?
                         <input type="checkbox" onChange={handleChangeForceWholeBuildings} checked /> :

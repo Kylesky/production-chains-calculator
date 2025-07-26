@@ -22,7 +22,7 @@ const speedModules = [
 
 const efficiencyModules = [-0.3, -0.4, -0.5];
 
-function getModuleModifiers(modules, beacons) {
+function computeModuleModifiers(modules, beacons) {
     var productivity = 0;
     var speed = 0;
     var energy = 0;
@@ -75,8 +75,12 @@ function getModuleModifiers(modules, beacons) {
             if (module) addModuleValues(module, 1);
         });
     }
-
     return { productivity: productivity, speed: speed, energy: energy, pollution: pollution }
+}
+
+function getModuleModifiers(recipe) {
+    if("modifiers" in recipe) return recipe.modifiers;
+    else return {productivity: 0, speed: 0, energy: 0, pollution: 0};
 }
 
 function getRecipeProcesses(data, recipe) {
@@ -92,9 +96,8 @@ function getRecipeProcess(data, recipe) {
 function getRecipeTimePerCraft(data, recipe, speedMultiplier = null) {
     const process = getRecipeProcess(data, recipe);
     var speedModifier = speedMultiplier;
-    if (speedModifier === null)
-        speedModifier = getModuleModifiers(recipe.modules ?? [], recipe.beacons ?? []).speed;
-    const speed = process.speed * (1 + (0.3 * (recipe.quality ?? 0))) * (1 + speedModifier);
+    if (speedModifier === null) speedModifier = getModuleModifiers(recipe).speed;
+    const speed = process.speed * Math.max(0.2, (1 + (0.3 * (recipe.quality ?? 0))) * (1 + speedModifier));
     return recipe.duration / speed;
 }
 
@@ -103,7 +106,7 @@ function compileProcessCosts(data, computeType, recipesList) {
 
     recipesList.forEach(recipe => {
         const process = getRecipeProcess(data, recipe);
-        const { speed, energy, pollution } = getModuleModifiers(recipe.modules ?? [], recipe.beacons ?? []);
+        const { speed, energy, pollution } = getModuleModifiers(recipe);
         let multiplier = recipe.multiplier ?? 1;
         if (computeType === "count") multiplier *= getRecipeTimePerCraft(data, recipe, 1 + speed);
         costs.forEach(costType => {
@@ -123,7 +126,7 @@ function compileProcessCosts(data, computeType, recipesList) {
 function getProcessCostComponents(computeType, recipe, process, multiplier = 1) {
     let components = [];
 
-    const { energy, pollution } = getModuleModifiers(recipe.modules ?? [], recipe.beacons ?? []);
+    const { energy, pollution } = getModuleModifiers(recipe);
     const energyMultiplier = Math.max(0.2, 1 + energy);
     const powerUnits = computeType === "count" ? "KJ" : "KW";
     if (process.power) {
@@ -165,7 +168,7 @@ function getOutputQuantity(item, recipe, process) {
     //     return item.qty;
 
     const productivity = process.productivity ?? 0;
-    const { productivity: prodModifier } = getModuleModifiers(recipe.modules ?? [], recipe.beacons ?? []);
+    const { productivity: prodModifier } = getModuleModifiers(recipe);
     let qty = item.qty * (1 + productivity + prodModifier);
     if ("ignored_by_productivity" in item)
         qty -= item["ignored_by_productivity"] * (productivity + prodModifier);
@@ -197,92 +200,101 @@ function getItemDefaultValue(_data, _item) {
     return 1;
 }
 
-function getRecipeAdditionalComponents(data, recipe, process, updateRecipe) {
-    const setModule = (index, module) => {
-        if (recipe.modules) {
-            const modules = [...recipe.modules];
-            modules[index] = module;
-            updateRecipe(recipe.id, { ...recipe, modules: modules });
-        } else {
-            const modules = Array.from({ length: process.modules }, () => null);
-            modules[index] = module;
-            updateRecipe(recipe.id, { ...recipe, modules: modules });
+function RecipeAdditionalComponents(data, recipe, process, updateRecipe) {
+    if(recipe.showAdditional) {
+        const setModule = (index, module) => {
+            if (recipe.modules) {
+                const modules = [...recipe.modules];
+                modules[index] = module;
+                updateRecipe(recipe.id, { ...recipe, modules: modules, modifiers: computeModuleModifiers(modules, recipe.beacons) });
+            } else {
+                const modules = Array.from({ length: process.modules }, () => null);
+                modules[index] = module;
+                updateRecipe(recipe.id, { ...recipe, modules: modules, modifiers: computeModuleModifiers(modules, recipe.beacons) });
+            }
         }
-    }
 
-    const modules = recipe.modules > 0 ?
-        (recipe.modules.length > process.modules ? recipe.modules.slice(0, process.modules) : recipe.modules) :
-        (process.modules ? Array.from({ length: process.modules }, () => null) : null)
+        const modules = "modules" in recipe ?
+            (recipe.modules.length > process.modules ? recipe.modules.slice(0, process.modules) : recipe.modules) :
+            (process.modules ? Array.from({ length: process.modules }, () => null) : null)
 
-    const moduleComponents = modules ? <div className="factorio-modules-container">
-        {modules.map((module, index) => <FactorioModuleSelector value={module} setModule={(value) => setModule(index, value)} />)}
-    </div> : null;
+        const moduleComponents = modules ? <div className="factorio-modules-container">
+            {modules.map((module, index) => <FactorioModuleSelector value={module} setModule={(value) => setModule(index, value)} />)}
+        </div> : null;
 
-    const setQuality = (quality) => {
-        updateRecipe(recipe.id, { ...recipe, quality: quality });
-    }
+        const setQuality = (quality) => {
+            updateRecipe(recipe.id, { ...recipe, quality: quality });
+        }
 
-    const setBeaconNumber = (count) => {
-        if (recipe.beacons) {
-            if (count > recipe.beacons.length) {
-                const beacons = [...recipe.beacons];
+        const setBeaconNumber = (count) => {
+            if (recipe.beacons) {
+                if (count > recipe.beacons.length) {
+                    const beacons = [...recipe.beacons];
+                    while (beacons.length < count)
+                        beacons.push({ count: 1, quality: 0, modules: [null, null] });
+                    updateRecipe(recipe.id, { ...recipe, beacons: beacons, modifiers: recipe.modifiers })
+                } else {
+                    const beacons = recipe.beacons.slice(0, count)
+                    updateRecipe(recipe.id, { ...recipe, beacons: beacons, modifiers: computeModuleModifiers(recipe.modules, beacons) });
+                }
+            } else {
+                const beacons = [];
                 while (beacons.length < count)
                     beacons.push({ count: 1, quality: 0, modules: [null, null] });
-                updateRecipe(recipe.id, { ...recipe, beacons: beacons })
-            } else {
-                updateRecipe(recipe.id, { ...recipe, beacons: recipe.beacons.slice(0, count) });
+                
+                updateRecipe(recipe.id, { ...recipe, beacons: beacons, modifiers: computeModuleModifiers(recipe.modules, []) })
             }
-        } else {
-            const beacons = [];
-            while (beacons.length < count)
-                beacons.push({ count: 1, quality: 0, modules: [null, null] });
-            updateRecipe(recipe.id, { ...recipe, beacons: beacons })
         }
-    }
 
-    const setBeaconCount = (beaconIndex, count) => {
-        const updatedBeacons = [...recipe.beacons];
-        updatedBeacons[beaconIndex].count = count;
-        updateRecipe(recipe.id, { ...recipe, beacons: updatedBeacons })
-    }
+        const setBeaconCount = (beaconIndex, count) => {
+            const updatedBeacons = [...recipe.beacons];
+            updatedBeacons[beaconIndex].count = count;
+            updateRecipe(recipe.id, { ...recipe, beacons: updatedBeacons, modifiers: computeModuleModifiers(recipe.modules, updatedBeacons) })
+        }
 
-    const setBeaconModule = (beaconIndex, moduleIndex, module) => {
-        const updatedBeacons = [...recipe.beacons];
-        updatedBeacons[beaconIndex].modules[moduleIndex] = module;
-        updateRecipe(recipe.id, { ...recipe, beacons: updatedBeacons })
-    }
+        const setBeaconModule = (beaconIndex, moduleIndex, module) => {
+            const updatedBeacons = [...recipe.beacons];
+            updatedBeacons[beaconIndex].modules[moduleIndex] = module;
+            updateRecipe(recipe.id, { ...recipe, beacons: updatedBeacons, modifiers: computeModuleModifiers(recipe.modules, updatedBeacons) })
+        }
 
-    const setBeaconQuality = (beaconIndex, quality) => {
-        const updatedBeacons = [...recipe.beacons];
-        updatedBeacons[beaconIndex].quality = quality;
-        updateRecipe(recipe.id, { ...recipe, beacons: updatedBeacons })
-    }
+        const setBeaconQuality = (beaconIndex, quality) => {
+            const updatedBeacons = [...recipe.beacons];
+            updatedBeacons[beaconIndex].quality = quality;
+            updateRecipe(recipe.id, { ...recipe, beacons: updatedBeacons, modifiers: computeModuleModifiers(recipe.modules, updatedBeacons) })
+        }
 
-    const beacons = (recipe.beacons ?? []).map((beacon, index) => {
-        return <div className="factorio-beacon-component">
-            <input className="factorio-beacon-number-input" type="number" value={beacon.count} min="0" onChange={(e) => setBeaconCount(index, e.target.value)} />
-            &nbsp;x&nbsp;
-            <FactorioQualitySelector id="beacon" quality={beacon.quality} setQuality={(quality) => setBeaconQuality(index, quality)} />
-            <FactorioModuleSelector value={beacon.modules[0]} setModule={(value) => setBeaconModule(index, 0, value)} noProd={true} />
-            <FactorioModuleSelector value={beacon.modules[1]} setModule={(value) => setBeaconModule(index, 1, value)} noProd={true} />
-        </div>
-    })
-
-    return <div className="factorio-additional-components">
-        <div className="factorio-building-options">
-            {process.id !== "by-hand" ? <FactorioQualitySelector id={process.id} quality={recipe.quality ?? 0} setQuality={setQuality} /> : null}
-            {moduleComponents}
-        </div>
-        <div className="factorio-beacon-options">
-            <div>
-                Beacons:&nbsp;
-                <input className="factorio-beacon-number-input" type="number" value={recipe.beacons ? recipe.beacons.length : 0} min="0" onChange={(e) => setBeaconNumber(e.target.value)} />
+        const beacons = (recipe.beacons ?? []).map((beacon, index) => {
+            return <div className="factorio-beacon-component">
+                <input className="factorio-beacon-number-input" type="number" value={beacon.count} min="0" onChange={(e) => setBeaconCount(index, e.target.value)} />
+                &nbsp;x&nbsp;
+                <FactorioQualitySelector id="beacon" quality={beacon.quality} setQuality={(quality) => setBeaconQuality(index, quality)} />
+                <FactorioModuleSelector value={beacon.modules[0]} setModule={(value) => setBeaconModule(index, 0, value)} noProd={true} />
+                <FactorioModuleSelector value={beacon.modules[1]} setModule={(value) => setBeaconModule(index, 1, value)} noProd={true} />
             </div>
-            <div className="factorio-beacon-components">
-                {beacons}
+        })
+
+        return <div className="factorio-additional-components">
+            <div className="factorio-building-options">
+                {process.id !== "by-hand" ? <FactorioQualitySelector id={process.id} quality={recipe.quality ?? 0} setQuality={setQuality} /> : null}
+                {moduleComponents}
+            </div>
+            <div className="factorio-beacon-options">
+                <div>
+                    Beacons:&nbsp;
+                    <input className="factorio-beacon-number-input" type="number" value={recipe.beacons ? recipe.beacons.length : 0} min="0" onChange={(e) => setBeaconNumber(e.target.value)} />
+                </div>
+                <div className="factorio-beacon-components">
+                    {beacons}
+                </div>
             </div>
         </div>
-    </div>
+    } else {
+        const handleShowAdditional = () => {
+            updateRecipe(recipe.id, {...recipe, showAdditional: true});
+        };
+        return <button onClick={handleShowAdditional}>Set Quality or Modules</button>
+    }
 }
 
 export {
@@ -297,5 +309,5 @@ export {
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
     getItemDefaultValue,
-    getRecipeAdditionalComponents
+    RecipeAdditionalComponents
 };
