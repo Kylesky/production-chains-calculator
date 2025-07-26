@@ -1,6 +1,14 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.2.3] - 2025-07-26
+- Added visual changes to the site overall.
+- Set minimum speed to 20% of base speed when modules are added to buildings in Factorio.
+- Added forced recipes which forcibly adds a specified recipe when its corresponding item is included in "Add Default Recipes". Used for Fluoroketone in Factorio.
+- Hid quality and modules in Factorio by default to prevent the intense lag from rending everything. Possibly need to optimize component construction in the future to handle this better.
+- Added searching to graph view.
+- Fixed a bug in Factorio where modules would not render in their corresponding select components when moving between tabs.
+
 ## [0.2.2] - 2025-07-25
 - Added values to items for LP computations to use for optimization (items with higher value contribute higher score).
 - Added power shards and somersloops to satisfactory.
