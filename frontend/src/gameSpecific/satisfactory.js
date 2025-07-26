@@ -145,7 +145,7 @@ function getItemDefaultValue(_data, item) {
     return "default_value" in item ? item["default_value"] : 1;
 }
 
-function getRecipeAdditionalComponents(data, recipe, process, updateRecipe) {
+function RecipeAdditionalComponents(data, recipe, process, updateRecipe) {
     const updateClockSpeed = (event) => {updateRecipe(recipe.id, {...recipe, clockSpeed: event.target.value/100})};
     const clockSpeed = recipe.clockSpeed ? recipe.clockSpeed*100 : 100;
     const overclock = process.overclock ? <div className="satisfactory-overclock">
@@ -182,5 +182,5 @@ export {
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
     getItemDefaultValue,
-    getRecipeAdditionalComponents
+    RecipeAdditionalComponents
 };

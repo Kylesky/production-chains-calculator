@@ -29,13 +29,13 @@
 }
 
 .tab:hover {
-    color: white;
+    color: #eee;
 }
 
 .selected-tab {
     font-size: 1em;
     font-weight: bold;
-    color: white;
+    color: #eee;
     border: transparent;
     border-radius: 5px;
 }

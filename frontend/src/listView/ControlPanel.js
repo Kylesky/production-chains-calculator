@@ -5,7 +5,7 @@ import "./ControlPanel.css"
 
 function ControlPanel({ computeVarsState, recipesListState, handleRecipeModalOpen, forceWholeBuildingsState }) {
     let data = useGetData();
-    const {recipesList, addRecipes, clearRecipes} = recipesListState;
+    const { recipesList, addRecipes, clearRecipes } = recipesListState;
     const {
         type: {
             value: computeType,
@@ -30,7 +30,7 @@ function ControlPanel({ computeVarsState, recipesListState, handleRecipeModalOpe
 
         const recipesToAdd = [];
         for (const itemId of inputs) {
-            if("forced_recipe" in data.items[itemId]) {
+            if ("forced_recipe" in data.items[itemId]) {
                 const recipe = data.recipes[data.items[itemId]["forced_recipe"]];
                 recipesToAdd.push(recipe);
                 if (recipe.input) recipe.input.forEach(input => inputs.add(input.id));
@@ -72,7 +72,6 @@ function ControlPanel({ computeVarsState, recipesListState, handleRecipeModalOpe
             }
         </select>
     </div>);
-    items.push(<button onClick={handleCompute}>Compute</button>);
     items.push(<div>
         <label>
             {forceWholeBuildingsState.value ?
@@ -81,8 +80,11 @@ function ControlPanel({ computeVarsState, recipesListState, handleRecipeModalOpe
             {"Force whole buildings?"}
         </label>
     </div>);
+    items.push(<button onClick={handleCompute}>Compute</button>);
     items.push(<button onClick={clearRecipes}>Clear</button>);
-    items.push(<div>Compute: {computeVarsState.success ? `${computeVarsState.time}ms` : "Failed"}</div>)
+    items.push(<div><span>Compute:</span> {computeVarsState.success ?
+        <span className="compute-success">{`${computeVarsState.time}ms`}</span> :
+        <span className="compute-failed">{"Failed"}</span>}</div>)
 
     return <div className="control-panel">{items}</div>;
 }
