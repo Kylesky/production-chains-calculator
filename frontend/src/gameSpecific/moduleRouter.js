@@ -1,21 +1,28 @@
 function loadModule(data) {
     try {
         if (data.gameId) {
-            const module = require(`./${data.gameId}`);
-            return module;
+            return require(`./${data.gameId}/${data.gameId}`).default;
         } else {
-            return null;
+            return require("./defaultModule");
         }
     } catch (err) {
         console.error(`${data.gameId} module not found`, err);
-        return null
+        return require("./defaultModule");
     }
 }
 
-function getRecipeProcesses(data, recipe) {
+function loadDefaultModule() {
+    return require("./defaultModule");
+}
+
+function executeModuleFunction(data, func, params){
     const module = loadModule(data);
-    if (!module) return {}
-    return module.getRecipeProcesses(data, recipe);
+    if(func in module) return module[func](params);
+    else loadDefaultModule[func](params);
+}
+
+function getRecipeProcesses(data, recipe) {
+    return executeModuleFunction(data, "getRecipeProcesses", {data: data, recipe: recipe})
 }
 
 function getRecipeProcessIds(data, recipe) {
@@ -24,69 +31,47 @@ function getRecipeProcessIds(data, recipe) {
 }
 
 function getRecipeProcess(data, recipe) {
-    const module = loadModule(data);
-    if (!module) return {}
-    return module.getRecipeProcess(data, recipe);
+    return executeModuleFunction(data, "getRecipeProcess", {data: data, recipe: recipe});
 }
 
 function getRecipeTimePerCraft(data, recipe) {
-    const module = loadModule(data);
-    if (!module) return {}
-    return module.getRecipeTimePerCraft(data, recipe);
+    return executeModuleFunction(data, "getRecipeTimePerCraft", {data: data, recipe: recipe});
 }
 
 function compileProcessCosts(data, computeType, recipesList) {
-    const module = loadModule(data);
-    if (!module) return {}
-    return module.compileProcessCosts(data, computeType, recipesList);
+    return executeModuleFunction(data, "compileProcessCosts", {data: data, computeType: computeType, recipesList: recipesList});
 }
 
 function getProcessCostComponents(data, computeType, recipe, process, multiplier = 1) {
-    const module = loadModule(data);
-    if (!module) return []
-    return module.getProcessCostComponents(computeType, recipe, process, multiplier);
+    return executeModuleFunction(data, "getProcessCostComponents", {computeType: computeType, recipe: recipe, process: process, multiplier: multiplier});
 }
 
 function getInputQuantity(data, item, recipe, process) {
-    const module = loadModule(data);
-    if (!module) return item.qty;
-    return module.getInputQuantity(item, recipe, process);
+    return executeModuleFunction(data, "getInputQuantity", {item: item, recipe: recipe, process: process});
 }
 
 function getOutputQuantity(data, item, recipe, process) {
-    const module = loadModule(data);
-    if (!module) return item.qty;
-    return module.getOutputQuantity(item, recipe, process);
+    return executeModuleFunction(data, "getOutputQuantity", {item: item, recipe: recipe, process: process});
 }
 
 function getDefaultRecipeId(data, itemId) {
-    const module = loadModule(data);
-    if (!module) return "";
-    return module.getDefaultRecipeId(data, itemId);
+    return executeModuleFunction(data, "getDefaultRecipeId", {data: data, itemId: itemId});
 }
 
 function getRecipeSearchFilters(data) {
-    const module = loadModule(data);
-    if (!module) return [];
-    return module.getRecipeSearchFilters();
+    return executeModuleFunction(data, "getRecipeSearchFilters", {});
 }
 
 function checkRecipeSearchMatch(data, recipe, searchState) {
-    const module = loadModule(data);
-    if (!module) return true;
-    return module.checkRecipeSearchMatch(recipe, searchState);
+    return executeModuleFunction(data, "checkRecipeSearchMatch", {recipe: recipe, searchState: searchState});
 }
 
 function getItemDefaultValue(data, item) {
-    const module = loadModule(data);
-    if (!module) return true;
-    return module.getItemDefaultValue(data, item);
+    return executeModuleFunction(data, "getItemDefaultValue", {data: data, item: item});
 }
 
 function RecipeAdditionalComponents(data, recipe, process, updateRecipe){
-    const module = loadModule(data);
-    if (!module) return null;
-    return module.RecipeAdditionalComponents(data, recipe, process, updateRecipe);
+    return executeModuleFunction(data, "RecipeAdditionalComponents", {data: data, recipe: recipe, process: process, updateRecipe: updateRecipe});
 }
 
 export {

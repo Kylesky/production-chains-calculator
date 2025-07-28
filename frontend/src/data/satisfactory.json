@@ -1267,12 +1267,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 12.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 6
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -1331,12 +1331,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 6.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 6
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -1357,12 +1357,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 6.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 4
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -1455,12 +1455,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 2.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 2.0
                 }
             ],
             "output": [
@@ -1485,12 +1485,12 @@
             ],
             "processes": [
                 {
-                    "id": "Foundry",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 6
+                },
+                {
+                    "id": "Foundry",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -1751,12 +1751,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -1777,12 +1777,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 5.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 1
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 5.0
                 }
             ],
             "output": [
@@ -1803,12 +1803,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 1
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -1829,12 +1829,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -1859,12 +1859,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 4.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 4
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -1937,12 +1937,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 2.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 1
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 2.0
                 }
             ],
             "output": [
@@ -2015,12 +2015,12 @@
             ],
             "processes": [
                 {
-                    "id": "Smelter",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 4
+                },
+                {
+                    "id": "Smelter",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -2139,12 +2139,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 8.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 6
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 8.0
                 }
             ],
             "output": [
@@ -2169,12 +2169,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 24.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 9
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 24.0
                 }
             ],
             "output": [
@@ -2263,12 +2263,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 24.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 18
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 24.0
                 }
             ],
             "output": [
@@ -2289,12 +2289,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -2375,12 +2375,12 @@
             ],
             "processes": [
                 {
-                    "id": "Smelter",
-                    "duration": 2.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Smelter",
+                    "duration": 2.0
                 }
             ],
             "output": [
@@ -2461,12 +2461,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 6.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -2487,12 +2487,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 6.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -2521,12 +2521,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 120.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 18
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 120.0
                 }
             ],
             "output": [
@@ -2633,12 +2633,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 30.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 15
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 30.0
                 }
             ],
             "output": [
@@ -2659,12 +2659,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -2685,12 +2685,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 1.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 1
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 1.0
                 }
             ],
             "output": [
@@ -2715,12 +2715,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 10.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 5
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 10.0
                 }
             ],
             "output": [
@@ -2745,12 +2745,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 12.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -2834,12 +2834,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 12.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 8
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -3008,12 +3008,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -3068,12 +3068,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 24.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 12
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 24.0
                 }
             ],
             "output": [
@@ -3184,12 +3184,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 6.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -3350,12 +3350,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 8.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 4
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 8.0
                 }
             ],
             "output": [
@@ -3410,12 +3410,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 12.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 5
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -3466,12 +3466,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 3.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 3.0
                 }
             ],
             "output": [
@@ -3530,12 +3530,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 8.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 6
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 8.0
                 }
             ],
             "output": [
@@ -3568,12 +3568,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 30.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 9
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 30.0
                 }
             ],
             "output": [
@@ -3602,12 +3602,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 16.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 8
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 16.0
                 }
             ],
             "output": [
@@ -3628,12 +3628,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 3.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 3.0
                 }
             ],
             "output": [
@@ -3658,12 +3658,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 24.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 9
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 24.0
                 }
             ],
             "output": [
@@ -3726,12 +3726,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 16.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 8
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 16.0
                 }
             ],
             "output": [
@@ -3808,12 +3808,12 @@
             ],
             "processes": [
                 {
-                    "id": "Smelter",
-                    "duration": 2.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Smelter",
+                    "duration": 2.0
                 }
             ],
             "output": [
@@ -3864,12 +3864,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 6.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -3890,12 +3890,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -3916,12 +3916,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 1
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -4092,12 +4092,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 60.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 15
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 60.0
                 }
             ],
             "output": [
@@ -4122,12 +4122,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 12.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 12
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -4284,12 +4284,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 6.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 4
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -4420,12 +4420,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 120.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 30
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 120.0
                 }
             ],
             "output": [
@@ -5008,12 +5008,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 8.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 4
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 8.0
                 }
             ],
             "output": [
@@ -5034,12 +5034,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 12.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 6
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -5060,12 +5060,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 24.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 12
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 24.0
                 }
             ],
             "output": [
@@ -5090,12 +5090,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 60.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 60
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 60.0
                 }
             ],
             "output": [
@@ -5146,12 +5146,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 60.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 20
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 60.0
                 }
             ],
             "output": [
@@ -5172,12 +5172,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 8.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 8
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 8.0
                 }
             ],
             "output": [
@@ -5198,12 +5198,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 5.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 5
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 5.0
                 }
             ],
             "output": [
@@ -5232,12 +5232,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 48.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 24
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 48.0
                 }
             ],
             "output": [
@@ -5318,12 +5318,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 2.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 1
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 2.0
                 }
             ],
             "output": [
@@ -5400,12 +5400,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 12.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 6
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -5538,12 +5538,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 12.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 6
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -5598,12 +5598,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 15.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 6
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 15.0
                 }
             ],
             "output": [
@@ -5658,12 +5658,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 6.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -5684,12 +5684,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 6.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -5714,12 +5714,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 12.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 6
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -5740,12 +5740,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 8.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 8
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 8.0
                 }
             ],
             "output": [
@@ -5874,12 +5874,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 10
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -5904,12 +5904,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 24.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 12
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 24.0
                 }
             ],
             "output": [
@@ -5930,12 +5930,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 3.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 3.0
                 }
             ],
             "output": [
@@ -5960,12 +5960,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 12.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 9
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 12.0
                 }
             ],
             "output": [
@@ -5986,12 +5986,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -6016,12 +6016,12 @@
             ],
             "processes": [
                 {
-                    "id": "Foundry",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 6
+                },
+                {
+                    "id": "Foundry",
+                    "duration": 4.0
                 }
             ],
             "output": [
@@ -6042,12 +6042,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 6.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 3
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -6068,12 +6068,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 3.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 3.0
                 }
             ],
             "output": [
@@ -6098,12 +6098,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 6.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 4
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 6.0
                 }
             ],
             "output": [
@@ -6222,12 +6222,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 32.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 24
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 32.0
                 }
             ],
             "output": [
@@ -6294,12 +6294,12 @@
             ],
             "processes": [
                 {
-                    "id": "Assembler",
-                    "duration": 24.0
-                },
-                {
                     "id": "Equipment_Workshop",
                     "labor": 12
+                },
+                {
+                    "id": "Assembler",
+                    "duration": 24.0
                 }
             ],
             "output": [
@@ -6464,12 +6464,12 @@
             ],
             "processes": [
                 {
-                    "id": "Manufacturer",
-                    "duration": 32.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 32
+                },
+                {
+                    "id": "Manufacturer",
+                    "duration": 32.0
                 }
             ],
             "output": [
@@ -6970,12 +6970,12 @@
             ],
             "processes": [
                 {
-                    "id": "Constructor",
-                    "duration": 4.0
-                },
-                {
                     "id": "Craft_Bench",
                     "labor": 2
+                },
+                {
+                    "id": "Constructor",
+                    "duration": 4.0
                 }
             ],
             "output": [

@@ -3,7 +3,7 @@ import Icon from "../components/Icon";
 import { useGetData } from "../DataContext";
 import "./ItemsViewItem.css";
 import ItemsViewRecipeLine from "./ItemsViewRecipeLine";
-import { getItemDefaultValue } from "../gameSpecific/moduleRouter";
+import { getDefaultRecipeId, getItemDefaultValue } from "../gameSpecific/moduleRouter";
 
 function ItemsViewItem({ item, addRecipes, itemValuesState }) {
     const data = useGetData();
@@ -42,6 +42,8 @@ function ItemsViewItem({ item, addRecipes, itemValuesState }) {
     const showInput = inputRecipes.length > 0;
     const showOutput = outputRecipes.length > 0;
 
+    const default_recipe = getDefaultRecipeId(data, item.id);
+
     return <details className="items-view-item" onToggle={handleToggle} open={isOpen}>
         <summary className="items-view-item-header"><Icon id={item.id} name={item.name} /> {item.name}</summary>
         {isOpen ?
@@ -68,7 +70,7 @@ function ItemsViewItem({ item, addRecipes, itemValuesState }) {
                             {
                                 outputRecipes.map(recipe =>
                                     <div className="items-view-recipe-container">
-                                        <ItemsViewRecipeLine recipe={recipe} addRecipes={addRecipes} />
+                                        <ItemsViewRecipeLine recipe={recipe} addRecipes={addRecipes} isDefault={default_recipe === recipe.id} />
                                     </div>
                                 )
                             }

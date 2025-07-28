@@ -26,3 +26,8 @@
     align-items: center;
     gap: 2px;
 }
+
+.items-view-default-recipe-tag {
+    font-style: italic;
+    color: #888;
+}
