@@ -7,6 +7,7 @@ import { getRecipeProcessIds } from '../gameSpecific/moduleRouter';
 const RecipeCard = ({ recipe, selected = false, onClick = null }) => {
     const data = useGetData()
     const processes = getRecipeProcessIds(data, recipe);
+
     return <div className={selected ? "recipe-card-selected" : "recipe-card"} onClick={onClick} style={onClick !== null ? {'--hover-cursor': 'pointer'} : {}}>
         <div className="recipe-card-contents">
             {recipe.name ? <div className="recipe-card-name">{recipe.name}</div> : null}
@@ -18,7 +19,7 @@ const RecipeCard = ({ recipe, selected = false, onClick = null }) => {
             <div className="recipe-card-inout">
                 <div className="recipe-card-inputs">
                     {recipe.input ?
-                        recipe.input.map(input => { return <div className="recipe-card-material-line"><span>{input.qty}x</span> <Icon id={input.id} name={data.items[input.id].name} /></div> }) :
+                        recipe.input.map(input => { return <div className="recipe-card-material-line"><span>{+(input.qty).toFixed(4)}x</span> <Icon id={input.id} name={data.items[input.id].name} /></div> }) :
                         <div>None</div>}
                 </div>
                 <div className="recipe-card-arrow">&rarr;</div>

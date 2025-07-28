@@ -12,7 +12,7 @@ function ProcessIcon({data, id}) {
     return <Icon id={id} name={data.processes[id].name}/>
 }
 
-function ItemsViewRecipeLine({recipe, addRecipes}) {
+function ItemsViewRecipeLine({recipe, addRecipes, isDefault=false}) {
     const data = useGetData();
     const [buttonText, setButtonText] = useState('Add Recipe');
 
@@ -22,13 +22,13 @@ function ItemsViewRecipeLine({recipe, addRecipes}) {
     }
 
     const processes = getRecipeProcessIds(data, recipe);
-    const inputComponents = recipe.input ? recipe.input.map(input => <ItemIcon data={data} id={input.id} count={input.qty}/>) : [];
+    const inputComponents = recipe.input ? recipe.input.map(input => <ItemIcon data={data} id={input.id} count={+(input.qty).toFixed(2)}/>) : [];
     const processComponents = processes.map(process => <ProcessIcon data={data} id={process} />)
-    const outputComponents = recipe.output ? recipe.output.map(input => <ItemIcon data={data} id={input.id} count={input.qty}/>) : [];
+    const outputComponents = recipe.output ? recipe.output.map(input => <ItemIcon data={data} id={input.id} count={+(input.qty).toFixed(2)}/>) : [];
 
     return <div className="items-view-recipe-line">
         <div className="items-view-recipe-line-header">
-            {recipe.name ?? null}
+            <div><span>{recipe.name ?? null}</span> <span className="items-view-default-recipe-tag">{isDefault ? "(default recipe)" : null}</span></div>
             <button onClick={handleClick}>{buttonText}</button>
         </div>
         <div className="items-view-recipe-line-components">

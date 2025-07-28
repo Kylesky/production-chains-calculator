@@ -74,6 +74,7 @@ def scrape_crafting_recipes(download_icons = False):
                     if cost_class == "recipe-energy":
                         process[cost_class] = [int(x) for x in cost.text.replace('\xa0', ' ').replace(',', '').removesuffix(" MW").split(' - ')]
             processes.append(process)
+        processes.reverse()
         recipe["processes"] = processes
 
         # Products
