@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/production-chains-calculator/static/css/main.82e1a483.css",
-    "main.js": "/production-chains-calculator/static/js/main.a8909e7a.js",
+    "main.css": "/production-chains-calculator/static/css/main.a35eb85a.css",
+    "main.js": "/production-chains-calculator/static/js/main.17818758.js",
     "static/js/453.4b5d4255.chunk.js": "/production-chains-calculator/static/js/453.4b5d4255.chunk.js",
     "index.html": "/production-chains-calculator/index.html",
-    "main.82e1a483.css.map": "/production-chains-calculator/static/css/main.82e1a483.css.map",
-    "main.a8909e7a.js.map": "/production-chains-calculator/static/js/main.a8909e7a.js.map",
+    "main.a35eb85a.css.map": "/production-chains-calculator/static/css/main.a35eb85a.css.map",
+    "main.17818758.js.map": "/production-chains-calculator/static/js/main.17818758.js.map",
     "453.4b5d4255.chunk.js.map": "/production-chains-calculator/static/js/453.4b5d4255.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.82e1a483.css",
-    "static/js/main.a8909e7a.js"
+    "static/css/main.a35eb85a.css",
+    "static/js/main.17818758.js"
   ]
 }
