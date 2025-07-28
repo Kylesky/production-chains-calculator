@@ -125,10 +125,10 @@ function getItemDefaultValue({ item }) {
     return "default_value" in item ? item["default_value"] : 1;
 }
 
-function RecipeAdditionalComponents({ recipe, updateRecipe }) {
+function RecipeAdditionalComponents({ recipe, process, updateRecipe }) {
     const [active, setActive] = useState(recipe.boosted);
 
-    if (!recipe.boostable) return null;
+    if (!process.boostable) return null;
 
     const handleToggle = () => {
         updateRecipe(recipe.id, { ...recipe, boosted: !active });

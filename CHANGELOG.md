@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.3.1] - 2025-07-28
+- Added Captain of Industry data. May have some issues with computation for more complex systems due to issues with matching items to recipe ids.
+- Changed internal format of game specific modules to make handling more games easier in the future.
+- Added default recipe tag to recipes in the items tab.
+- Various other minor changes and fixes.
+
 ## [0.2.3] - 2025-07-26
 - Added visual changes to the site overall.
 - Set minimum speed to 20% of base speed when modules are added to buildings in Factorio.
