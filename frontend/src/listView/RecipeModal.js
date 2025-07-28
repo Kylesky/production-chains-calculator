@@ -31,7 +31,7 @@ const includesIgnoreCase = (s1, s2) => { return s1.toLowerCase().includes(s2.toL
 
 const matchesGeneralSearch = (data, searchState, recipe) => {
     let result = false;
-    result |= includesIgnoreCase(recipe.name, searchState.general);
+    result |= includesIgnoreCase(recipe.name ?? "", searchState.general);
     if (result) return true;
     result |= recipe.input ? recipe.input.some(input => { return includesIgnoreCase(data.items[input.id].name, searchState.general) }) : false;
     if (result) return true;

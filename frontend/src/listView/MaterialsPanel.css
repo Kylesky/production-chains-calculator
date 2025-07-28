@@ -86,6 +86,7 @@
     flex-wrap: wrap;
     gap: 5px;
     padding: 5px;
+    height: 80%;
 }
 
 .costs-panel {
@@ -101,6 +102,7 @@
     flex-wrap: wrap;
     gap: 5px;
     padding: 5px;
+    height: 80%;
 }
 
 .card-container {

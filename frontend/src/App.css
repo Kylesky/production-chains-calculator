@@ -23,7 +23,9 @@
   color: #ddd;
 }
 
-button, select, input {
+button,
+select,
+input {
   background-color: #2a2a2a;
   color: #ddd;
   border: 1px solid #555;
@@ -33,10 +35,35 @@ button, select, input {
   transition: background-color 0.2s, border-color 0.2s;
 }
 
-button:hover, select:hover {
+button:hover,
+select:hover {
   background-color: #3a3a3a;
 }
 
 input[type="checkbox"] {
   accent-color: #0af;
+}
+
+.toggle-button {
+  background-color: #2a2a2a;
+  color: #ddd;
+  border: 1px solid #555;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 2px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.toggle-button:hover {
+  background-color: #3a3a3a;
+}
+
+.toggle-button.active {
+  background-color: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+}
+
+.toggle-buutton.active:hover {
+  background-color: #45a049;
 }
