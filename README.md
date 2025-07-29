@@ -7,9 +7,9 @@ If you want to use the tool please go to the [GitHub page](https://kylesky.githu
 - Factorio
 - Satisfactory
 - Captain of Industry
+- Dyson Sphere Program
 
 ### Potential Games
-- Dyson Sphere Program
 - Foundry
 - Final Factory
 - Techtonica

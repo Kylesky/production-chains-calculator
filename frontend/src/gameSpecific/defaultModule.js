@@ -1,10 +1,11 @@
 function getRecipeProcesses({data, recipe}) {
-    if("processes" in recipe)
+    if("processes" in recipe) {
         return recipe.processes;
-    else if("recipe_types" in data)
+    } else if("recipe_types" in data) {
         return data.recipe_types[recipe.type].processes;
-    else
-        return []
+    } else {
+        return [];
+    }
 }
 
 function getRecipeProcess({data, recipe}) {

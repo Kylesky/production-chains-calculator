@@ -1,4 +1,4 @@
-.select-trigger {
+.factorio-select-trigger {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,17 +10,17 @@
   cursor: pointer;
 }
 
-.select-value {
+.factorio-select-value {
   display: flex;
   align-items: center;
 }
 
-.select-icon {
+.factorio-select-icon {
   width: 20px;
   height: 20px;
 }
 
-.select-content {
+.factorio-select-content {
   background: #1f1f1f;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -29,16 +29,16 @@
   z-index: 100;
 }
 
-.select-viewport {
+.factorio-select-viewport {
   padding: 8px;
 }
 
-.select-grid {
+.factorio-select-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
 
-.select-item {
+.factorio-select-item {
   position: relative;
   padding: 6px;
   border-radius: 4px;
@@ -46,12 +46,12 @@
   text-align: center;
 }
 
-.select-item:focus,
-.select-item:hover {
+.factorio-select-item:focus,
+.factorio-select-item:hover {
   background: #eee;
 }
 
-.item-inner {
+.factorio-item-inner {
   display: flex;
   flex-direction: column;
   align-items: center;

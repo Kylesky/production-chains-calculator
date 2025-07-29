@@ -17,18 +17,18 @@ function FactorioQualitySelector({ id, quality, setQuality }) {
 
     return (
         <Select.Root value={selectedValue} onValueChange={handleUpdateValue} open={isOpen} onOpenChange={setIsOpen}>
-            <Select.Trigger className="select-trigger" ref={triggerRef}>
-                <div className="select-value">
+            <Select.Trigger className="factorio-select-trigger" ref={triggerRef}>
+                <div className="factorio-select-value">
                     <FactorioQualityIcon id={id} quality={selectedValue} />
                 </div>
             </Select.Trigger>
 
-            <Select.Content className="select-content">
-                <Select.Viewport className="select-viewport">
-                    <div className="select-grid">
+            <Select.Content className="factorio-select-content" position="popper">
+                <Select.Viewport className="factorio-select-viewport">
+                    <div className="factorio-select-grid">
                         {options.map((option) => (
-                            <Select.Item key={option} value={option} className="select-item">
-                                <div className="item-inner">
+                            <Select.Item key={option} value={option} className="factorio-select-item">
+                                <div className="factorio-item-inner">
                                     <FactorioQualityIcon id={id} quality={option} />
                                 </div>
                             </Select.Item>

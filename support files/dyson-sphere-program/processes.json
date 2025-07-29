@@ -1,0 +1,18 @@
+{
+    "0": {"id": "0", "name": "Handcraft", "speed": 1},
+    "2302": {"id": "2302", "name": "Arc Smelter", "speed": 1, "power": 360},
+    "2315": {"id": "2315", "name": "Plane Smelter", "speed": 2, "power": 1440},
+    "2319": {"id": "2319", "name": "Negentropy Smelter", "speed": 3, "power": 2880},
+    "2303": {"id": "2303", "name": "Assembling Machine Mk.I", "speed": 0.75, "power": 270},
+    "2304": {"id": "2304", "name": "Assembling Machine Mk.II", "speed": 1, "power": 540},
+    "2305": {"id": "2305", "name": "Assembling Machine Mk.III", "speed": 1.5, "power": 1080},
+    "2318": {"id": "2318", "name": "Re-composing Assembler", "speed": 3, "power": 2700},
+    "2901": {"id": "2901", "name": "Matrix Lab", "speed": 1, "power": 480},
+    "2902": {"id": "2902", "name": "Self-evolution Lab", "speed": 3, "power": 1920},
+    "2308": {"id": "2308", "name": "Oil Refinery", "speed": 1, "power": 960},
+    "2309": {"id": "2309", "name": "Chemical Plant", "speed": 1, "power": 720},
+    "2317": {"id": "2317", "name": "Quantum Chemical Plant", "speed": 2, "power": 2160},
+    "2310": {"id": "2310", "name": "Miniature Particle Collider", "speed": 1, "power": 12000},
+    "2314": {"id": "2314", "name": "Fractionator", "power": 720},
+    "2209": {"id": "2209", "name": "Energy Exchanger", "power": 54000}
+}

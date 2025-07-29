@@ -21,7 +21,6 @@ function ItemsViewItem({ item, addRecipes, itemValuesState }) {
         setOutputButtonText("Added!");
     }
 
-
     const [isOpen, setIsOpen] = useState(false);
     const handleToggle = (event) => {
         setIsOpen(event.target.open)
