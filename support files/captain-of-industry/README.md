@@ -22,3 +22,14 @@ Forced default recipes:
 "Plastic": "PlasticMaking"
 "Graphite": "GraphiteProductionT"
 ```
+
+### Additional Keys
+- process
+    - `workers`: (number) Number of workers this building employs
+    - `power`: (number) Power consumption per second (KW)
+    - `maintenance`: (number) Maintenance cost per month while active
+    - `maintenance2`: (number) Maintenance II cost per month while active
+    - `maintenance3`: (number) Maintenance III cost per month while active
+    - `boostable`: (boolean) Whether the building is Unity boostable
+    - `computing`: (number) Amount of computing needed to run (TFLOPS)
+    - `unity`: (number) Unity consumption per month
