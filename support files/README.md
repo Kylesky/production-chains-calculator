@@ -10,7 +10,8 @@ Files used to generate the respective data files and icons for each game. Data f
             "name": <string: item name>,
             "raw": <boolean optional: whether the item is a raw material, used by LP computation>,
             "default_recipe": <string optional: recipe id override for default recipe, usage depends on the game>,
-            "forced_recipe": <string optional: recipe id override, forced to add this recipe when this item appears as an input to another recipe>
+            "forced_recipe": <string optional: recipe id override, forced to add this recipe when this item appears as an input to another recipe>,
+            "default_value": <number optional: default value used to score the material for LP computation, defaults to 1>
         }
     },
     "processes": {
@@ -27,7 +28,8 @@ Files used to generate the respective data files and icons for each game. Data f
             "processes" <optional: this OR recipe_type is required, list of processes applicable to this recipe>: [
                 {
                     "id": <string: process id>,
-                    "duration": <number: duration>
+                    "duration": <number optional: duration>,
+                    <optional keys>: <??? optional: optional keys depending on the game>
                 }
             ],
             "recipe_type": <string: this OR processes is required, recipe_type maps to a list of processes applicable to this recipe>,
@@ -35,13 +37,15 @@ Files used to generate the respective data files and icons for each game. Data f
             "input" <optional: list of inputs to the recipe>: [
                 {
                     "id": <string: item id>,
-                    "qty": <number: quantity of the item>
+                    "qty": <number: quantity of the item>,
+                    <optional keys>: <??? optional: optional keys depending on the game>
                 }
             ],
             "output" <optional: list of outputs of the recipe>: [
                 {
                     "id": <string: item id>,
-                    "qty": <number: quantity of the item>
+                    "qty": <number: quantity of the item>,
+                    <optional keys>: <??? optional: optional keys depending on the game>
                 }
             ],
             <optional keys>: <??? optional: optional keys depending on the game, typically other options for the recipe>
