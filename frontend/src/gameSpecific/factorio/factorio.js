@@ -119,7 +119,7 @@ function getProcessCostComponents({computeType, recipe, process, multiplier = 1}
 
     const { energy, pollution } = getModuleModifiers(recipe);
     const energyMultiplier = Math.max(0.2, 1 + energy);
-    const powerUnits = computeType === "count" ? "KJ" : "KW";
+    const powerUnits = computeType === "count" ? "kJ" : "kW";
     if (process.power) {
         components.push(<span>&#9889;{+(process.power * multiplier * energyMultiplier).toFixed(2)} {powerUnits}</span>);
     }

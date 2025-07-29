@@ -1,0 +1,5180 @@
+{
+    "items": {
+        "1001": {
+            "id": 1001,
+            "name": "Iron Ore"
+        },
+        "1002": {
+            "id": 1002,
+            "name": "Copper Ore"
+        },
+        "1003": {
+            "id": 1003,
+            "name": "Silicon Ore",
+            "raw": true,
+            "default_recipe": 34
+        },
+        "1004": {
+            "id": 1004,
+            "name": "Titanium Ore"
+        },
+        "1005": {
+            "id": 1005,
+            "name": "Stone"
+        },
+        "1006": {
+            "id": 1006,
+            "name": "Coal"
+        },
+        "1030": {
+            "id": 1030,
+            "name": "Log"
+        },
+        "1031": {
+            "id": 1031,
+            "name": "Plant Fuel"
+        },
+        "1011": {
+            "id": 1011,
+            "name": "Fire Ice"
+        },
+        "1012": {
+            "id": 1012,
+            "name": "Kimberlite Ore"
+        },
+        "1013": {
+            "id": 1013,
+            "name": "Fractal Silicon"
+        },
+        "1014": {
+            "id": 1014,
+            "name": "Grating Crystal"
+        },
+        "1015": {
+            "id": 1015,
+            "name": "Stalagmite Crystal"
+        },
+        "1016": {
+            "id": 1016,
+            "name": "Unipolar Magnet"
+        },
+        "1101": {
+            "id": 1101,
+            "name": "Iron Ingot",
+            "default_recipe": 1
+        },
+        "1104": {
+            "id": 1104,
+            "name": "Copper Ingot",
+            "default_recipe": 3
+        },
+        "1105": {
+            "id": 1105,
+            "name": "High-purity Silicon",
+            "default_recipe": 59
+        },
+        "1106": {
+            "id": 1106,
+            "name": "Titanium Ingot",
+            "default_recipe": 65
+        },
+        "1108": {
+            "id": 1108,
+            "name": "Stone Brick",
+            "default_recipe": 4
+        },
+        "1109": {
+            "id": 1109,
+            "name": "Energetic Graphite",
+            "default_recipe": 17
+        },
+        "1103": {
+            "id": 1103,
+            "name": "Steel",
+            "default_recipe": 63
+        },
+        "1107": {
+            "id": 1107,
+            "name": "Titanium Alloy",
+            "default_recipe": 66
+        },
+        "1110": {
+            "id": 1110,
+            "name": "Glass",
+            "default_recipe": 57
+        },
+        "1119": {
+            "id": 1119,
+            "name": "Titanium Glass",
+            "default_recipe": 30
+        },
+        "1111": {
+            "id": 1111,
+            "name": "Prism",
+            "default_recipe": 11
+        },
+        "1112": {
+            "id": 1112,
+            "name": "Diamond",
+            "default_recipe": 60
+        },
+        "1113": {
+            "id": 1113,
+            "name": "Crystal Silicon",
+            "default_recipe": 37
+        },
+        "1201": {
+            "id": 1201,
+            "name": "Gear",
+            "default_recipe": 5
+        },
+        "1102": {
+            "id": 1102,
+            "name": "Magnet",
+            "default_recipe": 2
+        },
+        "1202": {
+            "id": 1202,
+            "name": "Magnetic Coil",
+            "default_recipe": 6
+        },
+        "1203": {
+            "id": 1203,
+            "name": "Electric Motor",
+            "default_recipe": 97
+        },
+        "1204": {
+            "id": 1204,
+            "name": "Electromagnetic Turbine",
+            "default_recipe": 98
+        },
+        "1205": {
+            "id": 1205,
+            "name": "Super-magnetic Ring",
+            "default_recipe": 103
+        },
+        "1206": {
+            "id": 1206,
+            "name": "Particle Container",
+            "default_recipe": 99
+        },
+        "1127": {
+            "id": 1127,
+            "name": "Strange Matter",
+            "default_recipe": 104
+        },
+        "1301": {
+            "id": 1301,
+            "name": "Circuit Board",
+            "default_recipe": 50
+        },
+        "1303": {
+            "id": 1303,
+            "name": "Processor",
+            "default_recipe": 51
+        },
+        "1305": {
+            "id": 1305,
+            "name": "Quantum Chip",
+            "default_recipe": 52
+        },
+        "1302": {
+            "id": 1302,
+            "name": "Microcrystalline Component",
+            "default_recipe": 53
+        },
+        "1304": {
+            "id": 1304,
+            "name": "Plane Filter",
+            "default_recipe": 38
+        },
+        "1402": {
+            "id": 1402,
+            "name": "Particle Broadband",
+            "default_recipe": 36
+        },
+        "1401": {
+            "id": 1401,
+            "name": "Plasma Exciter",
+            "default_recipe": 12
+        },
+        "1404": {
+            "id": 1404,
+            "name": "Photon Combiner",
+            "default_recipe": 68
+        },
+        "1501": {
+            "id": 1501,
+            "name": "Solar Sail",
+            "default_recipe": 70
+        },
+        "1000": {
+            "id": 1000,
+            "name": "Water"
+        },
+        "1007": {
+            "id": 1007,
+            "name": "Crude Oil"
+        },
+        "1114": {
+            "id": 1114,
+            "name": "Refined Oil"
+        },
+        "1116": {
+            "id": 1116,
+            "name": "Sulfuric Acid",
+            "default_recipe": 24
+        },
+        "1120": {
+            "id": 1120,
+            "name": "Hydrogen",
+            "raw": true
+        },
+        "1121": {
+            "id": 1121,
+            "name": "Deuterium",
+            "default_recipe": 40
+        },
+        "1122": {
+            "id": 1122,
+            "name": "Antimatter"
+        },
+        "1208": {
+            "id": 1208,
+            "name": "Critical Photon"
+        },
+        "1801": {
+            "id": 1801,
+            "name": "Hydrogen Fuel Rod",
+            "default_recipe": 19
+        },
+        "1802": {
+            "id": 1802,
+            "name": "Deuteron Fuel Rod",
+            "default_recipe": 41
+        },
+        "1803": {
+            "id": 1803,
+            "name": "Antimatter Fuel Rod",
+            "default_recipe": 44
+        },
+        "1804": {
+            "id": 1804,
+            "name": "Strange Annihilation Fuel Rod",
+            "default_recipe": 156
+        },
+        "1115": {
+            "id": 1115,
+            "name": "Plastic",
+            "default_recipe": 23
+        },
+        "1123": {
+            "id": 1123,
+            "name": "Graphene",
+            "default_recipe": 31
+        },
+        "1124": {
+            "id": 1124,
+            "name": "Carbon Nanotube",
+            "default_recipe": 33
+        },
+        "1117": {
+            "id": 1117,
+            "name": "Organic Crystal",
+            "default_recipe": 25
+        },
+        "1118": {
+            "id": 1118,
+            "name": "Titanium Crystal",
+            "default_recipe": 26
+        },
+        "1126": {
+            "id": 1126,
+            "name": "Casimir Crystal",
+            "default_recipe": 28
+        },
+        "1128": {
+            "id": 1128,
+            "name": "Combustible Unit",
+            "default_recipe": 133
+        },
+        "1129": {
+            "id": 1129,
+            "name": "Explosive Unit",
+            "default_recipe": 134
+        },
+        "1130": {
+            "id": 1130,
+            "name": "Crystal Explosive Unit",
+            "default_recipe": 135
+        },
+        "1209": {
+            "id": 1209,
+            "name": "Graviton Lens",
+            "default_recipe": 101
+        },
+        "1210": {
+            "id": 1210,
+            "name": "Space Warper",
+            "default_recipe": 78
+        },
+        "1403": {
+            "id": 1403,
+            "name": "Annihilation Constraint Sphere",
+            "default_recipe": 42
+        },
+        "1407": {
+            "id": 1407,
+            "name": "Engine",
+            "default_recipe": 105
+        },
+        "1405": {
+            "id": 1405,
+            "name": "Thruster"
+        },
+        "1406": {
+            "id": 1406,
+            "name": "Reinforced Thruster",
+            "default_recipe": 21
+        },
+        "5003": {
+            "id": 5003,
+            "name": "Logistics Bot",
+            "default_recipe": 123
+        },
+        "5001": {
+            "id": 5001,
+            "name": "Logistics Drone",
+            "default_recipe": 94
+        },
+        "5002": {
+            "id": 5002,
+            "name": "Interstellar Logistics Vessel",
+            "default_recipe": 96
+        },
+        "1125": {
+            "id": 1125,
+            "name": "Frame Material",
+            "default_recipe": 80
+        },
+        "1502": {
+            "id": 1502,
+            "name": "Dyson Sphere Component",
+            "default_recipe": 81
+        },
+        "1503": {
+            "id": 1503,
+            "name": "Small Carrier Rocket",
+            "default_recipe": 83
+        },
+        "1131": {
+            "id": 1131,
+            "name": "Foundation",
+            "default_recipe": 112
+        },
+        "1141": {
+            "id": 1141,
+            "name": "Proliferator Mk.I",
+            "default_recipe": 106
+        },
+        "1142": {
+            "id": 1142,
+            "name": "Proliferator Mk.II",
+            "default_recipe": 107
+        },
+        "1143": {
+            "id": 1143,
+            "name": "Proliferator Mk.III",
+            "default_recipe": 108
+        },
+        "1601": {
+            "id": 1601,
+            "name": "Magnum Ammo Box",
+            "default_recipe": 136
+        },
+        "1602": {
+            "id": 1602,
+            "name": "Titanium Ammo Box",
+            "default_recipe": 137
+        },
+        "1603": {
+            "id": 1603,
+            "name": "Superalloy Ammo Box",
+            "default_recipe": 138
+        },
+        "1604": {
+            "id": 1604,
+            "name": "Shell Set",
+            "default_recipe": 139
+        },
+        "1605": {
+            "id": 1605,
+            "name": "High-Explosive Shell Set",
+            "default_recipe": 140
+        },
+        "1606": {
+            "id": 1606,
+            "name": "Crystal Shell Set",
+            "default_recipe": 141
+        },
+        "1607": {
+            "id": 1607,
+            "name": "Plasma Capsule",
+            "default_recipe": 142
+        },
+        "1608": {
+            "id": 1608,
+            "name": "Antimatter Capsule",
+            "default_recipe": 143
+        },
+        "1609": {
+            "id": 1609,
+            "name": "Missile Set",
+            "default_recipe": 144
+        },
+        "1610": {
+            "id": 1610,
+            "name": "Supersonic Missile Set",
+            "default_recipe": 145
+        },
+        "1611": {
+            "id": 1611,
+            "name": "Gravity Missile Set",
+            "default_recipe": 146
+        },
+        "1612": {
+            "id": 1612,
+            "name": "Jamming Capsule",
+            "default_recipe": 158
+        },
+        "1613": {
+            "id": 1613,
+            "name": "Suppressing Capsule",
+            "default_recipe": 159
+        },
+        "5101": {
+            "id": 5101,
+            "name": "Prototype",
+            "default_recipe": 147
+        },
+        "5102": {
+            "id": 5102,
+            "name": "Precision Drone",
+            "default_recipe": 148
+        },
+        "5103": {
+            "id": 5103,
+            "name": "Attack Drone",
+            "default_recipe": 149
+        },
+        "5111": {
+            "id": 5111,
+            "name": "Corvette",
+            "default_recipe": 150
+        },
+        "5112": {
+            "id": 5112,
+            "name": "Destroyer",
+            "default_recipe": 151
+        },
+        "5201": {
+            "id": 5201,
+            "name": "Dark Fog Matrix"
+        },
+        "5202": {
+            "id": 5202,
+            "name": "Silicon-based Neuron"
+        },
+        "5203": {
+            "id": 5203,
+            "name": "Matter Recombinator"
+        },
+        "5204": {
+            "id": 5204,
+            "name": "Negentropy Singularity"
+        },
+        "5205": {
+            "id": 5205,
+            "name": "Core Element"
+        },
+        "5206": {
+            "id": 5206,
+            "name": "Energy Shard"
+        },
+        "2001": {
+            "id": 2001,
+            "name": "Conveyor Belt MK.I",
+            "default_recipe": 84
+        },
+        "2002": {
+            "id": 2002,
+            "name": "Conveyor Belt MK.II",
+            "default_recipe": 89
+        },
+        "2003": {
+            "id": 2003,
+            "name": "Conveyor Belt MK.III",
+            "default_recipe": 92
+        },
+        "2011": {
+            "id": 2011,
+            "name": "Sorter MK.I",
+            "default_recipe": 85
+        },
+        "2012": {
+            "id": 2012,
+            "name": "Sorter MK.II",
+            "default_recipe": 88
+        },
+        "2013": {
+            "id": 2013,
+            "name": "Sorter MK.III",
+            "default_recipe": 90
+        },
+        "2014": {
+            "id": 2014,
+            "name": "Pile Sorter",
+            "default_recipe": 160
+        },
+        "2020": {
+            "id": 2020,
+            "name": "Splitter",
+            "default_recipe": 87
+        },
+        "2040": {
+            "id": 2040,
+            "name": "Automatic Piler",
+            "default_recipe": 120
+        },
+        "2030": {
+            "id": 2030,
+            "name": "Traffic Monitor",
+            "default_recipe": 117
+        },
+        "2313": {
+            "id": 2313,
+            "name": "Spray Coater",
+            "default_recipe": 109
+        },
+        "2107": {
+            "id": 2107,
+            "name": "Logistics Distributor",
+            "default_recipe": 122
+        },
+        "2101": {
+            "id": 2101,
+            "name": "Depot MK.I",
+            "default_recipe": 86
+        },
+        "2102": {
+            "id": 2102,
+            "name": "Depot MK.II",
+            "default_recipe": 91
+        },
+        "2106": {
+            "id": 2106,
+            "name": "Storage Tank",
+            "default_recipe": 114
+        },
+        "2303": {
+            "id": 2303,
+            "name": "Assembling Machine Mk.I",
+            "default_recipe": 45
+        },
+        "2304": {
+            "id": 2304,
+            "name": "Assembling Machine Mk.II",
+            "default_recipe": 46
+        },
+        "2305": {
+            "id": 2305,
+            "name": "Assembling Machine Mk.III",
+            "default_recipe": 47
+        },
+        "2318": {
+            "id": 2318,
+            "name": "Re-composing Assembler",
+            "default_recipe": 154
+        },
+        "2201": {
+            "id": 2201,
+            "name": "Tesla Tower",
+            "default_recipe": 8
+        },
+        "2202": {
+            "id": 2202,
+            "name": "Wireless Power Tower",
+            "default_recipe": 13
+        },
+        "2212": {
+            "id": 2212,
+            "name": "Satellite Substation",
+            "default_recipe": 73
+        },
+        "2203": {
+            "id": 2203,
+            "name": "Wind Turbine",
+            "default_recipe": 7
+        },
+        "2204": {
+            "id": 2204,
+            "name": "Thermal Power Plant",
+            "default_recipe": 64
+        },
+        "2211": {
+            "id": 2211,
+            "name": "Mini Fusion Power Plant",
+            "default_recipe": 113
+        },
+        "2213": {
+            "id": 2213,
+            "name": "Geothermal Power Station",
+            "default_recipe": 118
+        },
+        "2301": {
+            "id": 2301,
+            "name": "Mining Machine",
+            "default_recipe": 48
+        },
+        "2316": {
+            "id": 2316,
+            "name": "Advanced Mining Machine",
+            "default_recipe": 119
+        },
+        "2306": {
+            "id": 2306,
+            "name": "Water Pump",
+            "default_recipe": 49
+        },
+        "2302": {
+            "id": 2302,
+            "name": "Arc Smelter",
+            "default_recipe": 56
+        },
+        "2315": {
+            "id": 2315,
+            "name": "Plane Smelter",
+            "default_recipe": 116
+        },
+        "2319": {
+            "id": 2319,
+            "name": "Negentropy Smelter",
+            "default_recipe": 155
+        },
+        "2307": {
+            "id": 2307,
+            "name": "Oil Extractor",
+            "default_recipe": 14
+        },
+        "2308": {
+            "id": 2308,
+            "name": "Oil Refinery",
+            "default_recipe": 15
+        },
+        "2309": {
+            "id": 2309,
+            "name": "Chemical Plant",
+            "default_recipe": 22
+        },
+        "2317": {
+            "id": 2317,
+            "name": "Quantum Chemical Plant",
+            "default_recipe": 124
+        },
+        "2314": {
+            "id": 2314,
+            "name": "Fractionator",
+            "default_recipe": 110
+        },
+        "2205": {
+            "id": 2205,
+            "name": "Solar Panel",
+            "default_recipe": 67
+        },
+        "2206": {
+            "id": 2206,
+            "name": "Accumulator",
+            "default_recipe": 76
+        },
+        "2207": {
+            "id": 2207,
+            "name": "Accumulator (full)"
+        },
+        "2311": {
+            "id": 2311,
+            "name": "EM-Rail Ejector",
+            "default_recipe": 71
+        },
+        "2208": {
+            "id": 2208,
+            "name": "Ray Receiver",
+            "default_recipe": 72
+        },
+        "2312": {
+            "id": 2312,
+            "name": "Vertical Launching Silo",
+            "default_recipe": 82
+        },
+        "2209": {
+            "id": 2209,
+            "name": "Energy Exchanger",
+            "default_recipe": 77
+        },
+        "2310": {
+            "id": 2310,
+            "name": "Miniature Particle Collider",
+            "default_recipe": 39
+        },
+        "2210": {
+            "id": 2210,
+            "name": "Artificial Star",
+            "default_recipe": 43
+        },
+        "2103": {
+            "id": 2103,
+            "name": "Planetary Logistics Station",
+            "default_recipe": 93
+        },
+        "2104": {
+            "id": 2104,
+            "name": "Interstellar Logistics Station",
+            "default_recipe": 95
+        },
+        "2105": {
+            "id": 2105,
+            "name": "Orbital Collector",
+            "default_recipe": 111
+        },
+        "2901": {
+            "id": 2901,
+            "name": "Matrix Lab",
+            "default_recipe": 10
+        },
+        "2902": {
+            "id": 2902,
+            "name": "Self-evolution Lab",
+            "default_recipe": 153
+        },
+        "3001": {
+            "id": 3001,
+            "name": "Gauss Turret",
+            "default_recipe": 125
+        },
+        "3002": {
+            "id": 3002,
+            "name": "Laser Turret",
+            "default_recipe": 126
+        },
+        "3003": {
+            "id": 3003,
+            "name": "Implosion Cannon",
+            "default_recipe": 127
+        },
+        "3004": {
+            "id": 3004,
+            "name": "Plasma Turret",
+            "default_recipe": 128
+        },
+        "3005": {
+            "id": 3005,
+            "name": "Missile Turret",
+            "default_recipe": 129
+        },
+        "3006": {
+            "id": 3006,
+            "name": "Jammer Tower",
+            "default_recipe": 130
+        },
+        "3007": {
+            "id": 3007,
+            "name": "Signal Tower",
+            "default_recipe": 131
+        },
+        "3008": {
+            "id": 3008,
+            "name": "Planetary Shield Generator",
+            "default_recipe": 132
+        },
+        "3009": {
+            "id": 3009,
+            "name": "Battlefield Analysis Base",
+            "default_recipe": 152
+        },
+        "3010": {
+            "id": 3010,
+            "name": "SR Plasma Turret",
+            "default_recipe": 157
+        },
+        "6001": {
+            "id": 6001,
+            "name": "Electromagnetic Matrix",
+            "default_recipe": 9
+        },
+        "6002": {
+            "id": 6002,
+            "name": "Energy Matrix",
+            "default_recipe": 18
+        },
+        "6003": {
+            "id": 6003,
+            "name": "Structure Matrix",
+            "default_recipe": 27
+        },
+        "6004": {
+            "id": 6004,
+            "name": "Information Matrix",
+            "default_recipe": 55
+        },
+        "6005": {
+            "id": 6005,
+            "name": "Gravity Matrix",
+            "default_recipe": 102
+        },
+        "6006": {
+            "id": 6006,
+            "name": "Universe Matrix",
+            "default_recipe": 75
+        },
+        "1099": {
+            "id": 1099,
+            "name": "Soil Pile"
+        }
+    },
+    "processes": {
+        "0": {
+            "id": "0",
+            "name": "Handcraft",
+            "speed": 1
+        },
+        "2302": {
+            "id": "2302",
+            "name": "Arc Smelter",
+            "speed": 1,
+            "power": 360
+        },
+        "2315": {
+            "id": "2315",
+            "name": "Plane Smelter",
+            "speed": 2,
+            "power": 1440
+        },
+        "2319": {
+            "id": "2319",
+            "name": "Negentropy Smelter",
+            "speed": 3,
+            "power": 2880
+        },
+        "2303": {
+            "id": "2303",
+            "name": "Assembling Machine Mk.I",
+            "speed": 0.75,
+            "power": 270
+        },
+        "2304": {
+            "id": "2304",
+            "name": "Assembling Machine Mk.II",
+            "speed": 1,
+            "power": 540
+        },
+        "2305": {
+            "id": "2305",
+            "name": "Assembling Machine Mk.III",
+            "speed": 1.5,
+            "power": 1080
+        },
+        "2318": {
+            "id": "2318",
+            "name": "Re-composing Assembler",
+            "speed": 3,
+            "power": 2700
+        },
+        "2901": {
+            "id": "2901",
+            "name": "Matrix Lab",
+            "speed": 1,
+            "power": 480
+        },
+        "2902": {
+            "id": "2902",
+            "name": "Self-evolution Lab",
+            "speed": 3,
+            "power": 1920
+        },
+        "2308": {
+            "id": "2308",
+            "name": "Oil Refinery",
+            "speed": 1,
+            "power": 960
+        },
+        "2309": {
+            "id": "2309",
+            "name": "Chemical Plant",
+            "speed": 1,
+            "power": 720
+        },
+        "2317": {
+            "id": "2317",
+            "name": "Quantum Chemical Plant",
+            "speed": 2,
+            "power": 2160
+        },
+        "2310": {
+            "id": "2310",
+            "name": "Miniature Particle Collider",
+            "speed": 1,
+            "power": 12000
+        },
+        "2314": {
+            "id": "2314",
+            "name": "Fractionator",
+            "power": 720
+        },
+        "2209": {
+            "id": "2209",
+            "name": "Energy Exchanger",
+            "power": 54000
+        }
+    },
+    "recipes": {
+        "1": {
+            "id": 1,
+            "name": "Iron Ingot",
+            "type": "Smelt",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1001,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1101,
+                    "qty": 1
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "name": "Magnet",
+            "type": "Smelt",
+            "handcraft": true,
+            "duration": 1.5,
+            "input": [
+                {
+                    "id": 1001,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1102,
+                    "qty": 1
+                }
+            ]
+        },
+        "3": {
+            "id": 3,
+            "name": "Copper Ingot",
+            "type": "Smelt",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1002,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1104,
+                    "qty": 1
+                }
+            ]
+        },
+        "4": {
+            "id": 4,
+            "name": "Stone Brick",
+            "type": "Smelt",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1005,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1108,
+                    "qty": 1
+                }
+            ]
+        },
+        "5": {
+            "id": 5,
+            "name": "Gear",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1201,
+                    "qty": 1
+                }
+            ]
+        },
+        "6": {
+            "id": 6,
+            "name": "Magnetic Coil",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1102,
+                    "qty": 2
+                },
+                {
+                    "id": 1104,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1202,
+                    "qty": 2
+                }
+            ]
+        },
+        "7": {
+            "id": 7,
+            "name": "Wind Turbine",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 6
+                },
+                {
+                    "id": 1201,
+                    "qty": 1
+                },
+                {
+                    "id": 1202,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 2203,
+                    "qty": 1
+                }
+            ]
+        },
+        "8": {
+            "id": 8,
+            "name": "Tesla Tower",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 2
+                },
+                {
+                    "id": 1202,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2201,
+                    "qty": 1
+                }
+            ]
+        },
+        "9": {
+            "id": 9,
+            "name": "Electromagnetic Matrix",
+            "type": "Research",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1202,
+                    "qty": 1
+                },
+                {
+                    "id": 1301,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 6001,
+                    "qty": 1
+                }
+            ]
+        },
+        "10": {
+            "id": 10,
+            "name": "Matrix Lab",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 8
+                },
+                {
+                    "id": 1110,
+                    "qty": 4
+                },
+                {
+                    "id": 1301,
+                    "qty": 4
+                },
+                {
+                    "id": 1202,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2901,
+                    "qty": 1
+                }
+            ]
+        },
+        "11": {
+            "id": 11,
+            "name": "Prism",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1110,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 1111,
+                    "qty": 2
+                }
+            ]
+        },
+        "12": {
+            "id": 12,
+            "name": "Plasma Exciter",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1202,
+                    "qty": 4
+                },
+                {
+                    "id": 1111,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1401,
+                    "qty": 1
+                }
+            ]
+        },
+        "13": {
+            "id": 13,
+            "name": "Wireless Power Tower",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 2201,
+                    "qty": 1
+                },
+                {
+                    "id": 1401,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 2202,
+                    "qty": 1
+                }
+            ]
+        },
+        "14": {
+            "id": 14,
+            "name": "Oil Extractor",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 12
+                },
+                {
+                    "id": 1108,
+                    "qty": 12
+                },
+                {
+                    "id": 1301,
+                    "qty": 6
+                },
+                {
+                    "id": 1401,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2307,
+                    "qty": 1
+                }
+            ]
+        },
+        "15": {
+            "id": 15,
+            "name": "Oil Refinery",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 10
+                },
+                {
+                    "id": 1108,
+                    "qty": 10
+                },
+                {
+                    "id": 1301,
+                    "qty": 6
+                },
+                {
+                    "id": 1401,
+                    "qty": 6
+                }
+            ],
+            "output": [
+                {
+                    "id": 2308,
+                    "qty": 1
+                }
+            ]
+        },
+        "16": {
+            "id": 16,
+            "name": "Plasma Refining",
+            "type": "Refine",
+            "handcraft": false,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1007,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1120,
+                    "qty": 1
+                },
+                {
+                    "id": 1114,
+                    "qty": 2
+                }
+            ]
+        },
+        "17": {
+            "id": 17,
+            "name": "Energetic Graphite",
+            "type": "Smelt",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1006,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1109,
+                    "qty": 1
+                }
+            ]
+        },
+        "18": {
+            "id": 18,
+            "name": "Energy Matrix",
+            "type": "Research",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1109,
+                    "qty": 2
+                },
+                {
+                    "id": 1120,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 6002,
+                    "qty": 1
+                }
+            ]
+        },
+        "19": {
+            "id": 19,
+            "name": "Hydrogen Fuel Rod",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1106,
+                    "qty": 1
+                },
+                {
+                    "id": 1120,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 1801,
+                    "qty": 2
+                }
+            ]
+        },
+        "20": {
+            "id": 20,
+            "name": " - Thruster",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 2
+                },
+                {
+                    "id": 1104,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 1405,
+                    "qty": 1
+                }
+            ]
+        },
+        "21": {
+            "id": 21,
+            "name": "Reinforced Thruster",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 5
+                },
+                {
+                    "id": 1204,
+                    "qty": 5
+                }
+            ],
+            "output": [
+                {
+                    "id": 1406,
+                    "qty": 1
+                }
+            ]
+        },
+        "22": {
+            "id": 22,
+            "name": "Chemical Plant",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 5.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 8
+                },
+                {
+                    "id": 1108,
+                    "qty": 8
+                },
+                {
+                    "id": 1110,
+                    "qty": 8
+                },
+                {
+                    "id": 1301,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 2309,
+                    "qty": 1
+                }
+            ]
+        },
+        "23": {
+            "id": 23,
+            "name": "Plastic",
+            "type": "Chemical",
+            "handcraft": false,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1114,
+                    "qty": 2
+                },
+                {
+                    "id": 1109,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1115,
+                    "qty": 1
+                }
+            ]
+        },
+        "24": {
+            "id": 24,
+            "name": "Sulfuric Acid",
+            "type": "Chemical",
+            "handcraft": false,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1114,
+                    "qty": 6
+                },
+                {
+                    "id": 1005,
+                    "qty": 8
+                },
+                {
+                    "id": 1000,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 1116,
+                    "qty": 4
+                }
+            ]
+        },
+        "25": {
+            "id": 25,
+            "name": "Organic Crystal",
+            "type": "Chemical",
+            "handcraft": false,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1115,
+                    "qty": 2
+                },
+                {
+                    "id": 1114,
+                    "qty": 1
+                },
+                {
+                    "id": 1000,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1117,
+                    "qty": 1
+                }
+            ]
+        },
+        "26": {
+            "id": 26,
+            "name": "Titanium Crystal",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1117,
+                    "qty": 1
+                },
+                {
+                    "id": 1106,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 1118,
+                    "qty": 1
+                }
+            ]
+        },
+        "27": {
+            "id": 27,
+            "name": "Structure Matrix",
+            "type": "Research",
+            "handcraft": true,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1112,
+                    "qty": 1
+                },
+                {
+                    "id": 1118,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 6003,
+                    "qty": 1
+                }
+            ]
+        },
+        "28": {
+            "id": 28,
+            "name": "Casimir Crystal",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1118,
+                    "qty": 1
+                },
+                {
+                    "id": 1123,
+                    "qty": 2
+                },
+                {
+                    "id": 1120,
+                    "qty": 12
+                }
+            ],
+            "output": [
+                {
+                    "id": 1126,
+                    "qty": 1
+                }
+            ]
+        },
+        "29": {
+            "id": 29,
+            "name": "Casimir Crystal (advanced)",
+            "type": "Assemble",
+            "handcraft": false,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1014,
+                    "qty": 8
+                },
+                {
+                    "id": 1123,
+                    "qty": 2
+                },
+                {
+                    "id": 1120,
+                    "qty": 12
+                }
+            ],
+            "output": [
+                {
+                    "id": 1126,
+                    "qty": 1
+                }
+            ]
+        },
+        "30": {
+            "id": 30,
+            "name": "Titanium Glass",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 5.0,
+            "input": [
+                {
+                    "id": 1110,
+                    "qty": 2
+                },
+                {
+                    "id": 1106,
+                    "qty": 2
+                },
+                {
+                    "id": 1000,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1119,
+                    "qty": 2
+                }
+            ]
+        },
+        "31": {
+            "id": 31,
+            "name": "Graphene",
+            "type": "Chemical",
+            "handcraft": false,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1109,
+                    "qty": 3
+                },
+                {
+                    "id": 1116,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1123,
+                    "qty": 2
+                }
+            ]
+        },
+        "32": {
+            "id": 32,
+            "name": "Graphene (advanced)",
+            "type": "Chemical",
+            "handcraft": false,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1011,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1123,
+                    "qty": 2
+                },
+                {
+                    "id": 1120,
+                    "qty": 1
+                }
+            ]
+        },
+        "33": {
+            "id": 33,
+            "name": "Carbon Nanotube",
+            "type": "Chemical",
+            "handcraft": false,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1123,
+                    "qty": 3
+                },
+                {
+                    "id": 1106,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1124,
+                    "qty": 2
+                }
+            ]
+        },
+        "34": {
+            "id": 34,
+            "name": "Silicon Ore",
+            "type": "Smelt",
+            "handcraft": false,
+            "duration": 10.0,
+            "input": [
+                {
+                    "id": 1005,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 1003,
+                    "qty": 1
+                }
+            ]
+        },
+        "35": {
+            "id": 35,
+            "name": "Carbon Nanotube (advanced)",
+            "type": "Chemical",
+            "handcraft": false,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1015,
+                    "qty": 6
+                }
+            ],
+            "output": [
+                {
+                    "id": 1124,
+                    "qty": 2
+                }
+            ]
+        },
+        "36": {
+            "id": 36,
+            "name": "Particle Broadband",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1124,
+                    "qty": 2
+                },
+                {
+                    "id": 1113,
+                    "qty": 2
+                },
+                {
+                    "id": 1115,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1402,
+                    "qty": 1
+                }
+            ]
+        },
+        "37": {
+            "id": 37,
+            "name": "Crystal Silicon",
+            "type": "Smelt",
+            "handcraft": false,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1105,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1113,
+                    "qty": 1
+                }
+            ]
+        },
+        "38": {
+            "id": 38,
+            "name": "Plane Filter",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 12.0,
+            "input": [
+                {
+                    "id": 1126,
+                    "qty": 1
+                },
+                {
+                    "id": 1119,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1304,
+                    "qty": 1
+                }
+            ]
+        },
+        "39": {
+            "id": 39,
+            "name": "Miniature Particle Collider",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 15.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 20
+                },
+                {
+                    "id": 1125,
+                    "qty": 20
+                },
+                {
+                    "id": 1205,
+                    "qty": 25
+                },
+                {
+                    "id": 1123,
+                    "qty": 10
+                },
+                {
+                    "id": 1303,
+                    "qty": 8
+                }
+            ],
+            "output": [
+                {
+                    "id": 2310,
+                    "qty": 1
+                }
+            ]
+        },
+        "40": {
+            "id": 40,
+            "name": "Deuterium",
+            "type": "Particle",
+            "handcraft": false,
+            "duration": 2.5,
+            "input": [
+                {
+                    "id": 1120,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 1121,
+                    "qty": 5
+                }
+            ]
+        },
+        "41": {
+            "id": 41,
+            "name": "Deuteron Fuel Rod",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 12.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 1
+                },
+                {
+                    "id": 1121,
+                    "qty": 20
+                },
+                {
+                    "id": 1205,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1802,
+                    "qty": 2
+                }
+            ]
+        },
+        "42": {
+            "id": 42,
+            "name": "Annihilation Constraint Sphere",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 20.0,
+            "input": [
+                {
+                    "id": 1206,
+                    "qty": 1
+                },
+                {
+                    "id": 1303,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1403,
+                    "qty": 1
+                }
+            ]
+        },
+        "43": {
+            "id": 43,
+            "name": "Artificial Star",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 30.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 20
+                },
+                {
+                    "id": 1125,
+                    "qty": 20
+                },
+                {
+                    "id": 1403,
+                    "qty": 10
+                },
+                {
+                    "id": 1305,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 2210,
+                    "qty": 1
+                }
+            ]
+        },
+        "44": {
+            "id": 44,
+            "name": "Antimatter Fuel Rod",
+            "type": "Assemble",
+            "handcraft": false,
+            "duration": 24.0,
+            "input": [
+                {
+                    "id": 1122,
+                    "qty": 12
+                },
+                {
+                    "id": 1120,
+                    "qty": 12
+                },
+                {
+                    "id": 1403,
+                    "qty": 1
+                },
+                {
+                    "id": 1107,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1803,
+                    "qty": 2
+                }
+            ]
+        },
+        "45": {
+            "id": 45,
+            "name": "Assembling Machine Mk.I",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 4
+                },
+                {
+                    "id": 1201,
+                    "qty": 8
+                },
+                {
+                    "id": 1301,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2303,
+                    "qty": 1
+                }
+            ]
+        },
+        "46": {
+            "id": 46,
+            "name": "Assembling Machine Mk.II",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 2303,
+                    "qty": 1
+                },
+                {
+                    "id": 1123,
+                    "qty": 8
+                },
+                {
+                    "id": 1303,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2304,
+                    "qty": 1
+                }
+            ]
+        },
+        "47": {
+            "id": 47,
+            "name": "Assembling Machine Mk.III",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 2304,
+                    "qty": 1
+                },
+                {
+                    "id": 1402,
+                    "qty": 8
+                },
+                {
+                    "id": 1305,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 2305,
+                    "qty": 1
+                }
+            ]
+        },
+        "48": {
+            "id": 48,
+            "name": "Mining Machine",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 4
+                },
+                {
+                    "id": 1301,
+                    "qty": 2
+                },
+                {
+                    "id": 1202,
+                    "qty": 2
+                },
+                {
+                    "id": 1201,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 2301,
+                    "qty": 1
+                }
+            ]
+        },
+        "49": {
+            "id": 49,
+            "name": "Water Pump",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 8
+                },
+                {
+                    "id": 1108,
+                    "qty": 4
+                },
+                {
+                    "id": 1203,
+                    "qty": 4
+                },
+                {
+                    "id": 1301,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 2306,
+                    "qty": 1
+                }
+            ]
+        },
+        "50": {
+            "id": 50,
+            "name": "Circuit Board",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 2
+                },
+                {
+                    "id": 1104,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1301,
+                    "qty": 2
+                }
+            ]
+        },
+        "51": {
+            "id": 51,
+            "name": "Processor",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1301,
+                    "qty": 2
+                },
+                {
+                    "id": 1302,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1303,
+                    "qty": 1
+                }
+            ]
+        },
+        "52": {
+            "id": 52,
+            "name": "Quantum Chip",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1303,
+                    "qty": 2
+                },
+                {
+                    "id": 1304,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1305,
+                    "qty": 1
+                }
+            ]
+        },
+        "53": {
+            "id": 53,
+            "name": "Microcrystalline Component",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1105,
+                    "qty": 2
+                },
+                {
+                    "id": 1104,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1302,
+                    "qty": 1
+                }
+            ]
+        },
+        "54": {
+            "id": 54,
+            "name": "Organic Crystal (original)",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1030,
+                    "qty": 20
+                },
+                {
+                    "id": 1031,
+                    "qty": 30
+                },
+                {
+                    "id": 1000,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 1117,
+                    "qty": 1
+                }
+            ]
+        },
+        "55": {
+            "id": 55,
+            "name": "Information Matrix",
+            "type": "Research",
+            "handcraft": true,
+            "duration": 10.0,
+            "input": [
+                {
+                    "id": 1303,
+                    "qty": 2
+                },
+                {
+                    "id": 1402,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 6004,
+                    "qty": 1
+                }
+            ]
+        },
+        "56": {
+            "id": 56,
+            "name": "Arc Smelter",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 4
+                },
+                {
+                    "id": 1108,
+                    "qty": 2
+                },
+                {
+                    "id": 1301,
+                    "qty": 4
+                },
+                {
+                    "id": 1202,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 2302,
+                    "qty": 1
+                }
+            ]
+        },
+        "57": {
+            "id": 57,
+            "name": "Glass",
+            "type": "Smelt",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1005,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1110,
+                    "qty": 1
+                }
+            ]
+        },
+        "58": {
+            "id": 58,
+            "name": "X-ray Cracking",
+            "type": "Refine",
+            "handcraft": false,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1114,
+                    "qty": 1
+                },
+                {
+                    "id": 1120,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1120,
+                    "qty": 3
+                },
+                {
+                    "id": 1109,
+                    "qty": 1
+                }
+            ]
+        },
+        "59": {
+            "id": 59,
+            "name": "High-purity Silicon",
+            "type": "Smelt",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1003,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1105,
+                    "qty": 1
+                }
+            ]
+        },
+        "60": {
+            "id": 60,
+            "name": "Diamond",
+            "type": "Smelt",
+            "handcraft": false,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1109,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1112,
+                    "qty": 1
+                }
+            ]
+        },
+        "61": {
+            "id": 61,
+            "name": "Diamond (advanced)",
+            "type": "Smelt",
+            "handcraft": false,
+            "duration": 1.5,
+            "input": [
+                {
+                    "id": 1012,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1112,
+                    "qty": 2
+                }
+            ]
+        },
+        "62": {
+            "id": 62,
+            "name": "Crystal Silicon (advanced)",
+            "type": "Assemble",
+            "handcraft": false,
+            "duration": 1.5,
+            "input": [
+                {
+                    "id": 1013,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1113,
+                    "qty": 2
+                }
+            ]
+        },
+        "63": {
+            "id": 63,
+            "name": "Steel",
+            "type": "Smelt",
+            "handcraft": false,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 1103,
+                    "qty": 1
+                }
+            ]
+        },
+        "64": {
+            "id": 64,
+            "name": "Thermal Power Plant",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 5.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 10
+                },
+                {
+                    "id": 1108,
+                    "qty": 4
+                },
+                {
+                    "id": 1201,
+                    "qty": 4
+                },
+                {
+                    "id": 1202,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2204,
+                    "qty": 1
+                }
+            ]
+        },
+        "65": {
+            "id": 65,
+            "name": "Titanium Ingot",
+            "type": "Smelt",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1004,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1106,
+                    "qty": 1
+                }
+            ]
+        },
+        "66": {
+            "id": 66,
+            "name": "Titanium Alloy",
+            "type": "Smelt",
+            "handcraft": false,
+            "duration": 12.0,
+            "input": [
+                {
+                    "id": 1106,
+                    "qty": 4
+                },
+                {
+                    "id": 1103,
+                    "qty": 4
+                },
+                {
+                    "id": 1116,
+                    "qty": 8
+                }
+            ],
+            "output": [
+                {
+                    "id": 1107,
+                    "qty": 4
+                }
+            ]
+        },
+        "67": {
+            "id": 67,
+            "name": "Solar Panel",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1104,
+                    "qty": 10
+                },
+                {
+                    "id": 1105,
+                    "qty": 10
+                },
+                {
+                    "id": 1301,
+                    "qty": 5
+                }
+            ],
+            "output": [
+                {
+                    "id": 2205,
+                    "qty": 1
+                }
+            ]
+        },
+        "68": {
+            "id": 68,
+            "name": "Photon Combiner",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1111,
+                    "qty": 2
+                },
+                {
+                    "id": 1301,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1404,
+                    "qty": 1
+                }
+            ]
+        },
+        "69": {
+            "id": 69,
+            "name": "Photon Combiner (advanced)",
+            "type": "Assemble",
+            "handcraft": false,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1014,
+                    "qty": 1
+                },
+                {
+                    "id": 1301,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1404,
+                    "qty": 1
+                }
+            ]
+        },
+        "70": {
+            "id": 70,
+            "name": "Solar Sail",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1123,
+                    "qty": 1
+                },
+                {
+                    "id": 1404,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1501,
+                    "qty": 2
+                }
+            ]
+        },
+        "71": {
+            "id": 71,
+            "name": "EM-Rail Ejector",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 20
+                },
+                {
+                    "id": 1201,
+                    "qty": 20
+                },
+                {
+                    "id": 1303,
+                    "qty": 5
+                },
+                {
+                    "id": 1205,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 2311,
+                    "qty": 1
+                }
+            ]
+        },
+        "72": {
+            "id": 72,
+            "name": "Ray Receiver",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 20
+                },
+                {
+                    "id": 1105,
+                    "qty": 20
+                },
+                {
+                    "id": 1404,
+                    "qty": 10
+                },
+                {
+                    "id": 1303,
+                    "qty": 5
+                },
+                {
+                    "id": 1205,
+                    "qty": 20
+                }
+            ],
+            "output": [
+                {
+                    "id": 2208,
+                    "qty": 1
+                }
+            ]
+        },
+        "73": {
+            "id": 73,
+            "name": "Satellite Substation",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 5.0,
+            "input": [
+                {
+                    "id": 2202,
+                    "qty": 1
+                },
+                {
+                    "id": 1205,
+                    "qty": 10
+                },
+                {
+                    "id": 1125,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 2212,
+                    "qty": 1
+                }
+            ]
+        },
+        "74": {
+            "id": 74,
+            "name": "Mass-energy Storage",
+            "type": "Particle",
+            "handcraft": false,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1208,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1122,
+                    "qty": 2
+                },
+                {
+                    "id": 1120,
+                    "qty": 2
+                }
+            ]
+        },
+        "75": {
+            "id": 75,
+            "name": "Universe Matrix",
+            "type": "Research",
+            "handcraft": false,
+            "duration": 15.0,
+            "input": [
+                {
+                    "id": 6001,
+                    "qty": 1
+                },
+                {
+                    "id": 6002,
+                    "qty": 1
+                },
+                {
+                    "id": 6003,
+                    "qty": 1
+                },
+                {
+                    "id": 6004,
+                    "qty": 1
+                },
+                {
+                    "id": 6005,
+                    "qty": 1
+                },
+                {
+                    "id": 1122,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 6006,
+                    "qty": 1
+                }
+            ]
+        },
+        "76": {
+            "id": 76,
+            "name": "Accumulator",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 6
+                },
+                {
+                    "id": 1205,
+                    "qty": 1
+                },
+                {
+                    "id": 1113,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 2206,
+                    "qty": 1
+                }
+            ]
+        },
+        "77": {
+            "id": 77,
+            "name": "Energy Exchanger",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 15.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 40
+                },
+                {
+                    "id": 1103,
+                    "qty": 40
+                },
+                {
+                    "id": 1303,
+                    "qty": 40
+                },
+                {
+                    "id": 1206,
+                    "qty": 8
+                }
+            ],
+            "output": [
+                {
+                    "id": 2209,
+                    "qty": 1
+                }
+            ]
+        },
+        "78": {
+            "id": 78,
+            "name": "Space Warper",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 10.0,
+            "input": [
+                {
+                    "id": 1209,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1210,
+                    "qty": 1
+                }
+            ]
+        },
+        "79": {
+            "id": 79,
+            "name": "Space Warper (advanced)",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 10.0,
+            "input": [
+                {
+                    "id": 6005,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1210,
+                    "qty": 8
+                }
+            ]
+        },
+        "80": {
+            "id": 80,
+            "name": "Frame Material",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1124,
+                    "qty": 4
+                },
+                {
+                    "id": 1107,
+                    "qty": 1
+                },
+                {
+                    "id": 1105,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1125,
+                    "qty": 1
+                }
+            ]
+        },
+        "81": {
+            "id": 81,
+            "name": "Dyson Sphere Component",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1125,
+                    "qty": 3
+                },
+                {
+                    "id": 1501,
+                    "qty": 3
+                },
+                {
+                    "id": 1303,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 1502,
+                    "qty": 1
+                }
+            ]
+        },
+        "82": {
+            "id": 82,
+            "name": "Vertical Launching Silo",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 30.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 80
+                },
+                {
+                    "id": 1125,
+                    "qty": 30
+                },
+                {
+                    "id": 1209,
+                    "qty": 20
+                },
+                {
+                    "id": 1305,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 2312,
+                    "qty": 1
+                }
+            ]
+        },
+        "83": {
+            "id": 83,
+            "name": "Small Carrier Rocket",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1502,
+                    "qty": 2
+                },
+                {
+                    "id": 1802,
+                    "qty": 4
+                },
+                {
+                    "id": 1305,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1503,
+                    "qty": 1
+                }
+            ]
+        },
+        "84": {
+            "id": 84,
+            "name": "Conveyor Belt MK.I",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 2
+                },
+                {
+                    "id": 1201,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2001,
+                    "qty": 3
+                }
+            ]
+        },
+        "85": {
+            "id": 85,
+            "name": "Sorter MK.I",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 1
+                },
+                {
+                    "id": 1301,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2011,
+                    "qty": 1
+                }
+            ]
+        },
+        "86": {
+            "id": 86,
+            "name": "Depot MK.I",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 4
+                },
+                {
+                    "id": 1108,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2101,
+                    "qty": 1
+                }
+            ]
+        },
+        "87": {
+            "id": 87,
+            "name": "Splitter",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 3
+                },
+                {
+                    "id": 1201,
+                    "qty": 2
+                },
+                {
+                    "id": 1301,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2020,
+                    "qty": 1
+                }
+            ]
+        },
+        "88": {
+            "id": 88,
+            "name": "Sorter MK.II",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 2011,
+                    "qty": 2
+                },
+                {
+                    "id": 1203,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2012,
+                    "qty": 2
+                }
+            ]
+        },
+        "89": {
+            "id": 89,
+            "name": "Conveyor Belt MK.II",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 2001,
+                    "qty": 3
+                },
+                {
+                    "id": 1204,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2002,
+                    "qty": 3
+                }
+            ]
+        },
+        "90": {
+            "id": 90,
+            "name": "Sorter MK.III",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 2012,
+                    "qty": 2
+                },
+                {
+                    "id": 1204,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2013,
+                    "qty": 2
+                }
+            ]
+        },
+        "91": {
+            "id": 91,
+            "name": "Depot MK.II",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 8
+                },
+                {
+                    "id": 1108,
+                    "qty": 8
+                }
+            ],
+            "output": [
+                {
+                    "id": 2102,
+                    "qty": 1
+                }
+            ]
+        },
+        "92": {
+            "id": 92,
+            "name": "Conveyor Belt MK.III",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 2002,
+                    "qty": 3
+                },
+                {
+                    "id": 1205,
+                    "qty": 1
+                },
+                {
+                    "id": 1123,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2003,
+                    "qty": 3
+                }
+            ]
+        },
+        "93": {
+            "id": 93,
+            "name": "Planetary Logistics Station",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 20.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 40
+                },
+                {
+                    "id": 1106,
+                    "qty": 40
+                },
+                {
+                    "id": 1303,
+                    "qty": 40
+                },
+                {
+                    "id": 1206,
+                    "qty": 20
+                }
+            ],
+            "output": [
+                {
+                    "id": 2103,
+                    "qty": 1
+                }
+            ]
+        },
+        "94": {
+            "id": 94,
+            "name": "Logistics Drone",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 5
+                },
+                {
+                    "id": 1303,
+                    "qty": 2
+                },
+                {
+                    "id": 1405,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 5001,
+                    "qty": 1
+                }
+            ]
+        },
+        "95": {
+            "id": 95,
+            "name": "Interstellar Logistics Station",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 30.0,
+            "input": [
+                {
+                    "id": 2103,
+                    "qty": 1
+                },
+                {
+                    "id": 1107,
+                    "qty": 40
+                },
+                {
+                    "id": 1206,
+                    "qty": 20
+                }
+            ],
+            "output": [
+                {
+                    "id": 2104,
+                    "qty": 1
+                }
+            ]
+        },
+        "96": {
+            "id": 96,
+            "name": "Interstellar Logistics Vessel",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 10
+                },
+                {
+                    "id": 1303,
+                    "qty": 10
+                },
+                {
+                    "id": 1406,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 5002,
+                    "qty": 1
+                }
+            ]
+        },
+        "97": {
+            "id": 97,
+            "name": "Electric Motor",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 2
+                },
+                {
+                    "id": 1201,
+                    "qty": 1
+                },
+                {
+                    "id": 1202,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1203,
+                    "qty": 1
+                }
+            ]
+        },
+        "98": {
+            "id": 98,
+            "name": "Electromagnetic Turbine",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1203,
+                    "qty": 2
+                },
+                {
+                    "id": 1202,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1204,
+                    "qty": 1
+                }
+            ]
+        },
+        "99": {
+            "id": 99,
+            "name": "Particle Container",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1204,
+                    "qty": 2
+                },
+                {
+                    "id": 1104,
+                    "qty": 2
+                },
+                {
+                    "id": 1123,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1206,
+                    "qty": 1
+                }
+            ]
+        },
+        "100": {
+            "id": 100,
+            "name": "Particle Container (advanced)",
+            "type": "Assemble",
+            "handcraft": false,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1016,
+                    "qty": 10
+                },
+                {
+                    "id": 1104,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1206,
+                    "qty": 1
+                }
+            ]
+        },
+        "101": {
+            "id": 101,
+            "name": "Graviton Lens",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1112,
+                    "qty": 4
+                },
+                {
+                    "id": 1127,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1209,
+                    "qty": 1
+                }
+            ]
+        },
+        "102": {
+            "id": 102,
+            "name": "Gravity Matrix",
+            "type": "Research",
+            "handcraft": true,
+            "duration": 24.0,
+            "input": [
+                {
+                    "id": 1209,
+                    "qty": 1
+                },
+                {
+                    "id": 1305,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 6005,
+                    "qty": 2
+                }
+            ]
+        },
+        "103": {
+            "id": 103,
+            "name": "Super-magnetic Ring",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1204,
+                    "qty": 2
+                },
+                {
+                    "id": 1102,
+                    "qty": 3
+                },
+                {
+                    "id": 1109,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1205,
+                    "qty": 1
+                }
+            ]
+        },
+        "104": {
+            "id": 104,
+            "name": "Strange Matter",
+            "type": "Particle",
+            "handcraft": false,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1206,
+                    "qty": 2
+                },
+                {
+                    "id": 1101,
+                    "qty": 2
+                },
+                {
+                    "id": 1121,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 1127,
+                    "qty": 1
+                }
+            ]
+        },
+        "106": {
+            "id": 106,
+            "name": "Proliferator Mk.I",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 0.5,
+            "input": [
+                {
+                    "id": 1006,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1141,
+                    "qty": 1
+                }
+            ]
+        },
+        "107": {
+            "id": 107,
+            "name": "Proliferator Mk.II",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1141,
+                    "qty": 2
+                },
+                {
+                    "id": 1112,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1142,
+                    "qty": 1
+                }
+            ]
+        },
+        "108": {
+            "id": 108,
+            "name": "Proliferator Mk.III",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1142,
+                    "qty": 2
+                },
+                {
+                    "id": 1124,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1143,
+                    "qty": 1
+                }
+            ]
+        },
+        "109": {
+            "id": 109,
+            "name": "Spray Coater",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 4
+                },
+                {
+                    "id": 1401,
+                    "qty": 2
+                },
+                {
+                    "id": 1301,
+                    "qty": 2
+                },
+                {
+                    "id": 1302,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 2313,
+                    "qty": 1
+                }
+            ]
+        },
+        "110": {
+            "id": 110,
+            "name": "Fractionator",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 8
+                },
+                {
+                    "id": 1108,
+                    "qty": 4
+                },
+                {
+                    "id": 1110,
+                    "qty": 4
+                },
+                {
+                    "id": 1303,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2314,
+                    "qty": 1
+                }
+            ]
+        },
+        "111": {
+            "id": 111,
+            "name": "Orbital Collector",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 30.0,
+            "input": [
+                {
+                    "id": 2104,
+                    "qty": 1
+                },
+                {
+                    "id": 1205,
+                    "qty": 50
+                },
+                {
+                    "id": 1406,
+                    "qty": 20
+                },
+                {
+                    "id": 2207,
+                    "qty": 20
+                }
+            ],
+            "output": [
+                {
+                    "id": 2105,
+                    "qty": 1
+                }
+            ]
+        },
+        "112": {
+            "id": 112,
+            "name": "Foundation",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1108,
+                    "qty": 3
+                },
+                {
+                    "id": 1103,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1131,
+                    "qty": 1
+                }
+            ]
+        },
+        "113": {
+            "id": 113,
+            "name": "Mini Fusion Power Plant",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 10.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 12
+                },
+                {
+                    "id": 1205,
+                    "qty": 10
+                },
+                {
+                    "id": 1124,
+                    "qty": 8
+                },
+                {
+                    "id": 1303,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2211,
+                    "qty": 1
+                }
+            ]
+        },
+        "114": {
+            "id": 114,
+            "name": "Storage Tank",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 8
+                },
+                {
+                    "id": 1108,
+                    "qty": 4
+                },
+                {
+                    "id": 1110,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2106,
+                    "qty": 1
+                }
+            ]
+        },
+        "115": {
+            "id": 115,
+            "name": "Deuterium Fractionation",
+            "type": "Fractionate",
+            "handcraft": false,
+            "duration": 0.016666666666666666,
+            "input": [
+                {
+                    "id": 1120,
+                    "qty": 100
+                }
+            ],
+            "output": [
+                {
+                    "id": 1121,
+                    "qty": 1
+                }
+            ]
+        },
+        "116": {
+            "id": 116,
+            "name": "Plane Smelter",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 5.0,
+            "input": [
+                {
+                    "id": 2302,
+                    "qty": 1
+                },
+                {
+                    "id": 1125,
+                    "qty": 5
+                },
+                {
+                    "id": 1304,
+                    "qty": 4
+                },
+                {
+                    "id": 1016,
+                    "qty": 15
+                }
+            ],
+            "output": [
+                {
+                    "id": 2315,
+                    "qty": 1
+                }
+            ]
+        },
+        "117": {
+            "id": 117,
+            "name": "Traffic Monitor",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 3
+                },
+                {
+                    "id": 1201,
+                    "qty": 2
+                },
+                {
+                    "id": 1110,
+                    "qty": 1
+                },
+                {
+                    "id": 1301,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 2030,
+                    "qty": 1
+                }
+            ]
+        },
+        "118": {
+            "id": 118,
+            "name": "Geothermal Power Station",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 15
+                },
+                {
+                    "id": 1104,
+                    "qty": 20
+                },
+                {
+                    "id": 1404,
+                    "qty": 4
+                },
+                {
+                    "id": 1205,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2213,
+                    "qty": 1
+                }
+            ]
+        },
+        "119": {
+            "id": 119,
+            "name": "Advanced Mining Machine",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 20.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 20
+                },
+                {
+                    "id": 1125,
+                    "qty": 10
+                },
+                {
+                    "id": 1205,
+                    "qty": 10
+                },
+                {
+                    "id": 1305,
+                    "qty": 4
+                },
+                {
+                    "id": 1014,
+                    "qty": 40
+                }
+            ],
+            "output": [
+                {
+                    "id": 2316,
+                    "qty": 1
+                }
+            ]
+        },
+        "120": {
+            "id": 120,
+            "name": "Automatic Piler",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 3
+                },
+                {
+                    "id": 1201,
+                    "qty": 4
+                },
+                {
+                    "id": 1205,
+                    "qty": 1
+                },
+                {
+                    "id": 1303,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 2040,
+                    "qty": 1
+                }
+            ]
+        },
+        "121": {
+            "id": 121,
+            "name": "Reformed Refinement",
+            "type": "Refine",
+            "handcraft": false,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1114,
+                    "qty": 2
+                },
+                {
+                    "id": 1120,
+                    "qty": 1
+                },
+                {
+                    "id": 1006,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1114,
+                    "qty": 3
+                }
+            ]
+        },
+        "122": {
+            "id": 122,
+            "name": "Logistics Distributor",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 8
+                },
+                {
+                    "id": 1401,
+                    "qty": 4
+                },
+                {
+                    "id": 1303,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2107,
+                    "qty": 1
+                }
+            ]
+        },
+        "123": {
+            "id": 123,
+            "name": "Logistics Bot",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 2
+                },
+                {
+                    "id": 1407,
+                    "qty": 1
+                },
+                {
+                    "id": 1303,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 5003,
+                    "qty": 1
+                }
+            ]
+        },
+        "124": {
+            "id": 124,
+            "name": "Quantum Chemical Plant",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 10.0,
+            "input": [
+                {
+                    "id": 2309,
+                    "qty": 1
+                },
+                {
+                    "id": 1119,
+                    "qty": 10
+                },
+                {
+                    "id": 1127,
+                    "qty": 3
+                },
+                {
+                    "id": 1305,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 2317,
+                    "qty": 1
+                }
+            ]
+        },
+        "125": {
+            "id": 125,
+            "name": "Gauss Turret",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 8
+                },
+                {
+                    "id": 1201,
+                    "qty": 8
+                },
+                {
+                    "id": 1301,
+                    "qty": 2
+                },
+                {
+                    "id": 1202,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 3001,
+                    "qty": 1
+                }
+            ]
+        },
+        "126": {
+            "id": 126,
+            "name": "Laser Turret",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 9
+                },
+                {
+                    "id": 1401,
+                    "qty": 6
+                },
+                {
+                    "id": 1301,
+                    "qty": 6
+                },
+                {
+                    "id": 1404,
+                    "qty": 9
+                }
+            ],
+            "output": [
+                {
+                    "id": 3002,
+                    "qty": 1
+                }
+            ]
+        },
+        "127": {
+            "id": 127,
+            "name": "Implosion Cannon",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 5.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 10
+                },
+                {
+                    "id": 1203,
+                    "qty": 8
+                },
+                {
+                    "id": 1301,
+                    "qty": 10
+                },
+                {
+                    "id": 1205,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 3003,
+                    "qty": 1
+                }
+            ]
+        },
+        "128": {
+            "id": 128,
+            "name": "Plasma Turret",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 10.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 20
+                },
+                {
+                    "id": 1119,
+                    "qty": 10
+                },
+                {
+                    "id": 1205,
+                    "qty": 10
+                },
+                {
+                    "id": 1401,
+                    "qty": 5
+                },
+                {
+                    "id": 1303,
+                    "qty": 5
+                }
+            ],
+            "output": [
+                {
+                    "id": 3004,
+                    "qty": 1
+                }
+            ]
+        },
+        "129": {
+            "id": 129,
+            "name": "Missile Turret",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 8
+                },
+                {
+                    "id": 1203,
+                    "qty": 6
+                },
+                {
+                    "id": 1301,
+                    "qty": 12
+                },
+                {
+                    "id": 1407,
+                    "qty": 6
+                }
+            ],
+            "output": [
+                {
+                    "id": 3005,
+                    "qty": 1
+                }
+            ]
+        },
+        "130": {
+            "id": 130,
+            "name": "Jammer Tower",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 5.0,
+            "input": [
+                {
+                    "id": 1104,
+                    "qty": 12
+                },
+                {
+                    "id": 1401,
+                    "qty": 9
+                },
+                {
+                    "id": 1112,
+                    "qty": 6
+                },
+                {
+                    "id": 1303,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 3006,
+                    "qty": 1
+                }
+            ]
+        },
+        "131": {
+            "id": 131,
+            "name": "Signal Tower",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 2202,
+                    "qty": 2
+                },
+                {
+                    "id": 1103,
+                    "qty": 12
+                },
+                {
+                    "id": 1113,
+                    "qty": 6
+                }
+            ],
+            "output": [
+                {
+                    "id": 3007,
+                    "qty": 1
+                }
+            ]
+        },
+        "132": {
+            "id": 132,
+            "name": "Planetary Shield Generator",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 10.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 20
+                },
+                {
+                    "id": 1204,
+                    "qty": 20
+                },
+                {
+                    "id": 1205,
+                    "qty": 5
+                },
+                {
+                    "id": 1206,
+                    "qty": 5
+                }
+            ],
+            "output": [
+                {
+                    "id": 3008,
+                    "qty": 1
+                }
+            ]
+        },
+        "133": {
+            "id": 133,
+            "name": "Combustible Unit",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1006,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 1128,
+                    "qty": 1
+                }
+            ]
+        },
+        "134": {
+            "id": 134,
+            "name": "Explosive Unit",
+            "type": "Chemical",
+            "handcraft": false,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1128,
+                    "qty": 2
+                },
+                {
+                    "id": 1115,
+                    "qty": 2
+                },
+                {
+                    "id": 1116,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1129,
+                    "qty": 2
+                }
+            ]
+        },
+        "135": {
+            "id": 135,
+            "name": "Crystal Explosive Unit",
+            "type": "Chemical",
+            "handcraft": false,
+            "duration": 24.0,
+            "input": [
+                {
+                    "id": 1129,
+                    "qty": 8
+                },
+                {
+                    "id": 1126,
+                    "qty": 1
+                },
+                {
+                    "id": 1113,
+                    "qty": 8
+                }
+            ],
+            "output": [
+                {
+                    "id": 1130,
+                    "qty": 8
+                }
+            ]
+        },
+        "136": {
+            "id": 136,
+            "name": "Magnum Ammo Box",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 1104,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 1601,
+                    "qty": 1
+                }
+            ]
+        },
+        "137": {
+            "id": 137,
+            "name": "Titanium Ammo Box",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1601,
+                    "qty": 1
+                },
+                {
+                    "id": 1106,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1602,
+                    "qty": 1
+                }
+            ]
+        },
+        "138": {
+            "id": 138,
+            "name": "Superalloy Ammo Box",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1602,
+                    "qty": 1
+                },
+                {
+                    "id": 1107,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1603,
+                    "qty": 1
+                }
+            ]
+        },
+        "139": {
+            "id": 139,
+            "name": "Shell Set",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.5,
+            "input": [
+                {
+                    "id": 1104,
+                    "qty": 9
+                },
+                {
+                    "id": 1128,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1604,
+                    "qty": 1
+                }
+            ]
+        },
+        "140": {
+            "id": 140,
+            "name": "High-Explosive Shell Set",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1604,
+                    "qty": 1
+                },
+                {
+                    "id": 1106,
+                    "qty": 6
+                },
+                {
+                    "id": 1129,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1605,
+                    "qty": 1
+                }
+            ]
+        },
+        "141": {
+            "id": 141,
+            "name": "Crystal Shell Set",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1605,
+                    "qty": 1
+                },
+                {
+                    "id": 1107,
+                    "qty": 3
+                },
+                {
+                    "id": 1130,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1606,
+                    "qty": 1
+                }
+            ]
+        },
+        "142": {
+            "id": 142,
+            "name": "Plasma Capsule",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1123,
+                    "qty": 1
+                },
+                {
+                    "id": 1102,
+                    "qty": 2
+                },
+                {
+                    "id": 1121,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 1607,
+                    "qty": 1
+                }
+            ]
+        },
+        "143": {
+            "id": 143,
+            "name": "Antimatter Capsule",
+            "type": "Assemble",
+            "handcraft": false,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1607,
+                    "qty": 1
+                },
+                {
+                    "id": 1206,
+                    "qty": 1
+                },
+                {
+                    "id": 1120,
+                    "qty": 10
+                },
+                {
+                    "id": 1122,
+                    "qty": 10
+                }
+            ],
+            "output": [
+                {
+                    "id": 1608,
+                    "qty": 1
+                }
+            ]
+        },
+        "144": {
+            "id": 144,
+            "name": "Missile Set",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1104,
+                    "qty": 6
+                },
+                {
+                    "id": 1301,
+                    "qty": 3
+                },
+                {
+                    "id": 1128,
+                    "qty": 2
+                },
+                {
+                    "id": 1407,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1609,
+                    "qty": 1
+                }
+            ]
+        },
+        "145": {
+            "id": 145,
+            "name": "Supersonic Missile Set",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 1609,
+                    "qty": 2
+                },
+                {
+                    "id": 1303,
+                    "qty": 4
+                },
+                {
+                    "id": 1129,
+                    "qty": 4
+                },
+                {
+                    "id": 1405,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1610,
+                    "qty": 2
+                }
+            ]
+        },
+        "146": {
+            "id": 146,
+            "name": "Gravity Missile Set",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1610,
+                    "qty": 3
+                },
+                {
+                    "id": 1130,
+                    "qty": 6
+                },
+                {
+                    "id": 1127,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 1611,
+                    "qty": 3
+                }
+            ]
+        },
+        "147": {
+            "id": 147,
+            "name": "Prototype",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1101,
+                    "qty": 3
+                },
+                {
+                    "id": 1407,
+                    "qty": 1
+                },
+                {
+                    "id": 1301,
+                    "qty": 2
+                },
+                {
+                    "id": 1401,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 5101,
+                    "qty": 1
+                }
+            ]
+        },
+        "148": {
+            "id": 148,
+            "name": "Precision Drone",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 5101,
+                    "qty": 1
+                },
+                {
+                    "id": 1204,
+                    "qty": 1
+                },
+                {
+                    "id": 1301,
+                    "qty": 2
+                },
+                {
+                    "id": 1404,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 5102,
+                    "qty": 1
+                }
+            ]
+        },
+        "149": {
+            "id": 149,
+            "name": "Attack Drone",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 5101,
+                    "qty": 1
+                },
+                {
+                    "id": 1204,
+                    "qty": 1
+                },
+                {
+                    "id": 1303,
+                    "qty": 1
+                },
+                {
+                    "id": 1206,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 5103,
+                    "qty": 1
+                }
+            ]
+        },
+        "150": {
+            "id": 150,
+            "name": "Corvette",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 5.0,
+            "input": [
+                {
+                    "id": 1107,
+                    "qty": 5
+                },
+                {
+                    "id": 1406,
+                    "qty": 1
+                },
+                {
+                    "id": 1303,
+                    "qty": 2
+                },
+                {
+                    "id": 1206,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 5111,
+                    "qty": 1
+                }
+            ]
+        },
+        "151": {
+            "id": 151,
+            "name": "Destroyer",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1125,
+                    "qty": 20
+                },
+                {
+                    "id": 1406,
+                    "qty": 4
+                },
+                {
+                    "id": 1303,
+                    "qty": 4
+                },
+                {
+                    "id": 1127,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 5112,
+                    "qty": 1
+                }
+            ]
+        },
+        "105": {
+            "id": 105,
+            "name": "Engine",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 3.0,
+            "input": [
+                {
+                    "id": 1202,
+                    "qty": 1
+                },
+                {
+                    "id": 1104,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1407,
+                    "qty": 1
+                }
+            ]
+        },
+        "152": {
+            "id": 152,
+            "name": "Battlefield Analysis Base",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 12
+                },
+                {
+                    "id": 1301,
+                    "qty": 18
+                },
+                {
+                    "id": 1302,
+                    "qty": 6
+                },
+                {
+                    "id": 1407,
+                    "qty": 12
+                }
+            ],
+            "output": [
+                {
+                    "id": 3009,
+                    "qty": 1
+                }
+            ]
+        },
+        "153": {
+            "id": 153,
+            "name": "Self-evolution Lab",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 4.0,
+            "input": [
+                {
+                    "id": 2901,
+                    "qty": 1
+                },
+                {
+                    "id": 5202,
+                    "qty": 10
+                },
+                {
+                    "id": 5201,
+                    "qty": 20
+                },
+                {
+                    "id": 1305,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2902,
+                    "qty": 1
+                }
+            ]
+        },
+        "154": {
+            "id": 154,
+            "name": "Re-composing Assembler",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 5.0,
+            "input": [
+                {
+                    "id": 2305,
+                    "qty": 1
+                },
+                {
+                    "id": 5203,
+                    "qty": 10
+                },
+                {
+                    "id": 5206,
+                    "qty": 30
+                },
+                {
+                    "id": 1305,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2318,
+                    "qty": 1
+                }
+            ]
+        },
+        "155": {
+            "id": 155,
+            "name": "Negentropy Smelter",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 6.0,
+            "input": [
+                {
+                    "id": 2315,
+                    "qty": 1
+                },
+                {
+                    "id": 5204,
+                    "qty": 10
+                },
+                {
+                    "id": 5206,
+                    "qty": 30
+                },
+                {
+                    "id": 1305,
+                    "qty": 4
+                }
+            ],
+            "output": [
+                {
+                    "id": 2319,
+                    "qty": 1
+                }
+            ]
+        },
+        "156": {
+            "id": 156,
+            "name": "Strange Annihilation Fuel Rod",
+            "type": "Assemble",
+            "handcraft": false,
+            "duration": 32.0,
+            "input": [
+                {
+                    "id": 1803,
+                    "qty": 8
+                },
+                {
+                    "id": 5205,
+                    "qty": 1
+                },
+                {
+                    "id": 1127,
+                    "qty": 2
+                },
+                {
+                    "id": 1125,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 1804,
+                    "qty": 1
+                }
+            ]
+        },
+        "157": {
+            "id": 157,
+            "name": "SR Plasma Turret",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1103,
+                    "qty": 15
+                },
+                {
+                    "id": 1205,
+                    "qty": 5
+                },
+                {
+                    "id": 1401,
+                    "qty": 5
+                },
+                {
+                    "id": 1303,
+                    "qty": 5
+                }
+            ],
+            "output": [
+                {
+                    "id": 3010,
+                    "qty": 1
+                }
+            ]
+        },
+        "158": {
+            "id": 158,
+            "name": "Jamming Capsule",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 2.0,
+            "input": [
+                {
+                    "id": 1204,
+                    "qty": 1
+                },
+                {
+                    "id": 1401,
+                    "qty": 1
+                },
+                {
+                    "id": 1120,
+                    "qty": 3
+                }
+            ],
+            "output": [
+                {
+                    "id": 1612,
+                    "qty": 1
+                }
+            ]
+        },
+        "159": {
+            "id": 159,
+            "name": "Suppressing Capsule",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 8.0,
+            "input": [
+                {
+                    "id": 1612,
+                    "qty": 2
+                },
+                {
+                    "id": 1205,
+                    "qty": 1
+                },
+                {
+                    "id": 1119,
+                    "qty": 2
+                }
+            ],
+            "output": [
+                {
+                    "id": 1613,
+                    "qty": 2
+                }
+            ]
+        },
+        "160": {
+            "id": 160,
+            "name": "Pile Sorter",
+            "type": "Assemble",
+            "handcraft": true,
+            "duration": 1.0,
+            "input": [
+                {
+                    "id": 2013,
+                    "qty": 2
+                },
+                {
+                    "id": 1205,
+                    "qty": 1
+                },
+                {
+                    "id": 1303,
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": 2014,
+                    "qty": 1
+                }
+            ]
+        },
+        "9999": {
+            "id": "9999",
+            "name": "Accumulator (full)",
+            "type": "Accumulation",
+            "handcraft": false,
+            "duration": 10,
+            "input": [
+                {
+                    "id": "2206",
+                    "qty": 1
+                }
+            ],
+            "output": [
+                {
+                    "id": "2207",
+                    "qty": 1
+                }
+            ]
+        }
+    },
+    "recipe_types": {
+        "Smelt": {
+            "id": "Smelt",
+            "processes": [
+                "2302",
+                "2315",
+                "2319"
+            ]
+        },
+        "Assemble": {
+            "id": "Assemble",
+            "processes": [
+                "2303",
+                "2304",
+                "2305",
+                "2318"
+            ]
+        },
+        "Research": {
+            "id": "Research",
+            "processes": [
+                "2901",
+                "2902"
+            ]
+        },
+        "Refine": {
+            "id": "Refine",
+            "processes": [
+                "2308"
+            ]
+        },
+        "Chemical": {
+            "id": "Chemical",
+            "processes": [
+                "2309",
+                "2317"
+            ]
+        },
+        "Particle": {
+            "id": "Particle",
+            "processes": [
+                "2310"
+            ]
+        },
+        "Fractionate": {
+            "id": "Fractionate",
+            "processes": [
+                "2314"
+            ]
+        },
+        "Accumulation": {
+            "id": "Accumulation",
+            "processes": [
+                "2209"
+            ]
+        }
+    }
+}

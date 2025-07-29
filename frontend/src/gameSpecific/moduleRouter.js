@@ -43,7 +43,7 @@ function compileProcessCosts(data, computeType, recipesList) {
 }
 
 function getProcessCostComponents(data, computeType, recipe, process, multiplier = 1) {
-    return executeModuleFunction(data, "getProcessCostComponents", {computeType: computeType, recipe: recipe, process: process, multiplier: multiplier});
+    return executeModuleFunction(data, "getProcessCostComponents", {data: data, computeType: computeType, recipe: recipe, process: process, multiplier: multiplier});
 }
 
 function getInputQuantity(data, item, recipe, process) {

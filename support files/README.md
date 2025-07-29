@@ -32,7 +32,7 @@ Files used to generate the respective data files and icons for each game. Data f
                     <optional keys>: <??? optional: optional keys depending on the game>
                 }
             ],
-            "recipe_type": <string: this OR processes is required, recipe_type maps to a list of processes applicable to this recipe>,
+            "type": <string: this OR processes is required, recipe_type maps to a list of processes applicable to this recipe>,
             "duration": <number optional: only needed when using recipe_type>,
             "input" <optional: list of inputs to the recipe>: [
                 {

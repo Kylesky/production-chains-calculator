@@ -49,7 +49,7 @@ function getProcessCostComponents({ computeType, recipe, process, multiplier = 1
     let components = [];
 
     const boosted = "boosted" in recipe ? recipe.boosted : false;
-    const powerUnits = computeType === "count" ? "KJ" : "KW";
+    const powerUnits = computeType === "count" ? "kJ" : "kW";
     if (process.power && !boosted) {
         components.push(<span>&#9889;{+(process.power * multiplier).toFixed(2)} {powerUnits}</span>);
     }

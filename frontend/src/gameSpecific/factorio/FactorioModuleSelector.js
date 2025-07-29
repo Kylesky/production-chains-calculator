@@ -41,9 +41,9 @@ function FactorioModuleSelector({ value, setModule, noProd = false }) {
 
     return (
         <Select.Root value={selectedValue} onValueChange={handleUpdateValue} open={isOpen} onOpenChange={setIsOpen}>
-            <Select.Trigger className="select-trigger" onPointerDown={handleTriggerClick} ref={triggerRef}>
+            <Select.Trigger className="factorio-select-trigger" onPointerDown={handleTriggerClick} ref={triggerRef}>
                 {selectedOption ? (
-                    <div className="select-value">
+                    <div className="factorio-select-value">
                         <FactorioQualityIcon id={selectedOption.id} quality={selectedOption.quality} />
                     </div>
                 ) : (
@@ -51,15 +51,15 @@ function FactorioModuleSelector({ value, setModule, noProd = false }) {
                 )}
             </Select.Trigger>
 
-            <Select.Content className="select-content">
-                <Select.Viewport className="select-viewport">
-                    <div className="select-grid">
+            <Select.Content className="factorio-select-content" position="popper">
+                <Select.Viewport className="factorio-select-viewport">
+                    <div className="factorio-select-grid">
                         {options.map((option) => {
                             if (noProd && option.id.includes("prod"))
                                 return null;
                             else
-                                return <Select.Item key={option.key} value={option.key} className="select-item">
-                                    <div className="item-inner">
+                                return <Select.Item key={option.key} value={option.key} className="factorio-select-item">
+                                    <div className="factorio-item-inner">
                                         <FactorioQualityIcon id={option.id} quality={option.quality} />
                                     </div>
                                 </Select.Item>

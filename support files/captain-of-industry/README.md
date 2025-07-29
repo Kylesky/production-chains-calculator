@@ -1,4 +1,4 @@
-# Factorio
+# Captain of Industry
 
 Files to produce the Captain of Industry data json. Run `python generate_data_json.py` to generate the json. Run `python generate_data_json.py --download-icons` to also download the relevant icons.
 
