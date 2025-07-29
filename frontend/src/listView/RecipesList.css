@@ -90,3 +90,20 @@
 .recipes-list-process-icon-selected:hover {
     cursor: pointer;
 }
+
+.recipes-list-multiplier-input {
+    width: 2em;
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.recipes-list-multiplier-input::-webkit-outer-spin-button,
+.recipes-list-multiplier-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.recipes-list-multiplier-input[type=number] {
+  -moz-appearance: textfield;
+}

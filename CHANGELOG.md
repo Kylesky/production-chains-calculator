@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.4.1] - 2025-07-29
+- Added Manual compute method
+
 ## [0.3.2] - 2025-07-29
 - Factorio: Disabled productivity modules on recipes that do not allow them.
 - Added a shortened usage section to the side panel and renamed the old usage section to detailed usage.
