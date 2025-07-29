@@ -3,6 +3,7 @@ All notable changes to this project will be documented in this file.
 
 ## [0.3.2] -
 - Factorio: Disabled productivity modules on recipes that do not allow them.
+- Added a shortened usage section to the side panel and renamed the old usage section to detailed usage.
 
 ## [0.3.1] - 2025-07-28
 - Captain of Industry: Added data. May have some issues with computation for more complex systems due to issues with matching items to recipe ids.
