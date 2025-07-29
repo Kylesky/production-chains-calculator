@@ -209,8 +209,9 @@ function RecipeAdditionalComponents({recipe, process, updateRecipe}) {
             (recipe.modules.length > process.modules ? recipe.modules.slice(0, process.modules) : recipe.modules) :
             (process.modules ? Array.from({ length: process.modules }, () => null) : null)
 
+        const allowProductivity = "allow_productivity" in recipe ? recipe["allow_productivity"] : false
         const moduleComponents = modules ? <div className="factorio-modules-container">
-            {modules.map((module, index) => <FactorioModuleSelector value={module} setModule={(value) => setModule(index, value)} />)}
+            {modules.map((module, index) => <FactorioModuleSelector value={module} setModule={(value) => setModule(index, value)} noProd={!allowProductivity}/>)}
         </div> : null;
 
         const setQuality = (quality) => {
