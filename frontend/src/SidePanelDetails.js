@@ -61,6 +61,9 @@ function SidePanelDetails() {
                     </ul>
                 </li>
                 <li>Select Compute Type and Compute Method</li>
+                    <ul>
+                        <li>Switch to Manual after computing a result from another method to fine tune your results.</li>
+                    </ul>
                 <li>Check the Visual tab if you want to see a flowchat</li>
             </ol>
         </div>
@@ -88,6 +91,7 @@ function SidePanelDetails() {
                         <li>Matrix: Resolves multiple options and loops better than Simple, but may struggle to match target numbers exactly. Will sometimes give "close enough" approximations for more complex problems.</li>
                         <li>LP-Force: Slower but more accurate. Forces inputs and outputs to match the target numbers and tries to minimize byproducts (unused intermediates) if any. Requires intermediates to be nonnegative. May give nonsense answers if it can't find a solution.</li>
                         <li>LP-Optimize: Slower but more accurate. Minimizes inputs and maximizes outputs (depending on the problem). Requires intermediates to be nonnegative. May give nonsense answers if it can't find a solution.</li>
+                        <li>Manual: Allows you to manually set the computed number of instances for each recipe. Retains results from previous computation, so you can fine tune the results from another Compute Method.</li>
                     </ul>
                 </li>
                 <li>Everything should automatically be computed whenever you change anything, but you can click the compute button in case it gets stuck.</li>

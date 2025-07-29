@@ -161,9 +161,9 @@ function MainView() {
     }
 
     const setItemValue = (id, value) => {
-        setItemValues({...itemValues, [id]: value})
+        setItemValues({ ...itemValues, [id]: value })
     }
-    
+
     const resetItemValue = (id) => {
         const { [id]: _removed, ...remaining } = itemValues
         setItemValues(remaining)
@@ -206,7 +206,8 @@ function MainView() {
                 { value: 'simple', label: "Simple" },
                 { value: 'matrix', label: "Matrix" },
                 { value: 'lp-force', label: "LP-Force" },
-                { value: 'lp-optimize', label: "LP-Optimize" }
+                { value: 'lp-optimize', label: "LP-Optimize" },
+                { value: 'manual', label: "Manual" },
             ]
 
         },

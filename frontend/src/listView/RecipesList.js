@@ -58,7 +58,7 @@ function ProcessContent({ computeType, recipe, updateRecipe, process, timePerCra
 
     let costs = useMemo(() => {
         let costs = [];
-        if(timePerCraft) costs.push(<span>&#9203;{+(timePerCraft).toFixed(4)}s</span>);
+        if (timePerCraft) costs.push(<span>&#9203;{+(timePerCraft).toFixed(4)}s</span>);
         return [...costs, ...getProcessCostComponents(data, "default", recipe, process)];
     }, [data, timePerCraft, recipe, process]);
 
@@ -77,21 +77,33 @@ function ProcessContent({ computeType, recipe, updateRecipe, process, timePerCra
     </div>;
 }
 
-function RecipeLine({ computeType, recipe, recipesListState, forceWholeBuildings }) {
+function RecipeLine({ computeType, computeMethod, recipe, recipesListState, forceWholeBuildings }) {
     const { updateRecipe, removeRecipe } = recipesListState;
     const data = useGetData();
 
     const process = getRecipeProcess(data, recipe);
     const timePerCraft = useMemo(() => getRecipeTimePerCraft(data, recipe), [data, recipe]);
-    
+
     const perBuildingMultiplier = computePerBuildingMultiplier(computeType, timePerCraft);
     const numBuildings = recipe.multiplier ?? 1;
     const itemsMultiplier = perBuildingMultiplier * numBuildings;
 
-    return <tr>
+    const handleMultiplierChange = (e) => {
+        updateRecipe(recipe.id, { ...recipe, multiplier: e.target.value })
+    }
+
+    const multiplierComponent = computeMethod === "manual" ?
+        <td className="recipes-list-table-num-cell">
+            <div style={{display: "flex", alignItems: "center"}}>
+                <input className="recipes-list-multiplier-input" type="number" value={recipe.multiplier ?? ""} onChange={handleMultiplierChange} />x
+            </div>
+        </td> :
         <td className="recipes-list-table-num-cell">
             {forceWholeBuildings ? Math.ceil(recipe.multiplier ?? 1) : +(recipe.multiplier ?? 1).toFixed(4)}x
-        </td>
+        </td>;
+
+    return <tr>
+        {multiplierComponent}
         <td className="recipes-list-table-cell">
             <InputMaterialsList computeType={computeType} recipe={recipe} process={process} itemsMultiplier={itemsMultiplier} />
         </td>
@@ -119,7 +131,7 @@ function RecipesList({ computeVarsState, recipesListState, forceWholeBuildingsSt
             </thead>
             <tbody>
                 {recipesListState.recipesList.map(recipe => {
-                    return <RecipeLine key={recipe.id} computeType={computeVarsState.type.value} recipe={recipe} recipesListState={recipesListState} forceWholeBuildings={forceWholeBuildingsState.value} />
+                    return <RecipeLine key={recipe.id} computeType={computeVarsState.type.value} computeMethod={computeVarsState.method.value} recipe={recipe} recipesListState={recipesListState} forceWholeBuildings={forceWholeBuildingsState.value} />
                 })}
             </tbody>
         </table>

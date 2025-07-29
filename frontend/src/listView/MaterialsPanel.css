@@ -24,7 +24,7 @@
 
 .item-list {
     height: 95%;
-    width: 100%;
+    width: 98%;
     overflow-y: auto;
 }
 
@@ -75,7 +75,7 @@
 
 .buildings-panel {
     height: 15%;
-    width: 100%;
+    width: 99%;
 }
 
 .buildings-container {
@@ -91,7 +91,7 @@
 
 .costs-panel {
     height: 15%;
-    width: 100%;
+    width: 99%;
 }
 
 .costs-container {

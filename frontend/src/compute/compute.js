@@ -25,6 +25,9 @@ function compute(data, recipesList, outputsList, inputsList, intermediatesList, 
             input: "input" in recipe ? recipe.input.reduce((acc2, input) => { acc2[input.id] = multiplier * getInputQuantity(data, input, recipe, process); return acc2 }, {}) : {},
             output: "output" in recipe ? recipe.output.reduce((acc2, output) => { acc2[output.id] = multiplier * getOutputQuantity(data, output, recipe, process); return acc2 }, {}) : {}
         }
+        if(computeMethod === "manual") {
+            acc[recipe.id]["mul"] = recipe.multiplier ?? 0;
+        }
         return acc;
     }, {});
 
@@ -65,8 +68,9 @@ function compute(data, recipesList, outputsList, inputsList, intermediatesList, 
     const itemProduction = {};
     const itemConsumption = {};
 
-    Object.entries(recipes).forEach(([recipeId, {input, output}]) => {
-        var count = (recipeId in result ? result[recipeId] : 0);
+    Object.entries(recipes).forEach(([recipeId, recipe]) => {
+        const {input, output} = recipe;
+        var count = computeMethod === 'manual' ? recipe.mul : (recipeId in result ? result[recipeId] : 0);
 
         // If using the "Items" compute type, partial recipes are not allowed.
         if(computeType === "count"){
