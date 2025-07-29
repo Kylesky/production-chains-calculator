@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.4.2] - 2025-07-29
+- Dyson Sphere Program: Added data set.
+- Factorio: Fixed positioning of selection menu for quality and modules for recipes after scrolling.
+- Fixed capitalization of kilo from K to k to follow proper SI conventions.
+
 ## [0.4.1] - 2025-07-29
 - Added Manual compute method
 
