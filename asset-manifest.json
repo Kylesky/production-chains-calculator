@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/production-chains-calculator/static/css/main.d5ca3480.css",
-    "main.js": "/production-chains-calculator/static/js/main.8b3fa010.js",
+    "main.js": "/production-chains-calculator/static/js/main.502be98b.js",
     "static/js/453.4b5d4255.chunk.js": "/production-chains-calculator/static/js/453.4b5d4255.chunk.js",
     "index.html": "/production-chains-calculator/index.html",
     "main.d5ca3480.css.map": "/production-chains-calculator/static/css/main.d5ca3480.css.map",
-    "main.8b3fa010.js.map": "/production-chains-calculator/static/js/main.8b3fa010.js.map",
+    "main.502be98b.js.map": "/production-chains-calculator/static/js/main.502be98b.js.map",
     "453.4b5d4255.chunk.js.map": "/production-chains-calculator/static/js/453.4b5d4255.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d5ca3480.css",
-    "static/js/main.8b3fa010.js"
+    "static/js/main.502be98b.js"
   ]
 }
