@@ -1,0 +1,103 @@
+{
+    "Department_Store": {
+        "name": "Department Store",
+        "maintenance": 400,
+        "workforce": {"qty": 240, "type": "Artisans"},
+        "duration": 60,
+        "electricity": "required",
+        "recipes": {
+            "Toasters": ["Steel", "Zinc", "Filaments"],
+            "Vacuum_Cleaners": ["Wool", "Celluloid", "Steel"],
+            "Crockery": ["Clay", "Quartz_Sand", "Lacquer"],
+            "Refrigerators": ["Steel", "Caoutchouc", "Gas"],
+            "Briefcases": ["Brass", "Celluloid", "Sanga_Cow"]
+        }
+    },
+    "Furniture_Store": {
+        "name": "Furniture Store",
+        "maintenance": 400,
+        "workforce": {"qty": 240, "type": "Artisans"},
+        "duration": 60,
+        "electricity": "required",
+        "recipes": {
+            "Bankers_Lamps": ["Brass", "Glass", "Light_Bulbs"],
+            "Vanity_Screens": ["Cotton_Fabric", "Cherry_Wood", "Lacquer"],
+            "Writing_Desks": ["Brass", "Wood_Veneers", "Lacquer"],
+            "Four-Poster_Beds": ["Bear_Fur", "Goose_Feathers", "Cherry_Wood"],
+            "Lounge_Seating": ["Wool", "Sanga_Cow", "Wanza_Timber"]
+        }
+    },
+    "Drug_Store": {
+        "name": "Drug Store",
+        "maintenance": 400,
+        "workforce": {"qty": 240, "type": "Artisans"},
+        "duration": 60,
+        "electricity": "required",
+        "recipes": {
+            "Toothpaste": ["Sugar", "Coal", "Soap"],
+            "Detergent": ["Ethanol", "Citrus", "Saltpetre"],
+            "Lipstick": ["Fish_Oil", "Coconut_Oil", "Lacquer"],
+            "Face_Cream": ["Coconut_Oil", "Citrus", "Whale_Oil"],
+            "Pomade": ["Camphor_Wax", "Beeswax", "Hibiscus_Petals"]
+        }
+    },
+    "Restaurant": {
+        "name": "Restaurant",
+        "maintenance": 500,
+        "workforce": {"qty": 120, "type": "Tourists"},
+        "duration": 60,
+        "electricity": "unused",
+        "recipes": {
+            "Archdukes_Schnitzel": ["Pigs", "Potatoes", "Tallow"],
+            "Stroggof_Goulash": ["Beef", "Red_Peppers", "Corn"],
+            "Fish_and_Frites": ["Fish", "Potatoes", "Citrus"],
+            "Venison_en_Croute": ["Flour", "Potatoes", "Caribou_Meat"],
+            "Lobster_Cheminee": ["Lobster", "Citrus", "Tobacco"],
+            "Empanadas": ["Beef", "Flour", "Herbs"]
+        }
+    },
+    "Cafe": {
+        "name": "Cafe",
+        "maintenance": 500,
+        "workforce": {"qty": 120, "type": "Tourists"},
+        "duration": 60,
+        "electricity": "unused",
+        "recipes": {
+            "Donut_Fourre": ["Flour", "Tallow", "Jam"],
+            "Eclair": ["Flour", "Sugar", "Chocolate"],
+            "Palmier_Biscuit": ["Flour", "Tallow", "Cinnamon"],
+            "Venison_Tartare": ["Grapes", "Caribou_Meat", "Citrus"],
+            "Banana_Surprise": ["Goat_Milk", "Plantains", "Cinnamon"],
+            "Cone_OCopia": ["Jam", "Milk", "Orchid"]
+        }
+    },
+    "Bar": {
+        "name": "Bar",
+        "maintenance": 500,
+        "workforce": {"qty": 120, "type": "Tourists"},
+        "duration": 60,
+        "electricity": "unused",
+        "recipes": {
+            "Daiquiri_Tropic": ["Sugar_Cane", "Rum", "Plantains"],
+            "Black_Muscovy": ["Coffee", "Rum", "Schnapps"],
+            "Montmartre_75": ["Sugar", "Champagne", "Citrus"],
+            "Glogg": ["Whale_Oil", "Grapes", "Cinnamon"],
+            "Enbesa_Sunrise": ["Hibiscus_Petals", "Rum", "Spices"],
+            "Absinthe": ["Herbs", "Sugar", "Schnapps"]
+        }
+    },
+    "The_Iron_Tower": {
+        "name": "The Iron Tower",
+        "maintenance": 500,
+        "workforce": {"qty": 5200, "type": "Tourists"},
+        "duration": 120,
+        "electricity": "required",
+        "recipes": {
+            "Brioche_Royale": ["Sausages", "Bread", "Beef", "Gold"],
+            "Trifle_Tower": ["Rum", "Bread", "Grapes", "Sugar"],
+            "Lady_Marmelade": ["Rum", "Champagne", "Citrus", "Jam"],
+            "Age_of_Exploration": ["Gas", "Potatoes", "Red_Peppers", "Beef"],
+            "Homard_Lit_de_Terroir": ["Lobster", "Sanga_Cow", "Potatoes", "Spices"]
+        }
+    }
+}

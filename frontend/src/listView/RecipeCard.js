@@ -13,19 +13,19 @@ const RecipeCard = ({ recipe, selected = false, onClick = null }) => {
             {recipe.name ? <div className="recipe-card-name">{recipe.name}</div> : null}
             <div className="recipe-card-process">
                 {processes.map(process => {
-                    return <Icon id={process} name={data.processes[process].name} />
+                    return <Icon item={data.processes[process]} />
                 })}
             </div>
             <div className="recipe-card-inout">
                 <div className="recipe-card-inputs">
                     {recipe.input ?
-                        recipe.input.map(input => { return <div className="recipe-card-material-line"><span>{+(input.qty).toFixed(4)}x</span> <Icon id={input.id} name={data.items[input.id].name} /></div> }) :
+                        recipe.input.map(input => { return <div className="recipe-card-material-line"><span>{+(input.qty).toFixed(4)}x</span> <Icon item={data.items[input.id]} /></div> }) :
                         <div>None</div>}
                 </div>
                 <div className="recipe-card-arrow">&rarr;</div>
                 <div className="recipe-card-outputs">
                     {recipe.output ?
-                        recipe.output.map(output => { return <div className="recipe-card-material-line"><span>{+(output.qty).toFixed(4)}x</span> <Icon id={output.id} name={data.items[output.id].name} /></div> }) :
+                        recipe.output.map(output => { return <div className="recipe-card-material-line"><span>{+(output.qty).toFixed(4)}x</span> <Icon item={data.items[output.id]} /></div> }) :
                         <div>None</div>}
                 </div>
             </div>

@@ -1,0 +1,578 @@
+{
+    "processes": {
+        "Fan_Factory": {
+            "id": "Fan_Factory",
+            "name": "Fan Factory"
+        },
+        "Perfume_Mixer": {
+            "id": "Perfume_Mixer",
+            "name": "Perfume Mixer"
+        },
+        "Ice_Cream_Factory": {
+            "id": "Ice_Cream_Factory",
+            "name": "Ice Cream Factory"
+        },
+        "Jalea_Kitchen": {
+            "id": "Jalea_Kitchen",
+            "name": "Jalea Kitchen"
+        },
+        "Mezcal_Bar": {
+            "id": "Mezcal_Bar",
+            "name": "Mezcal Bar"
+        },
+        "Scooter_Factory": {
+            "id": "Scooter_Factory",
+            "name": "Scooter Factory"
+        },
+        "Ball_Manufactory": {
+            "id": "Ball_Manufactory",
+            "name": "Ball Manufactory"
+        },
+        "Orchid_Farm": {
+            "id": "Orchid_Farm",
+            "name": "Orchid Farm"
+        },
+        "Herb_Garden": {
+            "id": "Herb_Garden",
+            "name": "Herb Garden"
+        },
+        "Motor_Assembly_Plant": {
+            "id": "Motor_Assembly_Plant",
+            "name": "Motor Assembly Plant"
+        },
+        "Cable_Factory": {
+            "id": "Cable_Factory",
+            "name": "Cable Factory"
+        },
+        "Hacienda_Brewery": {
+            "id": "Hacienda_Brewery",
+            "name": "Hacienda Brewery"
+        },
+        "Calamari_Fishery": {
+            "id": "Calamari_Fishery",
+            "name": "Calamari Fishery"
+        },
+        "Mineral_Mine": {
+            "id": "Mineral_Mine",
+            "name": "Mineral Mine"
+        },
+        "Nandu_Farm": {
+            "id": "Nandu_Farm",
+            "name": "Nandu Farm"
+        },
+        "Aluminium_Smelter": {
+            "id": "Aluminium_Smelter",
+            "name": "Aluminium Smelter"
+        },
+        "Bauxite_Mine": {
+            "id": "Bauxite_Mine",
+            "name": "Bauxite Mine"
+        }
+    },
+    "recipes": {
+        "Fan_Factory-New_World": {
+            "id": "Fan_Factory-New_World",
+            "name": "Fan Factory (New World)",
+            "processes": [
+                {
+                    "id": "Fan_Factory",
+                    "duration": 60,
+                    "maintenance": 500,
+                    "workforce": {
+                        "qty": 150,
+                        "type": "Artistas"
+                    },
+                    "electricity": "required"
+                }
+            ],
+            "input": [
+                {"id": "Motor", "qty": 1},
+                {"id": "Aluminium_Profiles", "qty": 1}
+            ],
+            "output": [
+                {"id": "Fans", "qty": 1}
+            ]
+        },
+        "Perfume_Mixer-New_World": {
+            "id": "Perfume_Mixer-New_World",
+            "name": "Perfume Mixer (New World)",
+            "processes": [
+                {
+                    "id": "Perfume_Mixer",
+                    "duration": 60,
+                    "maintenance": 200,
+                    "workforce": {
+                        "qty": 150,
+                        "type": "Artistas"
+                    },
+                    "electricity": "optional"
+                }
+            ],
+            "input": [
+                {"id": "Orchid", "qty": 1},
+                {"id": "Ethanol", "qty": 1},
+                {"id": "Coconut_Oil", "qty": 1}
+            ],
+            "output": [
+                {"id": "Perfumes", "qty": 1}
+            ]
+        },
+        "Ice_Cream_Factory-New_World": {
+            "id": "Ice_Cream_Factory-New_World",
+            "name": "Ice Cream Factory (New World)",
+            "processes": [
+                {
+                    "id": "Ice_Cream_Factory",
+                    "duration": 60,
+                    "maintenance": 200,
+                    "workforce": {
+                        "qty": 100,
+                        "type": "Artistas"
+                    },
+                    "electricity": "optional"
+                }
+            ],
+            "input": [
+                {"id": "Milk", "qty": 1},
+                {"id": "Chocolate", "qty": 1},
+                {"id": "Citrus", "qty": 1}
+            ],
+            "output": [
+                {"id": "Ice_Cream", "qty": 1}
+            ]
+        },
+        "Jalea_Kitchen-New_World": {
+            "id": "Jalea_Kitchen-New_World",
+            "name": "Jalea Kitchen (New World)",
+            "processes": [
+                {
+                    "id": "Jalea_Kitchen",
+                    "duration": 30,
+                    "maintenance": 150,
+                    "workforce": {
+                        "qty": 25,
+                        "type": "Artistas"
+                    },
+                    "electricity": "optional"
+                }
+            ],
+            "input": [
+                {"id": "Calamari", "qty": 1},
+                {"id": "Herbs", "qty": 1},
+                {"id": "Corn", "qty": 1}
+            ],
+            "output": [
+                {"id": "Jalea", "qty": 1}
+            ]
+        },
+        "Mezcal_Bar-New_World": {
+            "id": "Mezcal_Bar-New_World",
+            "name": "Mezcal Bar (New World)",
+            "processes": [
+                {
+                    "id": "Mezcal_Bar",
+                    "duration": 30,
+                    "maintenance": 150,
+                    "workforce": {
+                        "qty": 25,
+                        "type": "Artistas"
+                    },
+                    "electricity": "optional"
+                }
+            ],
+            "input": [
+                {"id": "Citrus", "qty": 1},
+                {"id": "Sugar", "qty": 1},
+                {"id": "Herbs", "qty": 1}
+            ],
+            "output": [
+                {"id": "Mezcal", "qty": 1}
+            ]
+        },
+        "Scooter_Factory-New_World": {
+            "id": "Scooter_Factory-New_World",
+            "name": "Scooter Factory (New World)",
+            "processes": [
+                {
+                    "id": "Scooter_Factory",
+                    "duration": 120,
+                    "maintenance": 2000,
+                    "workforce": {
+                        "qty": 200,
+                        "type": "Artistas"
+                    },
+                    "electricity": "required"
+                }
+            ],
+            "input": [
+                {"id": "Pigments", "qty": 1},
+                {"id": "Motor", "qty": 1},
+                {"id": "Caoutchouc", "qty": 1}
+            ],
+            "output": [
+                {"id": "Scooter", "qty": 1}
+            ]
+        },
+        "Ball_Manufactory-New_World": {
+            "id": "Ball_Manufactory-New_World",
+            "name": "Ball Manufactory (New World)",
+            "processes": [ 
+                {
+                    "id": "Ball_Manufactory",
+                    "duration": 30,
+                    "maintenance": 15,
+                    "workforce": {
+                        "qty": 30,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "optional"
+                }
+            ],
+            "input": [
+                {"id": "Nandu_Leather", "qty": 1},
+                {"id": "Caoutchouc", "qty": 1}
+            ],
+            "output": [
+                {"id": "Soccer_Balls", "qty": 1}
+            ]
+        },
+        "Orchid_Farm-New_World": {
+            "id": "Orchid_Farm-New_World",
+            "name": "Orchid Farm (New World)",
+            "processes": [ 
+                {
+                    "id": "Orchid_Farm",
+                    "duration": 30,
+                    "maintenance": 5,
+                    "workforce": {
+                        "qty": 10,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "unused"
+                }
+            ],
+            "output": [
+                {"id": "Orchid", "qty": 1}
+            ]
+        },
+        "Herb_Garden-New_World": {
+            "id": "Herb_Garden-New_World",
+            "name": "Herb Garden (New World)",
+            "processes": [ 
+                {
+                    "id": "Herb_Garden",
+                    "duration": 30,
+                    "maintenance": 5,
+                    "workforce": {
+                        "qty": 10,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "unused"
+                }
+            ],
+            "output": [
+                {"id": "Herbs", "qty": 1}
+            ]
+        },
+        "Motor_Assembly_Plant-New_World": {
+            "id": "Motor_Assembly_Plant-New_World",
+            "name": "Motor Assembly Plant (New World)",
+            "processes": [ 
+                {
+                    "id": "Motor_Assembly_Plant",
+                    "duration": 60,
+                    "maintenance": 400,
+                    "workforce": {
+                        "qty": 150,
+                        "type": "Obreros"
+                    },
+                    "electricity": "required"
+                }
+            ],
+            "input": [
+                {"id": "Electric_Cables", "qty": 1},
+                {"id": "Celluloid", "qty": 1},
+                {"id": "Steel", "qty": 1}
+            ],
+            "output": [
+                {"id": "Motor", "qty": 1}
+            ]
+        },
+        "Cable_Factory-New_World": {
+            "id": "Cable_Factory-New_World",
+            "name": "Cable Factory (New World)",
+            "processes": [ 
+                {
+                    "id": "Cable_Factory",
+                    "duration": 60,
+                    "maintenance": 725,
+                    "workforce": {
+                        "qty": 150,
+                        "type": "Obreros"
+                    },
+                    "electricity": "optional"
+                }
+            ],
+            "input": [
+                {"id": "Copper", "qty": 1},
+                {"id": "Caoutchouc", "qty": 1}
+            ],
+            "output": [
+                {"id": "Electric_Cables", "qty": 1}
+            ]
+        },
+        "Hacienda_Brewery-Rum-New_World": {
+            "id": "Hacienda_Brewery-Rum-New_World",
+            "name": "Hacienda Brewery Rum (New World)",
+            "processes": [ 
+                {
+                    "id": "Hacienda_Brewery",
+                    "duration": 30,
+                    "maintenance": 50,
+                    "workforce": {
+                        "qty": 30,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "unused"
+                }
+            ],
+            "input": [
+                {"id": "Wood", "qty": 1},
+                {"id": "Sugar_Cane", "qty": 1}
+            ],
+            "output": [
+                {"id": "Rum", "qty": 1}
+            ]
+        },
+        "Hacienda_Brewery-Beer-New_World": {
+            "id": "Hacienda_Brewery-Beer-New_World",
+            "name": "Hacienda Brewery Beer (New World)",
+            "processes": [ 
+                {
+                    "id": "Hacienda_Brewery",
+                    "duration": 60,
+                    "maintenance": 50,
+                    "workforce": {
+                        "qty": 30,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "unused"
+                }
+            ],
+            "input": [
+                {"id": "Grain", "qty": 1},
+                {"id": "Corn", "qty": 1}
+            ],
+            "output": [
+                {"id": "Beer", "qty": 1}
+            ]
+        },
+        "Hacienda_Brewery-Atole-New_World": {
+            "id": "Hacienda_Brewery-Atole-New_World",
+            "name": "Hacienda Brewery Atole (New World)",
+            "processes": [ 
+                {
+                    "id": "Hacienda_Brewery",
+                    "duration": 60,
+                    "maintenance": 50,
+                    "workforce": {
+                        "qty": 30,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "unused"
+                }
+            ],
+            "input": [
+                {"id": "Corn", "qty": 1},
+                {"id": "Sugar_Cane", "qty": 1}
+            ],
+            "output": [
+                {"id": "Atole", "qty": 1}
+            ]
+        },
+        "Hacienda_Brewery-Schnapps-New_World": {
+            "id": "Hacienda_Brewery-Schnapps-New_World",
+            "name": "Hacienda Brewery Schnapps (New World)",
+            "processes": [ 
+                {
+                    "id": "Hacienda_Brewery",
+                    "duration": 60,
+                    "maintenance": 50,
+                    "workforce": {
+                        "qty": 30,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "unused"
+                }
+            ],
+            "input": [
+                {"id": "Potatoes", "qty": 1}
+            ],
+            "output": [
+                {"id": "Schnapps", "qty": 1}
+            ]
+        },
+        "Hacienda_Brewery-Hot_Sauce-New_World": {
+            "id": "Hacienda_Brewery-Hot_Sauce-New_World",
+            "name": "Hacienda Brewery Hot Sauce (New World)",
+            "processes": [ 
+                {
+                    "id": "Hacienda_Brewery",
+                    "duration": 120,
+                    "maintenance": 50,
+                    "workforce": {
+                        "qty": 30,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "unused"
+                }
+            ],
+            "input": [
+                {"id": "Spices", "qty": 1}
+            ],
+            "output": [
+                {"id": "Hot_Sauce", "qty": 1}
+            ]
+        },
+        "Calamari_Fishery-New_World": {
+            "id": "Calamari_Fishery-New_World",
+            "name": "Calamari Fishery (New World)",
+            "processes": [ 
+                {
+                    "id": "Calamari_Fishery",
+                    "duration": 60,
+                    "maintenance": 150,
+                    "workforce": {
+                        "qty": 25,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "unused"
+                }
+            ],
+            "output": [
+                {"id": "Calamari", "qty": 1}
+            ]
+        },
+        "Cattle_Farm-Electrified-New World": {
+            "id": "Cattle_Farm-Electrified-New World",
+            "name": "Cattle Farm Electrified (New World)",
+            "processes": [
+                {
+                    "id": "Cattle_Farm",
+                    "duration": 120,
+                    "maintenance": 25.0,
+                    "workforce": {
+                        "qty": 20,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "required"
+                }
+            ],
+            "output": [
+                {"id": "Beef", "qty": 1},
+                {"id": "Milk", "qty": 6}
+            ]
+        },
+        "Mineral_Mine-New_World": {
+            "id": "Mineral_Mine-New_World",
+            "name": "Mineral Mine (New World)",
+            "processes": [ 
+                {
+                    "id": "Mineral_Mine",
+                    "duration": 15,
+                    "maintenance": 500,
+                    "workforce": {
+                        "qty": 120,
+                        "type": "Obreros"
+                    },
+                    "electricity": "optional"
+                }
+            ],
+            "output": [
+                {"id": "Minerals", "qty": 1}
+            ]
+        },
+        "Nandu_Farm-New_World": {
+            "id": "Nandu_Farm-New_World",
+            "name": "Nandu Farm (New World)",
+            "processes": [ 
+                {
+                    "id": "Nandu_Farm",
+                    "duration": 30,
+                    "maintenance": 5,
+                    "workforce": {
+                        "qty": 10,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "unused"
+                }
+            ],
+            "output": [
+                {"id": "Nandu_Leather", "qty": 1}
+            ]
+        },
+        "Nandu_Farm-Electrified-New_World": {
+            "id": "Nandu_Farm-Electrified-New_World",
+            "name": "Nandu Farm Electrified (New World)",
+            "processes": [ 
+                {
+                    "id": "Nandu_Farm",
+                    "duration": 60,
+                    "maintenance": 5,
+                    "workforce": {
+                        "qty": 10,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "required"
+                }
+            ],
+            "output": [
+                {"id": "Nandu_Leather", "qty": 1},
+                {"id": "Nandu_Feathers", "qty": 1}
+            ]
+        },
+        "Aluminium_Smelter-New_World": {
+            "id": "Aluminium_Smelter-New_World",
+            "name": "Aluminium Smelter (New World)",
+            "processes": [ 
+                {
+                    "id": "Aluminium_Smelter",
+                    "duration": 90,
+                    "maintenance": 540,
+                    "workforce": {
+                        "qty": 40,
+                        "type": "Obreros"
+                    },
+                    "electricity": "optional"
+                }
+            ],
+            "input": [
+                {"id": "Bauxite", "qty": 1},
+                {"id": "Coal", "qty": 1}
+            ],
+            "output": [
+                {"id": "Aluminium_Profiles", "qty": 1}
+            ]
+        },
+        "Bauxite_Mine-New_World": {
+            "id": "Bauxite_Mine-New_World",
+            "name": "Bauxite Mine (New World)",
+            "processes": [ 
+                {
+                    "id": "Bauxite_Mine",
+                    "duration": 10,
+                    "maintenance": 400,
+                    "workforce": {
+                        "qty": 220,
+                        "type": "Jornaleros"
+                    },
+                    "electricity": "optional"
+                }
+            ],
+            "output": [
+                {"id": "Bauxite", "qty": 1}
+            ]
+        }
+    }
+}
+

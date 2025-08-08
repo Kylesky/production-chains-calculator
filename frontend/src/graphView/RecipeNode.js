@@ -25,7 +25,7 @@ function RecipeNode({ data: nodeData }) {
             {recipe.name ? <div className="recipe-node-name">{recipe.name}</div> : null}
             <div className="recipe-node-process">
                 {forceWholeBuildings ? Math.ceil(recipe.multiplier) : +(recipe.multiplier ?? 0).toFixed(2)}x
-                <Icon id={process.id} name={process.name} />
+                <Icon item={data.processes[process.id]} />
                 {/* {process.name} */}
             </div>
             <div className="recipe-node-process-costs">
@@ -39,7 +39,7 @@ function RecipeNode({ data: nodeData }) {
                             const perCraft = getInputQuantity(data, input, recipe, process);
                             return <div className="recipe-node-material-line">
                                 <span>{+(perCraft.toFixed(2))}x ({+(perBuildingMultiplier * perCraft * numBuildings).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>
-                                <Icon id={input.id} name={data.items[input.id].name} />
+                                <Icon item={data.items[input.id]} />
                             </div>
                         }) :
                         <div>None</div>}
@@ -51,7 +51,7 @@ function RecipeNode({ data: nodeData }) {
                             const perCraft = getOutputQuantity(data, output, recipe, process);
                             return <div className="recipe-node-material-line">
                                 <span>{+(perCraft.toFixed(2))}x ({+(perBuildingMultiplier * perCraft * numBuildings).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>
-                                <Icon id={output.id} name={data.items[output.id].name} />
+                                <Icon item={data.items[output.id]} />
                             </div>
                         }) :
                         <div>None</div>}

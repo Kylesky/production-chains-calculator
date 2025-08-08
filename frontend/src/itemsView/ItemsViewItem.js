@@ -44,7 +44,7 @@ function ItemsViewItem({ item, addRecipes, itemValuesState }) {
     const default_recipe = getDefaultRecipeId(data, item.id);
 
     return <details className="items-view-item" onToggle={handleToggle} open={isOpen}>
-        <summary className="items-view-item-header"><Icon id={item.id} name={item.name} /> {item.name}</summary>
+        <summary className="items-view-item-header"><Icon item={item} /> {item.name}</summary>
         {isOpen ?
             <div className="items-view-item-container">
                 <div className="items-view-item-value">Value: <input className="items-view-item-value-input" value={value} type="number" placeholder={default_value} onChange={handleValueChange} /></div>

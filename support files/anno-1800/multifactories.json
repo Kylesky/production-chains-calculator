@@ -1,0 +1,78 @@
+{
+    "Orchard-Old World": {
+        "name": "Orchard (Old World)",
+        "maintenance": 50,
+        "workforce": {"qty": 35, "type": "Farmers"},
+        "duration": 30,
+        "electricity": "unused",
+        "recipes": {
+            "Jam": [],
+            "Resin": [],
+            "Cherry_Wood": []
+        }
+    },
+    "Orchard-New World": {
+        "name": "Orchard (New World)",
+        "maintenance": 50,
+        "workforce": {"qty": 35, "type": "Jornaleros"},
+        "duration": 30,
+        "electricity": "unused",
+        "recipes": {
+            "Cinnamon": [],
+            "Coconut_Oil": [],
+            "Citrus": [],
+            "Camphor_Wax": []
+        }
+    },
+    "Chemical_Plant-Old World": {
+        "name": "Chemical Plant (Old World)",
+        "maintenance": 800,
+        "workforce": {"qty": 100, "type": "Engineers"},
+        "duration": 30,
+        "electricity": "optional",
+        "recipes": {
+            "Shampoo": ["Coconut_Oil", "Cinnamon", "Soap"],
+            "Lemonade": ["Sugar", "Citrus", "Saltpetre"],
+            "Souvenirs": ["Camphor_Wax", "Glass", "Cotton"],
+            "Lacquer": ["Quartz_Sand", "Resin", "Ethanol"]
+        }
+    },
+    "Chemical_Plant-New World": {
+        "name": "Chemical Plant (New World)",
+        "maintenance": 800,
+        "workforce": {"qty": 125, "type": "Obreros"},
+        "duration": 30,
+        "electricity": "optional",
+        "recipes": {
+            "Chewing_Gum": ["Caoutchouc", "Sugar", "Cinnamon"],
+            "Ethanol": ["Wood", "Corn"],
+            "Celluloid": ["Cotton", "Camphor_Wax", "Ethanol"],
+            "Film_Reel": ["Saltpetre", "Celluloid"]
+        }
+    },
+    "Assembly_Line-Old World": {
+        "name": "Assembly Line (Old World)",
+        "maintenance": 600,
+        "workforce": {"qty": 500, "type": "Workers"},
+        "duration": 30,
+        "electricity": "required",
+        "recipes": {
+            "Elevators": ["Steel", "Wood_Veneers", "Steam_Motors"],
+            "Biscuits": ["Tallow", "Flour", "Citrus"],
+            "Typewriters": ["Steel", "Brass", "Lacquer"]
+        }
+    },
+    "Artisan's_Workshop-Old World": {
+        "name": "Artisan's Workshop (Old World)",
+        "maintenance": 600,
+        "workforce": {"qty": 350, "type": "Artisans"},
+        "duration": 30,
+        "electricity": "required",
+        "recipes": {
+            "Cognac": ["Grapes", "Cherry_Wood", "Sugar"],
+            "Billiard_Tables": ["Cherry_Wood", "Felt", "Celluloid"],
+            "Violins": ["Steel", "Cherry_Wood", "Lacquer"],
+            "Toys": ["Felt", "Celluloid", "Lacquer"]
+        }
+    }
+}
