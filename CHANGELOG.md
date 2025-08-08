@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.4.3] - 2025-08-09
+- Anno 1800: Added data.
+- Added internal function to override icon ids.
+
 ## [0.4.2] - 2025-07-29
 - Dyson Sphere Program: Added data set.
 - Factorio: Fixed positioning of selection menu for quality and modules for recipes after scrolling.

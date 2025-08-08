@@ -11,13 +11,16 @@ Files used to generate the respective data files and icons for each game. Data f
             "raw": <boolean optional: whether the item is a raw material, used by LP computation>,
             "default_recipe": <string optional: recipe id override for default recipe, usage depends on the game>,
             "forced_recipe": <string optional: recipe id override, forced to add this recipe when this item appears as an input to another recipe>,
-            "default_value": <number optional: default value used to score the material for LP computation, defaults to 1>
+            "default_value": <number optional: default value used to score the material for LP computation, defaults to 1>,
+            "icon_id": <string optional: optional override for the id used for the icon>,
+            <optional keys>: <??? optional: optional keys depending on the game>
         }
     },
     "processes": {
         <string: process id>: {
             "id": <string: process id>,
             "name": <string: process name>,
+            "icon_id": <string optional: optional override for the id used for the icon>,
             <optional keys>: <??? optional: optional keys depending on the game, typically other costs or additional options for the process>
         }
     },

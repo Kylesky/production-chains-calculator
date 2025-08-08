@@ -14,7 +14,7 @@ function InputMaterialsList({ computeType, recipe, process, itemsMultiplier }) {
             const pieces = [];
             const perCraft = getInputQuantity(data, material, recipe, process);
             pieces.push(<span>{+(perCraft.toFixed(2))}x ({+(perCraft * itemsMultiplier).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>);
-            pieces.push(<Icon id={material.id} name={data.items[material.id].name} />);
+            pieces.push(<Icon item={data.items[material.id]} />);
             pieces.push(<span> {data.items[material.id].name}</span>);
 
             return <div className="recipes-list-material-line">{pieces}</div>
@@ -31,7 +31,7 @@ function OutputMaterialsList({ computeType, recipe, process, itemsMultiplier }) 
             const pieces = [];
             const perCraft = getOutputQuantity(data, material, recipe, process);
             pieces.push(<span>{+(perCraft.toFixed(2))}x ({+(perCraft * itemsMultiplier).toFixed(2)}{getComputeTypeSuffix(computeType)})</span>);
-            pieces.push(<Icon id={material.id} name={data.items[material.id].name} />);
+            pieces.push(<Icon item={data.items[material.id]} />);
             pieces.push(<span> {data.items[material.id].name}</span>);
 
             return <div className="recipes-list-material-line">{pieces}</div>
@@ -48,9 +48,9 @@ function ProcessContent({ computeType, recipe, updateRecipe, process, timePerCra
     const processPiece = <div className="process-selection-container">
         {processes.map((process, index) => {
             if (selectedProcess.id === process)
-                return <Icon className="recipes-list-process-icon-selected" id={process} name={data.processes[process].name}
+                return <Icon className="recipes-list-process-icon-selected" item={data.processes[process]}
                     onClick={() => { updateRecipe(recipe.id, { ...recipe, selectedProcess: index }) }} />
-            return <Icon className="recipes-list-process-icon" id={process} name={data.processes[process].name}
+            return <Icon className="recipes-list-process-icon" item={data.processes[process]}
                 onClick={() => { updateRecipe(recipe.id, { ...recipe, selectedProcess: index }) }} />
         })}
         {process.name}

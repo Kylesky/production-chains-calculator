@@ -5,7 +5,8 @@ import { getRecipeProcessIds } from "../gameSpecific/moduleRouter";
 import "./ItemsViewRecipeLine.css";
 
 function ItemIcon({data, id, count=null}) {
-    return <div className="items-view-recipe-component">{count}x <Icon id={id} name={data.items[id].name}/></div>
+    console.log(id)
+    return <div className="items-view-recipe-component">{count}x <Icon item={data.items[id]}/></div>
 }
 
 function ProcessIcon({data, id}) {

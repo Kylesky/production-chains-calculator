@@ -22,7 +22,7 @@ function ItemEntry({ item, negate, handleButtonPress, itemGoalNumbers, setItemGo
         <button onClick={handleButtonPress}>+</button>
         <input className="item-entry-input" type="number" value={item.id in itemGoalNumbers ? sign * Math.abs(itemGoalNumbers[item.id]) : ""} onChange={handleNumberInput} />
         {item.id in itemComputedNumbers ? <span>({+(itemComputedNumbers[item.id].toFixed(4))})</span> : null}
-        <Icon id={item.id} name={item.name} />
+        <Icon item={item} />
         {item.name}
     </div>
 }
@@ -103,7 +103,7 @@ function BuildingsList({ recipesList }) {
     return <div className="buildings-container">
         {Object.entries(counts).map(([id, count]) => {
             return <div className="card-container">
-                <Icon id={id} name={data.processes[id].name} />
+                <Icon item={data.processes[id]} />
                 <span>{+(count.toFixed(4))}x</span>
             </div>
         })}

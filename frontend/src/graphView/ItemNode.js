@@ -1,8 +1,11 @@
 import {Handle, Position} from '@xyflow/react';
 import "./ItemNode.css";
 import Icon from '../components/Icon';
+import { useGetData } from '../DataContext';
 
-function ItemNode({ data }) {
+function ItemNode({ data: nodeData }) {
+    const data = useGetData();
+    const {item, type, produced, consumed} = nodeData;
     const borderColor = (type) => {
         switch(type){
             case "input": return "red";
@@ -13,16 +16,16 @@ function ItemNode({ data }) {
     }
 
     return <div>
-        <div className="item-node-contents" style={{borderColor: borderColor(data.type)}}>
+        <div className="item-node-contents" style={{borderColor: borderColor(type)}}>
             <div className="item-node-name">
-                <Icon id={data.item.id} name={data.item.name} />
-                {data.item.name}
+                <Icon item={data.items[item.id]} />
+                {item.name}
             </div>
             <div className="item-node-numbers">
                 <div className="item-node-inout">
-                    <div className="item-node-number">Produced: {+(data.produced ?? 0).toFixed(4)}</div>
-                    <div className="item-node-number">Consumed: {+(data.consumed ?? 0).toFixed(4)}</div>
-                    <div className="item-node-number">Total: {+((data.produced ?? 0) + (data.consumed ?? 0)).toFixed(4)}</div>
+                    <div className="item-node-number">Produced: {+(produced ?? 0).toFixed(4)}</div>
+                    <div className="item-node-number">Consumed: {+(consumed ?? 0).toFixed(4)}</div>
+                    <div className="item-node-number">Total: {+((produced ?? 0) + (consumed ?? 0)).toFixed(4)}</div>
                 </div>
             </div>
         </div>
