@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [0.4.4] - 
+- Added colored edges feature in the visual tab. Assigns a unique random color to each item then applies that color to the edges that correspond to that item. The randomization is done each time the feature is turned on, so colors will change every time. There is no guarantee that colors will always be visually distinct especially when there are many items in the system.
+
 ## [0.4.3] - 2025-08-09
 - Anno 1800: Added data.
 - Added internal function to override icon ids.

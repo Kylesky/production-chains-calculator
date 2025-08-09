@@ -11,6 +11,7 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@xyflow/react": "^12.8.2",
+    "iwanthue": "^2.0.0",
     "javascript-lp-solver": "^0.4.24",
     "ml-fcnnls": "^3.0.0",
     "ml-matrix": "^6.12.1",
