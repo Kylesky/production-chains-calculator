@@ -55,7 +55,27 @@ function getItemDefaultValue({item}) {
 }
 
 function RecipeAdditionalComponents({_}) {
-    return null
+    return null;
+}
+
+function AdditionalSettings({_}){
+    return null;
+}
+
+function AdditionalDetails({_}){
+    return null;
+}
+
+function getItemRecipes({data, item}) {
+    const inputRecipes = [];
+    const outputRecipes = [];
+
+    Object.values(data.recipes).forEach(recipe => {
+        if (recipe.input && recipe.input.some(recipeItem => item.id === recipeItem.id)) inputRecipes.push(recipe);
+        if (recipe.output && recipe.output.some(recipeItem => item.id === recipeItem.id)) outputRecipes.push(recipe);
+    })
+    
+    return {inputRecipes, outputRecipes};
 }
 
 export {
@@ -70,5 +90,8 @@ export {
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
     getItemDefaultValue,
-    RecipeAdditionalComponents
+    RecipeAdditionalComponents,
+    AdditionalSettings,
+    AdditionalDetails,
+    getItemRecipes
 };

@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import ItemsView from './itemsView/ItemsView';
 import ListView from './listView/ListView';
 import GraphView from './graphView/GraphView';
+import AdditionalDetailsView from './additionalDetailsView/AdditionalDetailsView';
 import SidePanel from './SidePanel';
 import './MainView.css';
 import { useGetData } from './DataContext';
@@ -229,6 +230,7 @@ function MainView() {
                 <Tab className="tab">Items</Tab>
                 <Tab className="tab">List</Tab>
                 <Tab className="tab">Visual</Tab>
+                <Tab className="tab">Additional Details</Tab>
                 Data Set Loaded: {data.name}
             </TabList>
 
@@ -240,6 +242,9 @@ function MainView() {
             </TabPanel>
             <TabPanel className="tab-panel">
                 <GraphView recipesListState={recipesListState} itemListsState={itemListsState} computeVarsState={computeVarsState} forceWholeBuildingsState={forceWholeBuildingsState} />
+            </TabPanel>
+            <TabPanel className="tab-panel">
+                <AdditionalDetailsView />
             </TabPanel>
         </Tabs>
     </>

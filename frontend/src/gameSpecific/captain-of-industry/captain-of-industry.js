@@ -142,6 +142,12 @@ function RecipeAdditionalComponents({ recipe, process, updateRecipe }) {
     </div>
 }
 
+function AdditionalDetails() {
+    return <div>
+        A housing recipe has been included to easily include all the relevant inputs. Search for "housing" or "population" to see it immediately.
+    </div>
+}
+
 const module = {
     ...defaults,
     getRecipeTimePerCraft,
@@ -153,7 +159,8 @@ const module = {
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
     getItemDefaultValue,
-    RecipeAdditionalComponents
+    RecipeAdditionalComponents,
+    AdditionalDetails
 }
 
 export default module;

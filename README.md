@@ -8,6 +8,7 @@ If you want to use the tool please go to the [GitHub page](https://kylesky.githu
 - Satisfactory
 - Captain of Industry
 - Dyson Sphere Program
+- Anno 1800
 
 ### Potential Games
 - Foundry
@@ -15,7 +16,6 @@ If you want to use the tool please go to the [GitHub page](https://kylesky.githu
 - Techtonica
 - The Crust
 - Return from Core
-- Anno 1800
 - Infraspace
 - The Riftbreaker
 - Palworld
@@ -26,6 +26,7 @@ If you want to use the tool please go to the [GitHub page](https://kylesky.githu
 - Little Rocket Lab
 - Nova Lands
 - Timberborn
+- and so on...
 
 ### Games that are unlikely to be added
 - Shapez/Shapez 2: This isn't built for the type of items in Shapez.

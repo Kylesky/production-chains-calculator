@@ -5,7 +5,6 @@ import { getRecipeProcessIds } from "../gameSpecific/moduleRouter";
 import "./ItemsViewRecipeLine.css";
 
 function ItemIcon({data, id, count=null}) {
-    console.log(id)
     return <div className="items-view-recipe-component">{count}x <Icon item={data.items[id]}/></div>
 }
 

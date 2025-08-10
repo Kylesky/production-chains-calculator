@@ -26,10 +26,11 @@ const edgeTypes = {
     "custom": CustomEdge
 }
 
-const includesIgnoreCaseSpecialAndSuffix = (s1, s2) => { 
+const includesIgnoreCaseSpecialAndSuffix = (s1, s2) => {
     const str1 = s1.split('|')[0].replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
     const str2 = s2.split('|')[0].replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-    return str1.includes(str2); }
+    return str1.includes(str2);
+}
 
 const resetLayout = (nodes, edges, setNodes, setEdges) => {
     // Apply layout from Dagre
@@ -131,13 +132,63 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
             setSearchIndex(index + 1);
         }
 
-        if(results.length > 0)
+        if (results.length > 0)
             fitView({ nodes: [{ id: results[index].id }], duration: 500 });
     }
 
-    const handleEnter = (event) => {
+    const handleSearchEnter = (event) => {
         if (event.key === "Enter") searchItem();
     }
+
+    const [coloredEdges, setColoredEdges] = useState(false);
+    const handleColoredEdgesToggle = () => {
+        setColoredEdges(!coloredEdges);
+    }
+
+    // Need to call this for updates while the chart is open
+    useEffect(() => {
+        if (coloredEdges) {
+            const itemColors = {};
+            nodes.forEach(node => {
+                if (node.type === "item")
+                    itemColors[node.data.item.id] = null;
+            });
+            const itemCount = Object.keys(itemColors).length;
+            if (itemCount > 1) {
+                var iwanthue = require('iwanthue');
+                const palette = iwanthue(itemCount);
+
+                let permutation = Array.from({ length: itemCount }, (_, i) => i);
+
+                for (let i = itemCount - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [permutation[i], permutation[j]] = [permutation[j], permutation[i]];
+                }
+
+                var index = 0;
+                Object.keys(itemColors).forEach(key => {
+                    itemColors[key] = palette[permutation[index]];
+                    index += 1;
+                })
+            } else {
+                Object.keys(itemColors).forEach(key => {
+                    itemColors[key] = 'grey';
+                })
+            }
+
+            const newEdges = edges.map((edge) => {
+                var itemId = edge.source.split("|")[1] === "item" ? edge.source.split("|")[0] : edge.target.split("|")[0];
+                return { ...edge, data: { color: itemColors[itemId] } }
+            });
+            setEdges(newEdges);
+        } else {
+            const newEdges = edges.map((edge) => {
+                return { ...edge, data: {} }
+            });
+            setEdges(newEdges);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [coloredEdges]);
 
     return <ReactFlow
         nodes={nodes}
@@ -151,13 +202,19 @@ function FlowChart({ nodeList, edgeList, forceWholeBuildingsState }) {
         <Background color="#ccc" variant={BackgroundVariant.Dots} />
         <Panel position="top-left" style={{ background: "rgba(0, 0, 0, 0.5)", padding: "5px" }}>
             <div className="flowchart-actions">
-                <input value={searchInput} onChange={handleSearchChange} onKeyDown={handleEnter} placeholder='item or recipe name' />
+                <input value={searchInput} onChange={handleSearchChange} onKeyDown={handleSearchEnter} placeholder='item or recipe name' />
                 <button onClick={searchItem}>Search</button>
                 <label>
                     {forceWholeBuildingsState.value ?
                         <input type="checkbox" onChange={handleChangeForceWholeBuildings} checked /> :
                         <input type="checkbox" onChange={handleChangeForceWholeBuildings} />}
                     {"Force whole buildings?"}
+                </label>
+                <label>
+                    {coloredEdges ?
+                        <input type="checkbox" onChange={handleColoredEdgesToggle} checked /> :
+                        <input type="checkbox" onChange={handleColoredEdgesToggle} />}
+                    {"Use colored edges?"}
                 </label>
                 <span><button onClick={() => resetLayout(nodes, edges, setNodes, setEdges)}>Reset Layout</button></span>
             </div>

@@ -117,3 +117,7 @@
     width: 2em;
     text-align: center;
 }
+
+.factorio-additional-settings {
+  display: flex;
+}

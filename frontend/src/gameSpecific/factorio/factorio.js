@@ -4,6 +4,7 @@ import FactorioModuleSelector from "./FactorioModuleSelector";
 import FactorioQualitySelector from "./FactorioQualitySelector";
 import "../gameSpecific.css";
 import * as defaults from "../defaultModule";
+import { useExtraData } from "../../DataContext";
 
 const costs = ["power", "burner", "nutrient", "food", "pollution"];
 
@@ -176,14 +177,13 @@ function getDefaultRecipeId({data, itemId}) {
 
 function getRecipeSearchFilters() {
     return [
-        { id: "recycle", label: "Show Recycling", type: "bool", default: false },
         { id: "research", label: "Show Research", type: "bool", default: true },
     ]
 }
 
-function checkRecipeSearchMatch({recipe, searchState}) {
-    if (!searchState.recycle && recipe.type === "recycling") return false;
-    if (!searchState.research && recipe.type === "research") return false;
+function checkRecipeSearchMatch({extraData, recipe, searchState}) {
+    if (recipe.type === "recycling" && !extraData.showRecycling) return false;
+    if (recipe.type === "research" && !searchState.research) return false;
     return true;
 }
 
@@ -289,6 +289,44 @@ function RecipeAdditionalComponents({recipe, process, updateRecipe}) {
     }
 }
 
+function AdditionalSettings() {
+    const [extraData, setExtraData] = useExtraData();
+
+    const toggleRecycling = () => {
+        setExtraData({...extraData, showRecycling: !extraData.showRecycling})
+    }
+
+    return <div className="factorio-additional-settings">
+        <label>
+            {extraData.showRecycling ?
+                <input type="checkbox" onChange={toggleRecycling} checked /> :
+                <input type="checkbox" onChange={toggleRecycling} />}
+            {" Show Recycling Recipes? (Scrap Recycling is always shown)"}
+        </label>
+    </div>
+}
+
+function AdditionalDetails() {
+    return <div>
+        Research recipes have been included to easily include the different sciences in a recipe. Search for "research" to see them immediately.
+    </div>
+}
+
+function useGetItemRecipes({data, item}) {
+    const [extraData] = useExtraData();
+
+    const inputRecipes = [];
+    const outputRecipes = [];
+
+    Object.values(data.recipes).forEach(recipe => {
+        if (recipe.type === "recycling" && !extraData.showRecycling) return;
+        if (recipe.input && recipe.input.some(recipeItem => item.id === recipeItem.id)) inputRecipes.push(recipe);
+        if (recipe.output && recipe.output.some(recipeItem => item.id === recipeItem.id)) outputRecipes.push(recipe);
+    })
+
+    return {inputRecipes, outputRecipes};
+}
+
 const module = {
     ...defaults, 
     getRecipeTimePerCraft,
@@ -300,7 +338,10 @@ const module = {
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
     getItemDefaultValue,
-    RecipeAdditionalComponents
+    RecipeAdditionalComponents,
+    AdditionalSettings,
+    AdditionalDetails,
+    getItemRecipes: useGetItemRecipes
 }
 
 export default module;
