@@ -62,8 +62,8 @@ function getRecipeSearchFilters(data) {
     return executeModuleFunction(data, "getRecipeSearchFilters", {});
 }
 
-function checkRecipeSearchMatch(data, recipe, searchState) {
-    return executeModuleFunction(data, "checkRecipeSearchMatch", {recipe: recipe, searchState: searchState});
+function checkRecipeSearchMatch(data, extraData, recipe, searchState) {
+    return executeModuleFunction(data, "checkRecipeSearchMatch", {extraData: extraData, recipe: recipe, searchState: searchState});
 }
 
 function getItemDefaultValue(data, item) {
@@ -72,6 +72,18 @@ function getItemDefaultValue(data, item) {
 
 function RecipeAdditionalComponents(data, recipe, process, updateRecipe){
     return executeModuleFunction(data, "RecipeAdditionalComponents", {data: data, recipe: recipe, process: process, updateRecipe: updateRecipe});
+}
+
+function AdditionalSettings({data}){
+    return executeModuleFunction(data, "AdditionalSettings", {data: data});
+}
+
+function AdditionalDetails({data}){
+    return executeModuleFunction(data, "AdditionalDetails", {data: data});
+}
+
+function getItemRecipes(data, item){
+    return executeModuleFunction(data, "getItemRecipes", {data: data, item: item});
 }
 
 export {
@@ -87,5 +99,8 @@ export {
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
     getItemDefaultValue,
-    RecipeAdditionalComponents
+    RecipeAdditionalComponents,
+    AdditionalSettings,
+    AdditionalDetails,
+    getItemRecipes
 }

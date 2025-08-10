@@ -16,6 +16,7 @@ function updateGameId(gameId) {
 
 const DataProvider = ({ children }) => {
     const [data, setData] = useState(defaultData);
+    const [extraData, setExtraData] = useState({});
     const initialized = useRef(false);
 
     const importData = (gameId) => {
@@ -27,6 +28,7 @@ const DataProvider = ({ children }) => {
 
             updateGameId(gameId);
             setData(newData);
+            setExtraData({});
         } else {
             console.error(`Game not found: ${gameId}`)
         }
@@ -39,7 +41,7 @@ const DataProvider = ({ children }) => {
         initialized.current = true;
     }
 
-    return <DataContext.Provider value={{ data, importData }}>
+    return <DataContext.Provider value={{ data, importData, extraData, setExtraData }}>
         {initialized ? children : null}
     </DataContext.Provider>
 }
@@ -54,9 +56,14 @@ const useImportData = () => {
     return importData;
 }
 
+const useExtraData = () => {
+    const { extraData, setExtraData } = useContext(DataContext);
+    return [extraData, setExtraData];
+};
+
 const getGamesList = () => {
     return gamesList;
 }
 
 export default DataContext;
-export { DataProvider, useGetData, getGamesList, useImportData };
+export { DataProvider, useGetData, useExtraData, getGamesList, useImportData };

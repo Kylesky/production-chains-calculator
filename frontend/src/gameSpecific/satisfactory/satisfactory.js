@@ -161,6 +161,12 @@ function RecipeAdditionalComponents({recipe, process, updateRecipe}) {
     </div>
 }
 
+function AdditionalDetails() {
+    return <div>
+        Elevator recipes have been included to easily include the respective components in a recipe. Search for "elevator" to see them immediately.
+    </div>
+}
+
 const module = {
     ...defaults, 
     getRecipeTimePerCraft,
@@ -172,7 +178,8 @@ const module = {
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
     getItemDefaultValue,
-    RecipeAdditionalComponents
+    RecipeAdditionalComponents,
+    AdditionalDetails
 }
 
 export default module;

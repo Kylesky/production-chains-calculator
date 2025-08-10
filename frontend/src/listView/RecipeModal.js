@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import Modal from 'react-modal';
 import './RecipeModal.css';
 import RecipeCard from './RecipeCard';
-import { useGetData } from '../DataContext';
+import { useExtraData, useGetData } from '../DataContext';
 import {
     getRecipeSearchFilters as getGameSpecificRecipeSearchFilters,
     checkRecipeSearchMatch as checkGameSpecificRecipeSearchMatch,
@@ -54,9 +54,9 @@ const matchesOutputSearch = (data, searchState, recipe) => {
     return recipe.output ? recipe.output.some(output => { return includesIgnoreCase(data.items[output.id].name, searchState.output) }) : false;
 }
 
-const checkSearchMatch = (data, searchState, recipe) => {
+const checkSearchMatch = (data, extraData, searchState, recipe) => {
     if (searchState.general !== '' && !matchesGeneralSearch(data, searchState, recipe)) return false;
-    if (!checkGameSpecificRecipeSearchMatch(data, recipe, searchState)) return false;
+    if (!checkGameSpecificRecipeSearchMatch(data, extraData, recipe, searchState)) return false;
     if (searchState.advanced) {
         if (searchState.input !== '' && !matchesInputSearch(data, searchState, recipe)) return false;
         if (searchState.process !== '' && !matchesProcessSearch(data, searchState, recipe)) return false;
@@ -65,20 +65,20 @@ const checkSearchMatch = (data, searchState, recipe) => {
     return true;
 }
 
-const applyFilters = (data, recipesList, selectedRecipesList, setFilteredRecipesList, searchState) => {
+const applyFilters = (data, extraData, recipesList, selectedRecipesList, setFilteredRecipesList, searchState) => {
     let recipes = Object.values(data.recipes);
     recipes = recipes.filter(recipe => {
         return selectedRecipesList.every(selected => { return selected.id !== recipe.id }) && recipesList.every(added => { return added.id !== recipe.id })
     })
-    recipes = recipes.filter((recipe) => checkSearchMatch(data, searchState, recipe));
+    recipes = recipes.filter((recipe) => checkSearchMatch(data, extraData, searchState, recipe));
 
     setFilteredRecipesList(recipes);
 }
 
-const toggleSelectedRecipe = (selected, toggledRecipe, data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList) => {
+const toggleSelectedRecipe = (selected, toggledRecipe, data, extraData, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList) => {
     if (selected) {
         setSelectedRecipesList(selectedRecipesList.filter(recipe => { return recipe.id !== toggledRecipe.id }));
-        if (checkSearchMatch(data, searchState, toggledRecipe)) {
+        if (checkSearchMatch(data, extraData, searchState, toggledRecipe)) {
             const index = filteredRecipesList.findIndex(item => item.id >= toggledRecipe.id);
             const newList = [...filteredRecipesList];
             if (index === -1) {
@@ -101,8 +101,8 @@ const selectAllRecipes = (selectedRecipesList, filteredRecipesList, setSelectedR
     setFilteredRecipesList([]);
 }
 
-const unselectAllRecipes = (data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList) => {
-    var newList = selectedRecipesList.filter(recipe => checkSearchMatch(data, searchState, recipe));
+const unselectAllRecipes = (data, extraData, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList) => {
+    var newList = selectedRecipesList.filter(recipe => checkSearchMatch(data, extraData, searchState, recipe));
     newList = [...newList, ...filteredRecipesList];
     newList = newList.sort((a, b) => a.id.localeCompare(b.id));
     setSelectedRecipesList([]);
@@ -111,6 +111,7 @@ const unselectAllRecipes = (data, searchState, selectedRecipesList, filteredReci
 
 const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchState }) => {
     const data = useGetData();
+    const [extraData] = useExtraData();
     const { recipesList, addRecipes } = recipesListState;
     const [toApplyFilters, setToApplyFilters] = useState(true);
 
@@ -142,7 +143,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
     const [filteredRecipesList, setFilteredRecipesList] = useState([]);
 
     useEffect(() => {
-        applyFilters(data, recipesList, selectedRecipesList, setFilteredRecipesList, searchState);
+        applyFilters(data, extraData, recipesList, selectedRecipesList, setFilteredRecipesList, searchState);
         setToApplyFilters(false);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [show, toApplyFilters]);
@@ -155,8 +156,8 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
 
     const recipeCardsContainer = useMemo(() => {
         return <div className="recipe-cards-container">
-            {selectedRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={true} onClick={() => toggleSelectedRecipe(true, recipe, data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)} /> })}
-            {filteredRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={false} onClick={() => toggleSelectedRecipe(false, recipe, data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)} /> })}
+            {selectedRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={true} onClick={() => toggleSelectedRecipe(true, recipe, data, extraData, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)} /> })}
+            {filteredRecipesList.map(recipe => { return <RecipeCard data={data} recipe={recipe} selected={false} onClick={() => toggleSelectedRecipe(false, recipe, data, extraData, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)} /> })}
         </div>
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedRecipesList, filteredRecipesList]);
@@ -218,7 +219,7 @@ const RecipeModal = ({ show, onClose, recipesListState, searchState, setSearchSt
                 {recipeCardsContainer}
                 <div className="modal-buttons">
                     <button onClick={() => selectAllRecipes(selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)}>Select All</button>
-                    <button onClick={() => unselectAllRecipes(data, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)}>Unselect All</button>
+                    <button onClick={() => unselectAllRecipes(data, extraData, searchState, selectedRecipesList, filteredRecipesList, setSelectedRecipesList, setFilteredRecipesList)}>Unselect All</button>
                     <button onClick={addSelectedRecipes}>Add</button>
                     <button onClick={onClose}>Cancel</button>
                 </div>

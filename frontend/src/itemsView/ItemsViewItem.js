@@ -3,12 +3,11 @@ import Icon from "../components/Icon";
 import { useGetData } from "../DataContext";
 import "./ItemsViewItem.css";
 import ItemsViewRecipeLine from "./ItemsViewRecipeLine";
-import { getDefaultRecipeId, getItemDefaultValue } from "../gameSpecific/moduleRouter";
+import { getDefaultRecipeId, getItemDefaultValue, getItemRecipes } from "../gameSpecific/moduleRouter";
 
 function ItemsViewItem({ item, addRecipes, itemValuesState }) {
     const data = useGetData();
-    const inputRecipes = Object.values(data.recipes).filter(recipe => recipe.input ? recipe.input.some(recipeItem => item.id === recipeItem.id) : false);
-    const outputRecipes = Object.values(data.recipes).filter(recipe => recipe.output ? recipe.output.some(recipeItem => item.id === recipeItem.id) : false);
+    const {inputRecipes, outputRecipes} = getItemRecipes(data, item);
 
     const [inputButtonText, setInputButtonText] = useState('Add All Recipes');
     const [outputButtonText, setOutputButtonText] = useState('Add All Recipes');

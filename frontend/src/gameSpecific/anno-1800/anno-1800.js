@@ -105,6 +105,14 @@ function RecipeAdditionalComponents({ recipe, process, updateRecipe }) {
     </div>
 }
 
+function AdditionalDetails() {
+    return <div>
+        Housing and population recipes have been included to easily include all the relevant inputs. Search for "residence" or "population" to see them immediately.
+        <br />
+        Computations for housing and population may not be entirely accurate due to other game factors that increase population count that are unaccounted for by this calculator.
+    </div>
+}
+
 const module = {
     ...defaults,
     getRecipeTimePerCraft,
@@ -116,7 +124,8 @@ const module = {
     getRecipeSearchFilters,
     checkRecipeSearchMatch,
     getItemDefaultValue,
-    RecipeAdditionalComponents
+    RecipeAdditionalComponents,
+    AdditionalDetails
 }
 
 export default module;
